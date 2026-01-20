@@ -1,0 +1,37 @@
+{
+  "api_version": "0.23.0-SNAPSHOT",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+      "name": "AllayMC",
+      "url": "https://github.com/AllayMC"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1768651861,
+  "dependencies": [],
+  "description": "# CustomStuffExample\n\nAn example plugin that demonstrates how to register custom items, blocks, and entities in AllayMC.\n\n## Features\n\nThis plugin showcases:\n\n- **Custom Item Registration** - A custom edible item (`cse:fish_cake`) with golden apple effects\n- **Custom Block Registration** - A custom block (`cse:test_block`) with custom geometry and collision shape\n- **Creative Item Registration** - Adding custom items to the creative inventory\n- **Resource Pack Integration** - Textures and models for custom content\n\n## Prerequisites\n\n- Java 21 or higher\n- AllayMC server (API version 0.23.0-SNAPSHOT or compatible)\n\n## Project Structure\n\n```\nsrc/main/java/org/allaymc/customstuffexample/\n├── CustomStuffExample.java    # Main plugin class\n└── item/\n    └── ItemFishCakeStack.java # Custom item implementation\n\nsrc/main/resources/assets/resource_pack/\n├── manifest.json              # Resource pack manifest\n├── blocks.json                # Block definitions\n├── models/blocks/             # Block geometry files\n└── textures/                  # Item and block textures\n    ├── items/\n    └── blocks/\n```\n\n## Building\n\n```bash\n./gradlew shadowJar\n```\n\nThe compiled `.jar` file will be in `build/libs`. Copy it to your AllayMC server's `plugins` directory.\n\n## Development\n\nRun a local AllayMC server with the plugin:\n\n```bash\n./gradlew runServer\n```\n\n## Documentation\n\nFor more information about the AllayMC API, refer to the [official documentation](https://docs.allaymc.org).\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/AllayMC/CustomStuffExample/blob/master/LICENSE) file for details.",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+  "id": "customstuffexample",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/AllayMC/CustomStuffExample",
+    "wiki": ""
+  },
+  "name": "CustomStuffExample",
+  "server_version": "",
+  "source": "https://github.com/AllayMC/CustomStuffExample",
+  "stars": 0,
+  "summary": "An example plugin that shows how to register custom item/block/entity in AllayMC",
+  "updated_at": 1768685022,
+  "versions": []
+}

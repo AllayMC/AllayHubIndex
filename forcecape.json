@@ -1,0 +1,54 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1752599555,
+  "dependencies": [],
+  "description": "# ForceCape\n\n[![Allay](https://img.shields.io/badge/Allay-0.22.0-blue)](https://github.com/AllayMC/Allay)\n[![Java](https://img.shields.io/badge/Java-21+-orange)](https://www.oracle.com/java/)\n[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)\n\nAn AllayMC plugin that forces all players to wear a custom cape.\n\n## Features\n\n- Automatically applies cape when players join the server\n- Supports custom cape images\n- Lightweight with zero configuration\n\n## Prerequisites\n\n- Java 21 or higher\n- [AllayMC](https://github.com/AllayMC/Allay) server\n\n## Installation\n\n1. Download the latest release from [Releases](https://github.com/smartcmd/ForceCape/releases)\n2. Place the `.jar` file into your server's `plugins` directory\n3. Start the server to generate the plugin data folder\n\n## Usage\n\n1. Prepare a cape image (PNG format, recommended size: 64x32)\n2. Name the image `cape.png`\n3. Place it in the `plugins/ForceCape/` directory\n4. Restart the server or reload the plugin\n\n```\nplugins/\n└── ForceCape/\n    └── cape.png    <-- Place here\n```\n\n## Building\n\n```bash\n./gradlew build\n```\n\nThe build output will be located in `build/libs/`.\n\n## License\n\nThis project is licensed under the [MIT License](https://github.com/smartcmd/ForceCape/blob/master/LICENSE).",
+  "downloads": 2,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "forcecape",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/ForceCape",
+    "wiki": ""
+  },
+  "name": "ForceCape",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/ForceCape",
+  "stars": 1,
+  "summary": "An allay plugin that force set player's cape",
+  "updated_at": 1768554817,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "ForceCape-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 3127,
+          "url": "https://github.com/smartcmd/ForceCape/releases/download/0.1.0/ForceCape-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1768554782,
+      "version": "0.1.0"
+    }
+  ]
+}

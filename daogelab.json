@@ -1,0 +1,93 @@
+{
+  "api_version": "0.21.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1753363998,
+  "dependencies": [],
+  "description": "# DaogeLab\n\nA DgLab plugin for Minecraft: Bedrock Edition running in [Allay](https://github.com/AllayMC/Allay) platform.\n\n<img src=\"https://raw.githubusercontent.com/smartcmd/DaogeLab/master/img.png\" alt=\"Logo\" width=\"768\" height=\"480\">\n\nThis plugin is a port of [Minecraft-DG-LAB](https://github.com/DancingSnow0517/Minecraft-DG-LAB).\n\n## Feature\n\n- Supports DGLab device connectivity and control.\n- Provide QR code scanning connection interface.\n- Injury feedback system.\n\n## Installation\n\n- Download the `.jar` file from release or action.\n- Put it in your `plugins` folder.\n- Restart the server. Configuration file will be generated in `plugins/DaogeLab/config.yml`\n- After editing the configuration file, restart the server again. Enjoy it.\n\nFor how to install Allay, please refer to https://docs.allaymc.org.\n\n## Usage\n\n- Enter the server.\n- Execute the command `/dglab connect`, and then a QR code will be displayed.\n- Open your DgLab APP, choose `Socket Control` and scan the QR code.\n- If connected successfully, the strength of A/B channels will be displayed in top right corner.\n- Use command `/dglab disconnect` to disconnect.\n\n## Acknowledgement\n\n- [Minecraft-DG-LAB](https://github.com/DancingSnow0517/Minecraft-DG-LAB): Code reference\n- [DG-LAB-OPENSOURCE](https://github.com/DG-LAB-OPENSOURCE/DG-LAB-OPENSOURCE): Protocol reference\n\n## License\n\nThis project is licensed under the AGPL-3 License - see the [LICENSE](https://github.com/smartcmd/DaogeLab/blob/master/LICENSE) file for details.",
+  "downloads": 19,
+  "gallery": [
+    {
+      "created": "",
+      "description": "",
+      "title": "Logo",
+      "url": "https://raw.githubusercontent.com/smartcmd/DaogeLab/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "daogelab",
+  "license": {
+    "id": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://spdx.org/licenses/AGPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "DaogeLab",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/DaogeLab",
+  "stars": 3,
+  "summary": "A DgLab plugin for Minecraft: Bedrock Edition running in Allay platform",
+  "updated_at": 1768478982,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/DaogeLab/compare/0.2.0...0.3.0",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "DaogeLab-0.3.0-shaded.jar",
+          "primary": true,
+          "size": 4861524,
+          "url": "https://github.com/smartcmd/DaogeLab/releases/download/0.3.0/DaogeLab-0.3.0-shaded.jar"
+        }
+      ],
+      "name": "0.3.0",
+      "prerelease": false,
+      "published_at": 1764781643,
+      "version": "0.3.0"
+    },
+    {
+      "changelog": "adapt allay-api 0.14.0",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "DaogeLab-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 4861440,
+          "url": "https://github.com/smartcmd/DaogeLab/releases/download/0.2.0/DaogeLab-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1760547986,
+      "version": "0.2.0"
+    },
+    {
+      "changelog": "The first release ❤",
+      "downloads": 10,
+      "files": [
+        {
+          "filename": "DaogeLab-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 3699857,
+          "url": "https://github.com/smartcmd/DaogeLab/releases/download/0.1.0/DaogeLab-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1753794778,
+      "version": "0.1.0"
+    }
+  ]
+}

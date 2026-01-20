@@ -1,0 +1,88 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
+      "name": "Miroshka000",
+      "url": "https://github.com/Miroshka000"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1766222124,
+  "dependencies": [],
+  "description": "<div align=\"center\">\n\n# ⚡ Aether Network Core\n\n**High-Performance Network Bridge for WaterdogPE & AllayMC**\n\n[![License](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](LICENSE)\n[![Version](https://img.shields.io/badge/Version-1.0.1-green.svg)](https://github.com/Miroshka000/Aether/releases)\n[![Java](https://img.shields.io/badge/Java-21+-purple.svg)](https://adoptium.net/)\n[![Netty](https://img.shields.io/badge/Netty-4.2.x-orange.svg)](https://netty.io/)\n[![Build](https://github.com/Miroshka000/Aether/actions/workflows/build.yml/badge.svg)](https://github.com/Miroshka000/Aether/actions)\n\n<br>\n\n[![Русский](https://img.shields.io/badge/Language-Русский-red?style=for-the-badge&logo=google-translate&logoColor=white)](README_RU.md)\n\n</div>\n\n---\n\n**Aether** is a blazing-fast, low-latency TCP bridge connecting **WaterdogPE Proxy** (Master) with multiple **AllayMC Servers** (Nodes). Built with Netty for maximum performance and designed for real-time cluster state synchronization.\n\n## ✨ Features\n\n### Core\n- **Ultra-Low Latency**: < 2ms network latency with TCP_NODELAY and Netty optimizations\n- **ProxyTransport**: Optimized TCP & QUIC transport for backend servers (replaces RakNet)\n- **Binary Protocol**: Custom framing with VarInt encoding and Snappy compression\n- **Star Topology**: Proxy acts as Master, orchestrating network state across all Nodes\n- **Real-time Sync**: Automatic state broadcasting with configurable intervals\n- **Circuit Breaker**: Smart backpressure handling to prevent cascade failures\n- **Heartbeat System**: Connection liveness detection with RTT metrics\n- **Secure Auth**: SHA-256 key hashing with constant-time comparison\n\n### Advanced Modules (v1.0.1+)\n- **🌀 Seamless World Streaming**: Cross-server portals with pre-loaded chunks\n- **📡 Event Broadcasting**: Cross-server events with LuckPerms group filtering\n- **💾 Distributed PDC**: PersistentDataContainer sync across network\n- **⚖️ Smart Load Balancer**: Multiple strategies (Round Robin, Least Connections, etc.)\n- **🔧 Packet Rewrite Pipeline**: Entity filtering, resource pack overrides\n- **🌐 Web Admin Panel**: REST API + WebSocket, i18n support (EN/RU), real-time monitoring\n- **🔌 Addons System**: Extensible addon architecture (coming soon)\n\n## 🏗️ Architecture\n\n```\n┌─────────────────┐         TCP/Binary         ┌─────────────────┐\n│   WaterdogPE    │◄─────────────────────────►│    AllayMC      │\n│    (MASTER)     │                            │    (NODE 1)     │\n│                 │         TCP/Binary         ├─────────────────┤\n│  aether-proxy   │◄─────────────────────────►│    AllayMC      │\n│                 │                            │    (NODE 2)     │\n│  Port: 3000     │         TCP/Binary         ├─────────────────┤\n│                 │◄─────────────────────────►│    AllayMC      │\n│  Web: 8080      │                            │    (NODE N)     │\n└─────────────────┘                            └─────────────────┘\n```\n\n## 📡 Protocol\n\n| Packet | ID | Direction | Description |\n|--------|-------|-----------|-------------|\n| `AuthHandshake` | 0x01 | Node→Master | Initial authentication |\n| `AuthResult` | 0x02 | Master→Node | Auth response |\n| `Heartbeat` | 0x10 | Bidirectional | Connection liveness |\n| `HeartbeatAck` | 0x11 | Bidirectional | RTT measurement |\n| `NodeSnapshot` | 0x20 | Node→Master | Server state report |\n| `NetworkState` | 0x21 | Master→Nodes | Cluster state broadcast |\n| `TransferRequest` | 0x30 | Bidirectional | Player transfer |\n| `PortalSync` | 0x31 | Node↔Master | Portal configuration |\n| `EventBroadcast` | 0x32 | Bidirectional | Cross-server events |\n| `PDCSync` | 0x33 | Bidirectional | PDC synchronization |\n| `ChunkData` | 0x34 | Node↔Node | Chunk streaming |\n\n## 🔌 Modules\n\n| Module | Description |\n|--------|-------------|\n| `aether-common` | Shared protocol, codecs, events, exceptions |\n| `aether-api` | Public API for third-party plugins |\n| `aether-proxy` | WaterdogPE plugin (Master role) |\n| `aether-server` | AllayMC plugin (Node role) |\n| `aether-web` | Web Admin Panel (Javalin + React) |\n| `aether-addons` | Addon system foundation |\n\n## 📦 Installation\n\n### Maven/Gradle (API Only)\n\n```xml\n<!-- Maven -->\n<dependency>\n    <groupId>io.github.miroshka000</groupId>\n    <artifactId>aether-api</artifactId>\n    <version>1.0.1</version>\n    <scope>provided</scope>\n</dependency>\n```\n\n```kotlin\n// Gradle\ncompileOnly(\"io.github.miroshka000:aether-api:1.0.1\")\n```\n\n### Download\n\nGet the latest release from [GitHub Releases](https://github.com/Miroshka000/Aether/releases).\n\n### WaterdogPE Proxy\n1. Download `aether-proxy-*.jar`\n2. Place in `plugins/` folder\n3. Restart the proxy\n4. Configure `plugins/aether-proxy/config.yml`\n\n### AllayMC Server\n1. Download `aether-server-*.jar`\n2. Place in `plugins/` folder\n3. Restart the server\n4. Configure `plugins/aether-server/config.yml`\n\n## 🎮 API Usage\n\n### Basic API\n\n```java\nimport miroshka.aether.api.AetherAPI;\n\nAetherAPI.getInstance().ifPresent(api -> {\n    int globalOnline = api.getGlobalOnline();\n    int serverCount = api.getServerCount();\n    \n    // Per-server data\n    int lobbyOnline = api.getServerOnline(\"lobby\");\n    double lobbyTps = api.getServerTps(\"lobby\");\n});\n```\n\n### Event Broadcasting\n\n```java\napi.getEventBridge().ifPresent(bridge -> {\n    bridge.publish(\"PlayerAchievement\", playerUuid, playerName, \n        List.of(\"vip\", \"survivor\"), \n        Map.of(\"achievement\", \"First Kill\"));\n    \n    bridge.subscribe(\"CustomEvent\", event -> {\n        System.out.println(\"Received: \" + event.eventType());\n    });\n});\n```\n\n### Portal Management\n\n```java\napi.getPortalManager().ifPresent(portals -> {\n    portals.transferPlayer(playerUuid, \"survival\", true); // seamless\n});\n```\n\n### Load Balancing\n\n```java\napi.getLoadBalancer().ifPresent(balancer -> {\n    balancer.selectServer(playerUuid, List.of(\"lobby-1\", \"lobby-2\"))\n        .ifPresent(server -> player.connect(server));\n});\n```\n\n## ⚙️ Configuration Files\n\nSee detailed configuration in:\n- `config.yml` - Main configuration (Transport: TCP/QUIC)\n- `portals.yml` - Portal definitions\n- `events.yml` - Event subscriptions\n- `load-balancer.yml` - Balancing strategies\n- `packet-rewrite.yml` - Packet transformers\n\n## 🔧 Build from Source\n\n```bash\ngit clone https://github.com/Miroshka000/Aether.git\ncd Aether\n./gradlew build\n\n# Run tests\n./gradlew test\n```\n\n## 🔗 Requirements\n\n- **Java 21+**\n- **WaterdogPE 2.0+** (for proxy plugin)\n- **AllayMC 0.18+** (for server plugin)\n- **LuckPerms** (optional, for permission-based filtering)\n\n## 📄 License\n\nThis project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](https://github.com/Miroshka000/Aether/blob/master/LICENSE) file for details.\n\n---\n\n<div align=\"center\">\n    <br>\n    <p>Created by <b>Miroshka</b> for <b>WaterdogPE + AllayMC</b> clusters with ⚡</p>\n</div>\n",
+  "downloads": 5,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
+  "id": "aether",
+  "license": {
+    "id": "GPL-3.0",
+    "name": "GNU General Public License v3.0",
+    "url": "https://spdx.org/licenses/GPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/Miroshka000/Aether",
+    "wiki": ""
+  },
+  "name": "Aether",
+  "server_version": "",
+  "source": "https://github.com/Miroshka000/Aether",
+  "stars": 3,
+  "summary": "⚡ Aether Network Core - High-Performance Network Bridge for WaterdogPE & AllayMC",
+  "updated_at": 1767169439,
+  "versions": [
+    {
+      "changelog": "## 🚀 Aether v1.0.1\n\n**Cross-server communication system** for AllayMC and WaterdogPE networks with optimized TCP/QUIC transport.\n\n### 📦 Downloads\n\n| File | Description |\n|------|-------------|\n| `aether-server-*-web.jar` | **AllayMC Plugin** - Install on each game server |\n| `aether-proxy-*-web.jar` | **WaterdogPE Plugin** - Full version with Web Admin Panel |\n| `aether-proxy-*-lite.jar` | **WaterdogPE Plugin** - Lightweight version without Web Panel |\n\n### 🔧 Quick Setup\n\n1. Place `aether-proxy-*.jar` in your WaterdogPE `plugins/` folder\n2. Place `aether-server-*.jar` in each AllayMC server `plugins/` folder\n3. Configure `config.yml` on each server with matching `secret-key`\n4. Start proxy, then start game servers\n5. Access Web Panel at `http://localhost:8080` (default: admin/admin)\n\n### ✨ Features\n\n- 🌐 **Web Admin Panel** - Beautiful dashboard for monitoring\n- 🔗 **ProxyTransport** - TCP/QUIC transport for lower latency\n- 👥 **Real-time sync** - Player counts, TPS, server status\n- 🌀 **Portal System** - Region-based server transfer\n- ⚖️ **Load Balancer** - Multiple strategies (Round Robin, Least Connections, etc.)\n- 📡 **Event Bridge** - Cross-server events and messaging\n- 🔄 **Auto-reconnect** - Automatic recovery on connection loss\n- 📊 **PlaceholderAPI** - Integration for scorebards and chat\n\n### 🔐 Security Notice\n\n⚠️ **Change default credentials immediately!**\n- Default login: `admin` / `admin`\n- SSL certificate recommended for production\n\n### 📚 Documentation\n\n- [API Documentation](https://github.com/Miroshka000/Aether/blob/master/docs/API.md)\n- [README (English)](https://github.com/Miroshka000/Aether/blob/master/README.md)\n- [README (Русский)](https://github.com/Miroshka000/Aether/blob/master/README_RU.md)\n\n---\n\n**Full Changelog**: https://github.com/Miroshka000/Aether/commits/v1.0.1\n",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "aether-proxy-1.0.1-lite.jar",
+          "primary": true,
+          "size": 28276197,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.1/aether-proxy-1.0.1-lite.jar"
+        },
+        {
+          "filename": "aether-proxy-1.0.1-web.jar",
+          "primary": false,
+          "size": 28357602,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.1/aether-proxy-1.0.1-web.jar"
+        },
+        {
+          "filename": "aether-server-1.0.1-web.jar",
+          "primary": false,
+          "size": 11277939,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.1/aether-server-1.0.1-web.jar"
+        }
+      ],
+      "name": "Aether v1.0.1",
+      "prerelease": false,
+      "published_at": 1766422093,
+      "version": "1.0.1"
+    },
+    {
+      "changelog": "## 🚀 Aether v1.0.0\n\nCross-server communication system for AllayMC and WaterdogPE networks.\n\n### 📦 Installation\n\n| File | Description |\n|------|-------------|\n| `aether-server-1.0.0.jar` | **AllayMC Plugin** - Install on each game server |\n| `aether-proxy-1.0.0.jar` | **WaterdogPE Plugin** - Install on proxy server |\n\n### 🔧 Quick Setup\n\n1. Place `aether-proxy-*.jar` in your WaterdogPE `plugins/` folder\n2. Place `aether-server-*.jar` in each AllayMC server `plugins/` folder\n3. Configure `config.yml` on each server with matching `secret-key`\n4. Restart all servers\n\n### 📚 Documentation\n\n- [API Documentation](https://github.com/Miroshka000/Aether/blob/master/docs/API.md)\n- [README (English)](https://github.com/Miroshka000/Aether/blob/master/README.md)\n- [README (Русский)](https://github.com/Miroshka000/Aether/blob/master/README_RU.md)\n\n### ✨ Features\n\n- Real-time player count synchronization\n- PlaceholderAPI integration\n- Low-latency TCP communication\n- Automatic reconnection\n\n---\n\n**Full Changelog**: https://github.com/Miroshka000/Aether/commits/v1.0.0\n",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "aether-proxy-1.0.0.jar",
+          "primary": true,
+          "size": 11174238,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.0/aether-proxy-1.0.0.jar"
+        },
+        {
+          "filename": "aether-server-1.0.0.jar",
+          "primary": false,
+          "size": 11176553,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.0/aether-server-1.0.0.jar"
+        }
+      ],
+      "name": "Aether v1.0.0",
+      "prerelease": false,
+      "published_at": 1766222680,
+      "version": "1.0.0"
+    }
+  ]
+}

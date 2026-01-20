@@ -1,0 +1,37 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/83061703?v=4",
+      "name": "MEFRREEX",
+      "url": "https://github.com/MEFRREEX"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1737529089,
+  "dependencies": [],
+  "description": "# DisplayEntities",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/83061703?v=4",
+  "id": "displayentities",
+  "license": {
+    "id": "ARR",
+    "name": "All Rights Reserved",
+    "url": ""
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "DisplayEntities",
+  "server_version": "",
+  "source": "https://github.com/MEFRREEX/DisplayEntities",
+  "stars": 2,
+  "summary": "",
+  "updated_at": 1766404237,
+  "versions": []
+}

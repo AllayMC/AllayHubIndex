@@ -1,0 +1,70 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
+      "name": "acktarbadulla",
+      "url": "https://github.com/acktarbadulla"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1740664326,
+  "dependencies": [],
+  "description": "# EconomyAPI for AllayMC Server Software\nSupporting both SQLITE3 and MongoDB\nBecause MongoDB is the GOAT\n\n![Banner](https://github.com/acktarbadulla/EconomyAPI-AllayMC/blob/master/20250227_210202.jpg)\n\n# Commands\nCommand | Aliases | Description | use\n--- | --- | --- | ---\n`/setmoney` | `/sm` | Set A Players Total Balance | op\n`/addmoney` | `/am` | Add Money To A Players Balance | op\n`/reducemoney` | `/rm` | Reduce Money From A Players Balance | op\n`/balance` | `/bal /money` | See Your / Other Players Balance | all\n\n# Repository\n```xml\n<repositories>\n        <repository>\n                <id>jitpack.io</id>\n                <url>https://jitpack.io</url>\n        </repository>\n</repositories>\n```\n\n# Dependency\n```xml\n<dependency>\n\t    <groupId>com.github.acktarbadulla</groupId>\n\t    <artifactId>EconomyAPI-AllayMC</artifactId>\n\t    <version>1.0.1</version>\n</dependency>\n```\n\n# For Developer\n```java\n/**\n * GET A PLAYERS BALANCE\n * @param (string) playername\n * @return (double) balance\n*/\nEconomyAPI.getInstance().getDatabase().getBalance(\"playername\");\n\n/**\n * SET A PLAYERS BALANCE\n * @param (string) playername | (double) balance\n * @return void\n*/\nEconomyAPI.getInstance().getDatabase().setBalance(\"playername\", 100000.0);\n\n/**\n * ADD MONEY TO A PLAYERS BALANCE\n * @param (string) playername | (double) amount\n * @return void\n*/\nEconomyAPI.getInstance().getDatabase().addBalance(\"playername\", 500.0);\n\n/**\n * REDUCE A PLAYERS BALANCE\n * @param (string) playername | (double) amount\n * @return (boolean) true if successfull | false if not enough money\n*/\nEconomyAPI.getInstance().getDatabase().subtractBalance(\"playername\", 500.0);\n\n/**\n * CHECK IF PLAYER HAS ACCOUNT\n * @param (string) playername\n * @return (boolean) true if has account | false if no account\n*/\nEconomyAPI.getInstance().getDatabase().hasAccount(\"playername\");\n```\n",
+  "downloads": 9,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
+  "id": "economyapi",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "EconomyAPI",
+  "server_version": "",
+  "source": "https://github.com/acktarbadulla/EconomyAPI-AllayMC",
+  "stars": 3,
+  "summary": "A Simple EconomyAPI plugin using SQLITE and MONGODB!",
+  "updated_at": 1741763258,
+  "versions": [
+    {
+      "changelog": "• Put everything in a try catch (better error handling)\r\n• Now send messages to the player if a configuration issue or internal error was found instead of leaving them hanging\r\n• prevent users from using negative amounts \r\n• added aliases for all commands to make it easier\r\n",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "EconomyAPI-1.0.1-shaded.jar",
+          "primary": true,
+          "size": 15836526,
+          "url": "https://github.com/acktarbadulla/EconomyAPI-AllayMC/releases/download/1.0.1/EconomyAPI-1.0.1-shaded.jar"
+        }
+      ],
+      "name": "EconomyAPI V1.0.1",
+      "prerelease": false,
+      "published_at": 1741763057,
+      "version": "1.0.1"
+    },
+    {
+      "changelog": "Basic Economy system for AllayMC\r\n\r\nProviding both SQLITE3 and MONGODB database option\r\n\r\n**Because MongoDB is the GOAT**",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "EconomyAPI-1.0.0-SNAPSHOT-shaded.jar",
+          "primary": true,
+          "size": 15833913,
+          "url": "https://github.com/acktarbadulla/EconomyAPI-AllayMC/releases/download/AllayMC/EconomyAPI-1.0.0-SNAPSHOT-shaded.jar"
+        }
+      ],
+      "name": "EconomyAPI V1.0.0-SNAPSHOT",
+      "prerelease": false,
+      "published_at": 1740682057,
+      "version": "AllayMC"
+    }
+  ]
+}

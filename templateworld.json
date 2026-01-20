@@ -1,0 +1,54 @@
+{
+  "api_version": "0.19.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+      "name": "AllayMC",
+      "url": "https://github.com/AllayMC"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1766571729,
+  "dependencies": [],
+  "description": "# 🌍 TemplateWorld\n\nTemplateWorld is an [AllayMC](https://github.com/AllayMC/Allay) plugin that allows you to create runtime-only worlds based on template worlds. It is designed for mini-game servers where you need to create temporary game rooms that are automatically cleaned up after use. 🎮\n\n## ✨ Features\n\n- 🗺️ Create temporary worlds from pre-defined templates\n- 💨 Runtime-only worlds that won't persist to disk\n- 📦 Support for different world storage formats (LEVELDB, etc.)\n- 🧹 Automatic cleanup of temporary world files on server restart\n- 🔌 Simple API for programmatic world creation\n\n## 📥 Installation\n\n1. 📦 Download the latest release from [Releases](https://github.com/AllayMC/TemplateWorld/releases)\n2. 📂 Place the JAR file in your server's `plugins` folder\n3. 🚀 Start the server\n\n## 🎯 Usage\n\n### 📁 Preparing Templates\n\n1. Create a folder named `templates` in your server root directory\n2. Copy your world folder into `templates/`\n3. The folder name will be used as the template name\n\n```\nserver/\n├── templates/\n│   ├── lobby/\n│   ├── bedwars_map1/\n│   └── skywars_map1/\n└── ...\n```\n\n### 💻 Commands\n\n| Command                            | Description                              | Permission              |\n|------------------------------------|------------------------------------------|-------------------------|\n| `/template create <template_name>` | Create a temporary world from a template | `templateworld.command` |\n\n### 🔧 API Usage\n\nFirst, you should add the dependency to your project:\n\n```kts\nrepositories {\n    mavenCentral()\n}\n\ndependencies {\n    compileOnly(group = \"org.allaymc\", name = \"template-world\", version = \"0.1.0\")\n}\n```\n\nYou can use the API to create temporary worlds programmatically:\n\n```java\nimport org.allaymc.templateworld.TemplateWorld;\nimport org.allaymc.api.world.World;\n\n// Create a temporary world using default LEVELDB format\nWorld tmpWorld = TemplateWorld.createTmpWorld(\"bedwars_map1\");\n\n// Create with custom formats\nWorld tmpWorld = TemplateWorld.createTmpWorld(\n    \"bedwars_map1\",  // template name\n    \"LEVELDB\",       // template format\n    \"LEVELDB\"        // temporary world format\n);\n\n// The world is automatically marked as runtime-only\n// and will be cleaned up when unloaded\n```\n\n### ⚙️ How It Works\n\n1. 📂 Template worlds are stored in the `templates/` directory\n2. 📖 When a temporary world is created, chunks are read from the template but written to a temporary location (`worlds/.tmp/`)\n3. 🔑 Each temporary world gets a unique UUID as its name\n4. ⏳ The world is marked as `runtimeOnly`, so it won't persist after unloading\n5. 🔄 On server restart, all temporary world files are automatically cleaned up\n\n## 📄 License\n\nThis project is licensed under the LGPL v3 License - see the [LICENSE](https://github.com/AllayMC/TemplateWorld/blob/master/LICENSE) file for details.\n",
+  "downloads": 3,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+  "id": "templateworld",
+  "license": {
+    "id": "LGPL-3.0",
+    "name": "GNU Lesser General Public License v3.0",
+    "url": "https://spdx.org/licenses/LGPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/AllayMC/TemplateWorld",
+    "wiki": ""
+  },
+  "name": "TemplateWorld",
+  "server_version": "",
+  "source": "https://github.com/AllayMC/TemplateWorld",
+  "stars": 0,
+  "summary": "TemplateWorld is a plugin to make it able to create a runtime-only world based on a 'template world'",
+  "updated_at": 1766578614,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/AllayMC/TemplateWorld/commits/0.1.0",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "TemplateWorld-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 7328,
+          "url": "https://github.com/AllayMC/TemplateWorld/releases/download/0.1.0/TemplateWorld-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1766578895,
+      "version": "0.1.0"
+    }
+  ]
+}

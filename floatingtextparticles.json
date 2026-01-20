@@ -1,0 +1,54 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+      "name": "Mythical-Games",
+      "url": "https://github.com/Mythical-Games"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1761022596,
+  "dependencies": [],
+  "description": "# 🖌️ FloatingTextParticles\n\n![Preview](https://github.com/Mythical-Games/FloatingTextParticles/blob/master/Screenshot_20251021_155038.jpg)\n\nA simple yet powerful **Floating Text Particles plugin** for **AllayMC**, allowing you to create, manage, and display floating texts anywhere in your world.  \nPerfect for announcements, labels, NPC titles, or region markers!\n\n---\n\n## ✨ Features\n\n- 🚀 Create custom floating texts easily via commands or config  \n- 🔄 Persistent floating texts — saved and restored on server restart  \n- 🎨 Supports **color codes**\n- ⚡ Lightweight and optimized for performance  \n- 🗺️ Works across multiple worlds  \n\n---\n",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+  "id": "floatingtextparticles",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "FloatingTextParticles",
+  "server_version": "",
+  "source": "https://github.com/Mythical-Games/FloatingTextParticles",
+  "stars": 1,
+  "summary": "A simple Floating Texts plugin for AllayMC!",
+  "updated_at": 1765653118,
+  "versions": [
+    {
+      "changelog": "Update to Allay-API 0.18.0",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "FloatingTextParticles-1.0.0-shaded.jar",
+          "primary": true,
+          "size": 482318,
+          "url": "https://github.com/Mythical-Games/FloatingTextParticles/releases/download/1.0.0/FloatingTextParticles-1.0.0-shaded.jar"
+        }
+      ],
+      "name": "FloatingTextParticles",
+      "prerelease": false,
+      "published_at": 1761047068,
+      "version": "1.0.0"
+    }
+  ]
+}

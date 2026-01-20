@@ -1,0 +1,54 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1765208646,
+  "dependencies": [],
+  "description": "# Essentials ✨\n\nA basic Essentials plugin built on top of Allay. 🧰\n\nIt provides common utility commands and simple event listeners to help with day-to-day server use.\n\n## Features 🚀\n\n- `ping`: view your current network latency 📡\n- `back`: return to your last death location or position before a teleport 🧭\n- `tpa`: send teleport requests between players and accept/deny them 🔗\n- `warp`: manage named warp points (tp/add/remove/list) 🗺️\n- `home`: manage personal homes (tp/add/remove) 🏠\n- `hub`: teleport to the server's hub spawn location 🏛️\n- `notice`: display server notices to players on join and on command 📢\n\n> See \"Commands & Permissions\" below for details.\n\n## Configuration ⚙️\n\nThe plugin uses a `config.yml` file located in the `plugins/Essentials/` directory. On first run, it will automatically create a default configuration file.\n\n### config.yml Structure\n\n```yaml\n# Essentials Plugin Configuration\n# Control which features are enabled\n\n# Feature toggles - Set to false to disable a feature\nfeatures:\n  # Enable /ping command - Shows player's network latency\n  ping: true\n\n  # Enable /back command - Teleport back to death location\n  back: true\n\n  # Enable /tpa command - Request to teleport to another player\n  tpa: true\n\n  # Enable /home commands - Manage personal home locations\n  # Sub-commands: tp, add, remove, list\n  home: true\n\n  # Enable /warp commands - Manage server-wide warp points\n  # Sub-commands: tp, add, remove, list\n  warp: true\n\n  # Enable /notice command and join notice - Server announcements\n  # Players see notice on join, can use /notice view to view again\n  # Admins can use /notice set <content> to update\n  notice: true\n\n  # Enable /hub and /sethub commands - Teleport to hub spawn\n  # /hub - Teleport to hub (available to all players)\n  # /sethub - Set hub location (admin only)\n  hub: true\n\n# Notice configuration\nnotice:\n  # The notice content shown to players\n  # Use \\n for line breaks\n  content: \"Welcome to the server!\\n\\nPlease read the rules and have fun!\"\n\n  # Notice title shown in the form\n  title: \"Server Notice\"\n```\n\n### How to Disable Features\n\nTo disable a feature, simply set its value to `false` in the config file:\n\n```yaml\nfeatures:\n  ping: false  # Disables the /ping command\n  back: true   # Keeps /back enabled\n```\n\nAfter modifying the config, restart the server for changes to take effect.\n\n## Commands & Permissions 🔐\n\n- `ping` 📡\n  - Description: Display your current latency.\n  - Permission: `essentials.command.ping`\n\n- `back` 🧭\n  - Description: Return to your last key position (e.g., death point or the position before teleport).\n  - Permission: `essentials.command.back`\n\n- `tpa` 🔗\n  - Description: Send a teleport request to another player, with accept/deny subcommands (if implemented).\n  - Permission: `essentials.command.tpa`\n\n- `warp` 🗺️\n  - Description: Manage and travel to named warp points.\n  - Subcommands:\n    - `warp tp`: open a form to choose a warp to teleport to.\n      - Permission: `essentials.command.warp.tp`\n    - `warp add`: create a warp at your current location.\n      - Permission: `essentials.command.warp.add`\n    - `warp remove`: delete an existing warp via form selection.\n      - Permission: `essentials.command.warp.remove`\n    - `warp list`: list all available warp names. 📋\n      - Permission: `essentials.command.warp.list`\n\n- `home` 🏠\n  - Description: Manage and travel to your own homes.\n  - Subcommands:\n    - `home tp`: open a form listing your homes to teleport to.\n      - Permission: `essentials.command.home.tp`\n    - `home add`: create a home at your current location.\n      - Permission: `essentials.command.home.add`\n    - `home remove`: delete one of your homes via form selection.\n      - Permission: `essentials.command.home.remove`\n    - `home list`: list your home names. 📋\n      - Permission: `essentials.command.home.list`\n\n- `notice` 📢\n  - Description: View server notice or update notice content (for admins).\n  - Subcommands:\n    - `notice view`: View the current server notice\n      - Permission: `essentials.command.notice.view`\n      - Shown automatically to players when they join\n    - `notice set <content>`: Update the server notice content\n      - Permission: `essentials.command.notice.set`\n      - Content can include `\\n` for line breaks\n      - Changes are saved immediately to config.yml\n\n- `hub` 🏛️\n  - Description: Teleport to the server's hub spawn location.\n  - Permission: `essentials.command.hub`\n  - Note: Available to all players by default\n\n- `sethub` ⚙️\n  - Description: Set the hub spawn location to your current position.\n  - Permission: `essentials.command.sethub`\n  - Note: Admin only - sets the location where players will be teleported when using `/hub`\n\n## License 📜\n\nThis project is open-sourced under the MIT license. See [LICENSE](https://github.com/smartcmd/Essentials/blob/master/LICENSE) for details.",
+  "downloads": 7,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "essentials",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/Essentials",
+    "wiki": ""
+  },
+  "name": "Essentials",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/Essentials",
+  "stars": 0,
+  "summary": "Essential plugin for Allay server (vibe coded)",
+  "updated_at": 1765447396,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/Essentials/commits/0.1.0",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "Essentials-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 41439,
+          "url": "https://github.com/smartcmd/Essentials/releases/download/0.1.0/Essentials-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1765393524,
+      "version": "0.1.0"
+    }
+  ]
+}

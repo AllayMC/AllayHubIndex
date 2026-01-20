@@ -1,0 +1,44 @@
+{
+  "api_version": "0.17.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1725462850,
+  "dependencies": [],
+  "description": "# ServerInfo\n\nShow some server information through scoreboard.\n\n![img.png](https://raw.githubusercontent.com/smartcmd/ServerInfo/master/img.png)\n\n## Prerequisites\n\n- Java21 or higher.\n- Allay installed.\n\n## License\n\nThis project is licensed under the LGPL v3 License - see the [LICENSE](https://github.com/smartcmd/ServerInfo/blob/master/LICENSE) file for details.",
+  "downloads": 0,
+  "gallery": [
+    {
+      "created": "",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/ServerInfo/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "serverinfo",
+  "license": {
+    "id": "LGPL-3.0",
+    "name": "GNU Lesser General Public License v3.0",
+    "url": "https://spdx.org/licenses/LGPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "ServerInfo",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/ServerInfo",
+  "stars": 1,
+  "summary": "Show some information through scoreboard & bossbar",
+  "updated_at": 1765784270,
+  "versions": []
+}

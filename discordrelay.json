@@ -1,0 +1,60 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
+      "name": "acktarbadulla",
+      "url": "https://github.com/acktarbadulla"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1740572691,
+  "dependencies": [],
+  "description": "#  DiscordRelay for AllayMC & PowerNukkitX Server Software\n\n![Banner](https://github.com/acktarbadulla/DiscordRelay-AllayMC/blob/master/20250227_181724.png)\n\n## Roadmap:\n\n * [x] Server Start and Stop Messages\n * [x] Player Join and Leave Messages\n * [x] Minecraft to Discord Chat Relay\n * [x] Discord to Minecraft Chat Relay\n * [x] /discord Command In-Game to get a discord server link\n * [x] Player Death Messages\n * [ ] Discord account linking for rewards & ranks\n * [ ] Discord-Minecraft / Vice versa Role syncing\n * [ ] Any Suggestions Please Let Me Know! Thanks\n\n## Important\nYou can customize everything in this plugin. From enabling only specific features to changing all the responses and chat format. Checkout our config.yml\n\nFor any support needed relating to an issue with the plugin or needing help to set it up, you may DM me on Discord!\n\n",
+  "downloads": 20,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
+  "id": "discordrelay",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "DiscordRelay",
+  "server_version": "",
+  "source": "https://github.com/acktarbadulla/DiscordRelay-AllayMC",
+  "stars": 1,
+  "summary": "A Simple Minecraft to Discord Relay for the AllayMC Server Software!",
+  "updated_at": 1740809265,
+  "versions": [
+    {
+      "changelog": "**[×] Server Start and Stop Messages**\r\n**[×] Player Join and Leave Messages**\r\n**[×] Minecraft to Discord Chat Relay**\r\n**[×] Discord to Minecraft Chat Relay**\r\n**[×] /discord Command In-Game**\r\n**[×] Player Death Messages**",
+      "downloads": 20,
+      "files": [
+        {
+          "filename": "DiscordRelay-1.0.0-SNAPSHOT-shaded.jar",
+          "primary": true,
+          "size": 19023723,
+          "url": "https://github.com/acktarbadulla/DiscordRelay-AllayMC/releases/download/AllayMC/DiscordRelay-1.0.0-SNAPSHOT-shaded.jar"
+        },
+        {
+          "filename": "DiscordRelay-POWERNUKKITX-1.0.0-SNAPSHOT-shaded.jar",
+          "primary": false,
+          "size": 19482789,
+          "url": "https://github.com/acktarbadulla/DiscordRelay-AllayMC/releases/download/AllayMC/DiscordRelay-POWERNUKKITX-1.0.0-SNAPSHOT-shaded.jar"
+        }
+      ],
+      "name": "DiscordRelay-1.0.0-SNAPSHOT",
+      "prerelease": false,
+      "published_at": 1740577329,
+      "version": "AllayMC"
+    }
+  ]
+}
