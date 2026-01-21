@@ -50,9 +50,9 @@
   "name": "Terra",
   "server_version": "",
   "source": "https://github.com/PolyhedralDev/Terra",
-  "stars": 791,
+  "stars": 792,
   "summary": "Voxel world generation modding platform",
-  "updated_at": 1768475046,
+  "updated_at": 1768982810,
   "versions": [
     {
       "changelog": "This version adds full support for 3D biomes in the following addons:\r\n* 3D Noise Chunk Generator (3D biomes are sampled for noise)\r\n* Feature Generation Stage (Feature generator uses ranges in biome columns to place features)\r\n\r\nA number of optimisations regarding 3D biomes were added:\r\n* Addition of \"biome columns\" to avoid repeating expensive 3D computations\r\n* Optional override for a `BiomeProvider` implementation to return a \"base biome\" used in biome columns\r\n* More advanced biome caching\r\n* Finer control over biome caches\r\n\r\nSeveral other general-purpose optimisations were added:\r\n* TerraScript backend was rewritten to store LVs in an array-based table with reference and store nodes containing table indices, rather than storing in an ID-based hashmap\r\n* 3D Noise Chunk Generator was optimised to avoid biome lookups when possible\r\n* Adjacent palette locators no longer instantiate 4 extra `Column` instances\r\n* Iteration over `Range` using foreach was replaced with index-based iteration in hot code.\r\n\r\nThis version also adds a new core addon, the Biome Extrusion Provider.\r\n\r\nThe Extrusion Provider takes another biome provider as a parameter, which it uses as a \"base.\" Through \"extrusion\" layers, 3D biomes are inserted on top of the base biomes.\r\n\r\nThis release also fixes a Minecraft bug where bee entities access the world `random` instance upon instantiation, which during worldgen can potentially cause an exception due to a race condition (Fixes #327)\r\n",
