@@ -12,15 +12,15 @@
   ],
   "created_at": 1768302700,
   "dependencies": [],
-  "description": "# AllayBacktoDeath\nA simple plugin that adds the /back command to teleport players to their last death location.\n\nPermission: back.run\n",
+  "description": "# AllayBacktoDeath\n- A simple plugin that adds the /back command to teleport players to their last death location.\n\nPermission: back.run\n",
   "downloads": 2,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/216477222?v=4",
   "id": "backtodeath",
   "license": {
-    "id": "ARR",
-    "name": "All Rights Reserved",
-    "url": ""
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://spdx.org/licenses/Apache-2.0.html"
   },
   "links": {
     "discord": "",
@@ -32,7 +32,7 @@
   "source": "https://github.com/Kanelucky/AllayBacktoDeath",
   "stars": 0,
   "summary": "Return to your last death location",
-  "updated_at": 1768304113,
+  "updated_at": 1769056365,
   "versions": [
     {
       "changelog": "",
