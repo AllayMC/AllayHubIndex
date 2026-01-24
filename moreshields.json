@@ -1,0 +1,54 @@
+{
+  "api_version": "0.23.0-SNAPSHOT",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60543561?v=4",
+      "name": "ClexaGod",
+      "url": "https://github.com/ClexaGod"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1769023257,
+  "dependencies": [],
+  "description": "# MoreShields\n\nA custom shields plugin for Allay servers with an embedded resource pack.\n\n## Features\n- 12 custom shields (amethyst, bee, breeze, diamond, dragon, emerald, ender, goat, nether, netherite, sea, warden)\n- Embedded resource pack (no extra pack install required)\n- Language files (EN + TR)\n- Per-shield recipes and durability settings\n\n## Shield List\n- Amethyst\n- Bee\n- Breeze\n- Diamond\n- Dragon\n- Emerald\n- Ender\n- Goat\n- Nether\n- Netherite\n- Sea\n- Warden\n\n## Durability\n- Vanilla shield: 336\n- Amethyst: +20%\n- Diamond: +85%\n- Emerald: +85%\n- Netherite: +95%\n- Breeze: +120%\n- Dragon: +150%\n- Ender: +10%\n- Warden: +200%\n- Sea: +50%\n- Nether: +250%\n- Bee: same as vanilla\n- Goat: same as vanilla\n\n## Recipes (visual)\nIn all recipes, the bottom row only has the center slot filled.\n\nLegend:\n- A = Amethyst Block\n- S = Amethyst Shard\n- P = Planks (any type)\n- N = Netherrack\n- I = Netherite Ingot\n- D = Diamond\n- E = Emerald\n- R = Breeze Rod\n- W = Wind Charge\n- O = Obsidian\n- H = Dragon Head\n- X = End Stone\n- Y = Ender Eye\n- B = Bee Nest\n- G = Goat Horn\n- L = Leather\n- M = Iron Ingot\n- U = Heart of the Sea\n- Z = Prismarine\n- K = Sculk\n- C = Sculk Sensor\n- Q = Ender Pearl\n\nAmethyst\n```\nA S A\nA A A\n  A\n```\n\nBee\n```\nP B P\nP P P\n  P\n```\n\nBreeze\n```\nR W R\nR R R\n  R\n```\n\nDiamond\n```\nD D D\nD D D\n  D\n```\n\nDragon\n```\nO H O\nO O O\n  O\n```\n\nEmerald\n```\nE E E\nE E E\n  E\n```\n\nEnder\n```\nX Y X\nX X X\n  X\n```\n\nGoat\n```\nG M G\nL P L\n  P\n```\n\nNether\n```\nO Q O\nO O O\n  O\n```\n\nNetherite\n```\nN I N\nN   N\n  N\n```\n\nSea\n```\nZ U Z\nZ Z Z\n  Z\n```\n\nWarden\n```\nK C K\nK K K\n  K\n```\n\n## Installation\n1. Copy `MoreShields-0.1.0.jar` into your `plugins/` folder.\n2. Restart the server.\n\nThe resource pack is bundled inside the plugin.\n\n## Build\n```bash\ncd MoreShields\n./gradlew build\n```\n\nOutput:\n```\nbuild/libs/MoreShields-0.1.0.jar\n```\n\n## Notes\n- Shield names are localized based on the player language.\n- All plank types are accepted in recipes where planks are required.\n",
+  "downloads": 2,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60543561?v=4",
+  "id": "moreshields",
+  "license": {
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://spdx.org/licenses/Apache-2.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/ClexaGod/MoreShields",
+    "wiki": ""
+  },
+  "name": "MoreShields",
+  "server_version": "",
+  "source": "https://github.com/ClexaGod/MoreShields",
+  "stars": 1,
+  "summary": "More Shield for Allay",
+  "updated_at": 1769250522,
+  "versions": [
+    {
+      "changelog": "Release 0.1.0",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "MoreShields-0.1.0.jar",
+          "primary": true,
+          "size": 282379,
+          "url": "https://github.com/ClexaGod/MoreShields/releases/download/0.1.0/MoreShields-0.1.0.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1769024351,
+      "version": "0.1.0"
+    }
+  ]
+}
