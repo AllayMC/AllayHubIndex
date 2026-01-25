@@ -1,5 +1,5 @@
 {
-  "api_version": "0.18.0",
+  "api_version": "0.23.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
@@ -32,8 +32,36 @@
   "source": "https://github.com/Miroshka000/Aether",
   "stars": 3,
   "summary": "⚡ Aether Network Core - High-Performance Network Bridge for WaterdogPE & AllayMC",
-  "updated_at": 1767169439,
+  "updated_at": 1769339563,
   "versions": [
+    {
+      "changelog": "## 🚀 Aether v1.0.2\n\n**Cross-server communication system** for AllayMC and WaterdogPE networks with optimized TCP/QUIC transport.\n\n### 📦 Downloads\n\n| File | Description |\n|------|-------------|\n| `aether-server-*-web.jar` | **AllayMC Plugin** - Install on each game server |\n| `aether-proxy-*-web.jar` | **WaterdogPE Plugin** - Full version with Web Admin Panel |\n| `aether-proxy-*-lite.jar` | **WaterdogPE Plugin** - Lightweight version without Web Panel |\n\n### 🔧 Quick Setup\n\n1. Place `aether-proxy-*.jar` in your WaterdogPE `plugins/` folder\n2. Place `aether-server-*.jar` in each AllayMC server `plugins/` folder\n3. Configure `config.yml` on each server with matching `secret-key`\n4. Start proxy, then start game servers\n5. Access Web Panel at `http://localhost:8080` (default: admin/admin)\n\n### ✨ Features\n\n- 🌐 **Web Admin Panel** - Beautiful dashboard for monitoring\n- 🔗 **ProxyTransport** - TCP/QUIC transport for lower latency\n- 👥 **Real-time sync** - Player counts, TPS, server status\n- 🌀 **Portal System** - Region-based server transfer\n- ⚖️ **Load Balancer** - Multiple strategies (Round Robin, Least Connections, etc.)\n- 📡 **Event Bridge** - Cross-server events and messaging\n- 🔄 **Auto-reconnect** - Automatic recovery on connection loss\n- 📊 **PlaceholderAPI** - Integration for scorebards and chat\n\n### 🔐 Security Notice\n\n⚠️ **Change default credentials immediately!**\n- Default login: `admin` / `admin`\n- SSL certificate recommended for production\n\n### 📚 Documentation\n\n- [API Documentation](https://github.com/Miroshka000/Aether/blob/master/docs/API.md)\n- [README (English)](https://github.com/Miroshka000/Aether/blob/master/README.md)\n- [README (Русский)](https://github.com/Miroshka000/Aether/blob/master/README_RU.md)\n\n---\n\n**Full Changelog**: https://github.com/Miroshka000/Aether/commits/v1.0.2\n",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "aether-proxy-1.0.2-lite.jar",
+          "primary": true,
+          "size": 28275658,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.2/aether-proxy-1.0.2-lite.jar"
+        },
+        {
+          "filename": "aether-proxy-1.0.2-web.jar",
+          "primary": false,
+          "size": 28357063,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.2/aether-proxy-1.0.2-web.jar"
+        },
+        {
+          "filename": "aether-server-1.0.2-web.jar",
+          "primary": false,
+          "size": 11272913,
+          "url": "https://github.com/Miroshka000/Aether/releases/download/v1.0.2/aether-server-1.0.2-web.jar"
+        }
+      ],
+      "name": "Aether v1.0.2",
+      "prerelease": false,
+      "published_at": 1769339706,
+      "version": "1.0.2"
+    },
     {
       "changelog": "## 🚀 Aether v1.0.1\n\n**Cross-server communication system** for AllayMC and WaterdogPE networks with optimized TCP/QUIC transport.\n\n### 📦 Downloads\n\n| File | Description |\n|------|-------------|\n| `aether-server-*-web.jar` | **AllayMC Plugin** - Install on each game server |\n| `aether-proxy-*-web.jar` | **WaterdogPE Plugin** - Full version with Web Admin Panel |\n| `aether-proxy-*-lite.jar` | **WaterdogPE Plugin** - Lightweight version without Web Panel |\n\n### 🔧 Quick Setup\n\n1. Place `aether-proxy-*.jar` in your WaterdogPE `plugins/` folder\n2. Place `aether-server-*.jar` in each AllayMC server `plugins/` folder\n3. Configure `config.yml` on each server with matching `secret-key`\n4. Start proxy, then start game servers\n5. Access Web Panel at `http://localhost:8080` (default: admin/admin)\n\n### ✨ Features\n\n- 🌐 **Web Admin Panel** - Beautiful dashboard for monitoring\n- 🔗 **ProxyTransport** - TCP/QUIC transport for lower latency\n- 👥 **Real-time sync** - Player counts, TPS, server status\n- 🌀 **Portal System** - Region-based server transfer\n- ⚖️ **Load Balancer** - Multiple strategies (Round Robin, Least Connections, etc.)\n- 📡 **Event Bridge** - Cross-server events and messaging\n- 🔄 **Auto-reconnect** - Automatic recovery on connection loss\n- 📊 **PlaceholderAPI** - Integration for scorebards and chat\n\n### 🔐 Security Notice\n\n⚠️ **Change default credentials immediately!**\n- Default login: `admin` / `admin`\n- SSL certificate recommended for production\n\n### 📚 Documentation\n\n- [API Documentation](https://github.com/Miroshka000/Aether/blob/master/docs/API.md)\n- [README (English)](https://github.com/Miroshka000/Aether/blob/master/README.md)\n- [README (Русский)](https://github.com/Miroshka000/Aether/blob/master/README_RU.md)\n\n---\n\n**Full Changelog**: https://github.com/Miroshka000/Aether/commits/v1.0.1\n",
       "downloads": 5,
