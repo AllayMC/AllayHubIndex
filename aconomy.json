@@ -8,12 +8,12 @@
     }
   ],
   "categories": [
-    "utility"
+    "economy"
   ],
   "created_at": 1765447101,
   "dependencies": [],
   "description": "# 💰 Aconomy\n\nA simple and flexible economy plugin for [AllayMC](https://github.com/AllayMC/Allay) that implements the [EconomyAPI](https://github.com/AllayMC/EconomyAPI).\n\n## ✨ Features\n\n- 🔌 Full implementation of EconomyAPI interfaces\n- 💾 Multiple storage backends (JSON, SQLite, H2)\n- 💵 Configurable currency (name, symbol, decimal places)\n\n## 📋 Requirements\n\n- Java 21 or higher\n- AllayMC server\n- [EconomyAPI](https://github.com/AllayMC/EconomyAPI) plugin installed\n\n## 📥 Installation\n\n1. Download the latest release from the [Releases](https://github.com/smartcmd/Aconomy/releases) page\n2. Place the jar file in your server's `plugins` folder\n3. Start the server\n4. Configure the plugin in `plugins/Aconomy/config.yml`\n\n## ⚙️ Configuration\n\n```yaml\n# Storage Configuration\nstorage:\n  # Storage type: json, sqlite, or h2\n  # json - Uses local JSON file (accounts.json)\n  # sqlite - Uses SQLite database (economy.db)\n  # h2 - Uses H2 database (economy.mv.db)\n  type: json\n\n# Currency Configuration\ncurrency:\n  # The name of the currency (singular form)\n  name: Coin\n  # The plural form of the currency name\n  plural: Coins\n  # The symbol displayed before amounts\n  symbol: \"$\"\n  # Number of decimal places to display\n  fraction_digits: 2\n\n# Economy Settings\neconomy:\n  # Default balance for new accounts\n  default_balance: 0.0\n```\n\n## 📜 Commands\n\nAll commands use `/aconomy` (alias: `/aco`)\n\n| Command                           | Description                      | Permission                 |\n|-----------------------------------|----------------------------------|----------------------------|\n| `/aco balance [player]`           | Check balance                    | `aconomy.command.balance`  |\n| `/aco transfer <amount> <player>` | Transfer money to another player | `aconomy.command.transfer` |\n| `/aco top [count]`                | Show richest players             | `aconomy.command.top`      |\n| `/aco set <amount> [player]`      | Set player's balance             | `aconomy.command.set`      |\n| `/aco deposit <amount> [player]`  | Add money to account             | `aconomy.command.deposit`  |\n| `/aco withdraw <amount> [player]` | Remove money from account        | `aconomy.command.withdraw` |\n\n### 🔐 Permissions\n\n| Permission                 | Description             | Default  |\n|----------------------------|-------------------------|----------|\n| `aconomy.command`          | Base command permission | Everyone |\n| `aconomy.command.balance`  | Check balance           | Everyone |\n| `aconomy.command.transfer` | Transfer money          | Everyone |\n| `aconomy.command.top`      | View leaderboard        | Everyone |\n| `aconomy.command.set`      | Set balance (admin)     | OP only  |\n| `aconomy.command.deposit`  | Deposit money (admin)   | OP only  |\n| `aconomy.command.withdraw` | Withdraw money (admin)  | OP only  |\n\n## 📄 License\n\nThis project is licensed under the LGPL-3.0 License - see the [LICENSE](https://github.com/smartcmd/Aconomy/blob/master/LICENSE) file for details.\n\n## 🙏 Credits\n\n- [AllayMC](https://github.com/AllayMC/Allay) - The Minecraft Bedrock server software\n- [EconomyAPI](https://github.com/AllayMC/EconomyAPI) - The economy API interface\n",
-  "downloads": 7,
+  "downloads": 8,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "aconomy",
@@ -32,11 +32,11 @@
   "source": "https://github.com/smartcmd/Aconomy",
   "stars": 0,
   "summary": "Aconomy is an simple implementation of https://github.com/AllayMC/EconomyAPI",
-  "updated_at": 1767525318,
+  "updated_at": 1769288071,
   "versions": [
     {
       "changelog": "",
-      "downloads": 3,
+      "downloads": 4,
       "files": [
         {
           "filename": "Aconomy-0.1.1-shaded.jar",
