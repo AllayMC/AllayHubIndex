@@ -1,5 +1,5 @@
 {
-  "api_version": "0.16.0",
+  "api_version": "0.23.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
@@ -12,19 +12,19 @@
   ],
   "created_at": 1764346580,
   "dependencies": [],
-  "description": "# Allay Java Plugin Template\n\nWelcome to the java plugin template for allay.\n\n## Prerequisites\n\n- Java21 or higher.\n- Allay installed.\n\n## Getting Started\n\n1. **Clone this Repository**\n\n```bash\ngit clone https://github.com/AllayMC/JavaPluginTemplate.git\n```\n   \n2. **Navigate to the Cloned Directory**\n\n```bash\ncd JavaPluginTemplate\n```\n   \n3. **Change Plugin Information**\n\n- Rename package name from `org.allaymc.javaplugintemplate` to `your.group.name.and.pluginname`\n- Update [build.gradle.kts](https://github.com/AllayMC/ViAllay/blob/master/build.gradle.kts) and [settings.gradle.kts](https://github.com/AllayMC/ViAllay/blob/master/settings.gradle.kts)\n- Reload gradle\n   \n4. **Build and Run Your Plugin**\n\n```bash\ngradlew shadowJar\n```\n   \nThis command will produce a `.jar` file in the `build/libs` directory. \nCopy the `.jar` file to the `plugins` directory of your allay server.\nStart the allay server and check the logs to ensure your plugin loads and operates\nas expected.\n\n5. **Test Your Plugin in Gradle**\n\n```bash\ngradlew runServer\n```\n\nThis command will start an allay server with your plugin loaded.\nThen close allay server by clicking `X` in the dashboard window.\n\n## Documentation\n\nFor a deeper dive into the Allay API and its functionalities, please refer to our [documentation](https://docs.allaymc.org) (WIP).\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/AllayMC/ViAllay/blob/master/LICENSE) file for details.",
+  "description": "# ViAllay\n\n**ViAllay** is an [AllayMC](https://github.com/AllayMC/Allay) plugin that enables **Java Edition** players to join **Bedrock Edition** servers. It brings the power of [ViaVersion](https://github.com/ViaVersion/ViaVersion) and [ViaBedrock](https://github.com/RaphiMC/ViaBedrock) to the AllayMC ecosystem.\n\n## Features\n\n- **Java to Bedrock Translation** - Allows Minecraft Java Edition clients to connect to AllayMC Bedrock servers\n- **Wide Version Support** - Supports a broad range of Java Edition client versions through ViaVersion, ViaBackwards, ViaRewind, and ViaLegacy\n- **Seamless Integration** - Works as a native AllayMC plugin with full configuration support\n- **Custom Server Status** - Configurable MOTD and max players display\n- **Privacy Compliant** - Optional IP address logging (GDPR friendly)\n\n## How It Works\n\n```\n┌─────────────────┐         ┌─────────────┐         ┌─────────────────┐\n│  Java Edition   │  TCP    │   ViAllay   │  RakNet │  AllayMC Server │\n│     Client      │ ──────► │   (Proxy)   │ ──────► │    (Bedrock)    │\n└─────────────────┘         └─────────────┘         └─────────────────┘\n                                  │\n                    ┌─────────────┴─────────────┐\n                    │     Protocol Translation   │\n                    │  ViaVersion + ViaBedrock   │\n                    └───────────────────────────┘\n```\n\nViAllay acts as a protocol translation proxy:\n1. Java Edition clients connect to ViAllay via TCP (default port 25565)\n2. ViAllay translates Java Edition protocol to Bedrock Edition protocol using ViaVersion stack\n3. Translated packets are forwarded to the AllayMC Bedrock server via RakNet\n\n## Requirements\n\n- **AllayMC Server** - Version 0.23.0 or later\n- **Java** - Version 21 or later\n\n## Installation\n\n1. Download the latest `ViAllay-x.x.x-shaded.jar` from [Releases](https://github.com/AllayMC/ViAllay/releases)\n2. Place the JAR file in your AllayMC server's `plugins` folder\n3. Start or restart the server\n4. Configure `plugins/ViAllay/viallay.yml` as needed\n5. Restart the server to apply configuration changes\n\n## Configuration\n\nConfiguration file: `plugins/ViAllay/viallay.yml`\n\n```yaml\n# Network Settings\nnetwork-settings:\n  bind-address: \"0.0.0.0\"    # Address to listen on (0.0.0.0 = all interfaces)\n  bind-port: 25565           # Port for Java Edition clients\n  connect-timeout: 8000      # Backend connection timeout (ms)\n\n# Bedrock Backend Settings\nbedrock-backend-settings:\n  bedrock-host: \"127.0.0.1\"  # AllayMC server address\n  bedrock-port: 19132        # AllayMC server port\n\n# Protocol Settings\nprotocol-settings:\n  compression-threshold: 256              # Packet compression threshold (-1 to disable)\n  ignore-protocol-translation-errors: false\n  suppress-client-protocol-errors: false\n\n# Server Status Settings (shown in Java server list)\nserver-status-settings:\n  motd: \"\"                   # Custom MOTD (empty = use backend server's MOTD)\n  max-players: -1            # Custom max players (-1 = use backend server's value)\n\n# Logging Settings\nlogging-settings:\n  log-ips: true              # Log player IP addresses\n  log-status-requests: false # Log server list ping requests\n  protocol-debug: false      # Enable protocol debug logging\n\n# Authentication Settings\nauthentication-settings:\n  online-mode: false         # Mojang authentication (not yet implemented)\n```\n\n## Supported Versions\n\n### Java Edition Clients\nViAllay supports a wide range of Java Edition versions through the ViaVersion protocol translation stack:\n- Modern versions (1.21.x, 1.20.x, etc.)\n- Legacy versions via ViaBackwards and ViaRewind\n- Ancient versions via ViaLegacy\n\n### Bedrock Server\n- AllayMC with latest Bedrock protocol support\n\n## Building from Source\n\n```bash\n# Clone the repository\ngit clone https://github.com/AllayMC/ViAllay.git\ncd ViAllay\n\n# Build with Gradle\n./gradlew build\n\n# The shaded JAR will be in build/libs/\n```\n\n## Credits\n\nViAllay is built upon the excellent work of:\n\n- **[ViaVersion](https://github.com/ViaVersion/ViaVersion)** - Core protocol translation framework\n- **[ViaBackwards](https://github.com/ViaVersion/ViaBackwards)** - Backwards compatibility support\n- **[ViaRewind](https://github.com/ViaVersion/ViaRewind)** - Legacy version support\n- **[ViaLegacy](https://github.com/RaphiMC/ViaLegacy)** - Ancient version support\n- **[ViaBedrock](https://github.com/RaphiMC/ViaBedrock)** - Java to Bedrock translation\n- **[ViaProxy](https://github.com/RaphiMC/ViaProxy)** - Architecture reference and inspiration\n- **[NetMinecraft](https://github.com/RaphiMC/NetMinecraft)** - Minecraft networking library\n\nSpecial thanks to [RaphiMC](https://github.com/RaphiMC) for the incredible Via* ecosystem!\n\n## License\n\nThis project is licensed under the [GPL-3.0 License](https://github.com/AllayMC/ViAllay/blob/master/LICENSE).\n\n## Links\n\n- [AllayMC](https://github.com/AllayMC/Allay) - The Bedrock server software\n- [ViaVersion Project](https://viaversion.com/) - Protocol translation ecosystem\n- [Issue Tracker](https://github.com/AllayMC/ViAllay/issues) - Report bugs and request features\n",
   "downloads": 0,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
   "id": "viallay",
   "license": {
-    "id": "MIT",
-    "name": "MIT License",
-    "url": "https://spdx.org/licenses/MIT.html"
+    "id": "GPL-3.0",
+    "name": "GNU General Public License v3.0",
+    "url": "https://spdx.org/licenses/GPL-3.0.html"
   },
   "links": {
     "discord": "",
-    "homepage": "https://github.com/AllayMC/JavaPluginTemplate",
+    "homepage": "https://github.com/AllayMC/ViAllay",
     "wiki": ""
   },
   "name": "ViAllay",
@@ -32,6 +32,6 @@
   "source": "https://github.com/AllayMC/ViAllay",
   "stars": 1,
   "summary": "Plugin that brings Via*™ tech to Allay!",
-  "updated_at": 1769503899,
+  "updated_at": 1769509924,
   "versions": []
 }
