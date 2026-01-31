@@ -1,0 +1,37 @@
+{
+  "api_version": "0.24.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/100384210?v=4",
+      "name": "Novampr",
+      "url": "https://github.com/Novampr"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1722265416,
+  "dependencies": [],
+  "description": "# Pronouns",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/100384210?v=4",
+  "id": "novampr/pronouns",
+  "license": {
+    "id": "NOASSERTION",
+    "name": "Other",
+    "url": "https://github.com/Novampr/Pronouns2/blob/master/LICENSE"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "Pronouns",
+  "server_version": "",
+  "source": "https://github.com/Novampr/Pronouns2",
+  "stars": 0,
+  "summary": "PronounDB, in Minecraft! Again!",
+  "updated_at": 1740842990,
+  "versions": []
+}
