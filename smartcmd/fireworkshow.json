@@ -1,0 +1,70 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "decoration"
+  ],
+  "created_at": 1768214343,
+  "dependencies": [],
+  "description": "# 🎆 FireworkShow\n\n> ✨ A firework show plugin for AllayMC servers\n\n[![Allay API](https://img.shields.io/badge/Allay%20API-0.21.0-blue)](https://github.com/AllayMC/Allay)\n[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)\n\n## 📖 Introduction\n\nFireworkShow is a feature-rich firework display plugin that allows server administrators to automatically spawn fireworks at designated locations. Supports fully customizable firework effects, timed spawning, night-only mode, and more.\n\n## ✨ Features\n\n- 🎯 **Multi-location Support** - Configure fireworks at multiple locations across different worlds\n- ⏰ **Timed Spawning** - Configurable spawn intervals (in game ticks)\n- 🌙 **Night-only Mode** - Optionally spawn fireworks only during in-game night\n- 🎨 **Fully Customizable** - Custom explosion types, colors, fade colors, twinkle and trail effects\n- 🖥️ **In-game UI** - Convenient form interface to manage all settings\n- 🌍 **Multi-language Support** - Supports Chinese (zh_CN) and English (en_US)\n- 💾 **Persistent Storage** - Configuration automatically saved to YAML file\n\n## 📋 Commands\n\n| Command                                 | Description                           | Permission                          |\n|-----------------------------------------|---------------------------------------|-------------------------------------|\n| `/fireworkshow ui`                      | 🖥️ Open management UI (players only) | `fireworkshow.command.fireworkshow` |\n| `/fireworkshow list`                    | 📋 List all firework positions        | `fireworkshow.command.fireworkshow` |\n| `/fireworkshow add <world> <x> <y> <z>` | ➕ Add a new position                  | `fireworkshow.command.fireworkshow` |\n| `/fireworkshow remove <world> <index>`  | ➖ Remove a position                   | `fireworkshow.command.fireworkshow` |\n| `/fireworkshow toggle <world> <index>`  | 🔄 Toggle position enabled state      | `fireworkshow.command.fireworkshow` |\n\n**Aliases:** `fwshow`, `fws`\n\n## 🎨 Firework Types\n\n| Type           | Description     |\n|----------------|-----------------|\n| `SMALL_SPHERE` | 🔵 Small sphere |\n| `LARGE_SPHERE` | ⭕ Large sphere  |\n| `STAR`         | ⭐ Star shape    |\n| `CREEPER`      | 💀 Creeper face |\n| `BURST`        | 💥 Burst        |\n\n## 🎨 Available Colors\n\n```\nblack, red, green, brown, blue, purple, cyan, light_gray,\ngray, pink, lime, yellow, light_blue, magenta, orange, white\n```\n\n## ⚙️ Configuration Example\n\n```yaml\nconfigVersion: 1\npositions:\n  - worldName: world\n    x: 100\n    y: 64\n    z: 200\n    enabled: true\n    nightOnly: false\n    spawnTick: 40\n    flightTimeMultiplier: 2\n    explosions:\n      - type: LARGE_SPHERE\n        colors:\n          - RED\n          - YELLOW\n        fade:\n          - ORANGE\n        twinkle: true\n        trail: true\n```\n\n## 📦 Installation\n\n1. Download the latest `FireworkShow-x.x.x-shaded.jar`\n2. Place the JAR file in your server's `plugins` directory\n3. Restart the server\n4. Use `/fireworkshow ui` to start configuring\n\n## 🛠️ Building\n\n```bash\n# Build the plugin\n./gradlew shadowJar\n\n# Run local test server\n./gradlew runServer\n```\n\nBuild output located at `build/libs/FireworkShow-x.x.x-shaded.jar`\n\n## 📁 Project Structure\n\n```\nsrc/main/java/me/daoge/fireworkshow/\n├── 🎆 FireworkShow.java              # Main plugin class\n├── 📍 FireworkPosition.java          # Position data class\n├── 🔧 FireworkUtils.java             # Utility methods\n├── 💬 FireworkShowCommand.java       # Command handler\n├── 👁️ FireworkShowEventListener.java # Event listener\n├── 🖥️ FireworkShowUI.java            # Form UI\n└── 🔑 TrKeys.java                    # Translation key constants\n\nsrc/main/resources/assets/lang/\n├── 🇺🇸 en_US.json                    # English translations\n└── 🇨🇳 zh_CN.json                    # Chinese translations\n```\n\n## 📜 License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/FireworkShow/blob/master/LICENSE) file for details.\n\n---\n\n<p align=\"center\">\n  🎆 Made with ❤️ for AllayMC 🎆\n</p>\n",
+  "downloads": 3,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/fireworkshow",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/FireworkShow",
+    "wiki": ""
+  },
+  "name": "FireworkShow",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/FireworkShow",
+  "stars": 0,
+  "summary": "Firework show for AllayMC",
+  "updated_at": 1769287906,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "FireworkShow-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 31368,
+          "url": "https://github.com/smartcmd/FireworkShow/releases/download/0.2.0/FireworkShow-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1768582346,
+      "version": "0.2.0"
+    },
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "FireworkShow-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 31351,
+          "url": "https://github.com/smartcmd/FireworkShow/releases/download/0.1.0/FireworkShow-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1768218942,
+      "version": "0.1.0"
+    }
+  ]
+}

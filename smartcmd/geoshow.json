@@ -1,0 +1,37 @@
+{
+  "api_version": "0.23.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1769307619,
+  "dependencies": [],
+  "description": "# GeoShow\n\nAn AllayMC plugin that displays player's geolocation information when they join the server.\n\n[中文文档](https://github.com/smartcmd/GeoShow/blob/master/README_CN.md)\n\n## Features\n\n- **Join Notifications**: Broadcasts player's location (Continent - Country - Province - City - ISP) when they join.\n- **Offline Database**: Uses [ip2region](https://github.com/lionsoul2014/ip2region) for fast, offline IP lookups.\n- **Auto Update**: Automatically downloads/updates the database from GitHub/CDN on startup or via command.\n- **Multilingual**: Supports English (`en_US`) and Chinese (`zh_CN`) based on client language.\n\n## Commands\n\n- `/geoshow update`: Update ip2region database from GitHub/CDN.\n- `/geoshow reload`: Reload ip2region database from disk.\n- `/geoshow lookup <ip>`: Lookup geolocation for a specific IP.\n\n## Installation\n\n1. Download the latest `GeoShow-x.x.x.jar` from releases.\n2. Place it into your server's `plugins` folder.\n3. Restart the server.\n\nThe plugin will automatically download the `ip2region.xdb` database on first launch. If download fails (e.g. network issues), you can manually download `ip2region.xdb` and place it in `plugins/GeoShow/` folder.\n\n## Build\n\n```bash\n./gradlew shadowJar\n```\n\nThe output jar will be in `build/libs/`.\n\n## License\n\nMIT\n",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/geoshow",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/GeoShow",
+    "wiki": ""
+  },
+  "name": "GeoShow",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/GeoShow",
+  "stars": 1,
+  "summary": "Show the geolocation of the player's IP when they join",
+  "updated_at": 1769371725,
+  "versions": []
+}

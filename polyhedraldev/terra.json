@@ -1,0 +1,208 @@
+{
+  "api_version": "0.13.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/67664499?v=4",
+      "name": "PolyhedralDev",
+      "url": "https://github.com/PolyhedralDev"
+    },
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/51165317?v=4",
+      "name": "IWareQ",
+      "url": "https://github.com/IWareQ"
+    },
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/39248502?v=4",
+      "name": "dfsek",
+      "url": "https://github.com/dfsek"
+    },
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/25417900?v=4",
+      "name": "duplexsystem",
+      "url": "https://github.com/duplexsystem"
+    },
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46940694?v=4",
+      "name": "solonovamax",
+      "url": "https://github.com/solonovamax"
+    }
+  ],
+  "categories": [
+    "world-generation"
+  ],
+  "created_at": 1599554299,
+  "dependencies": [],
+  "description": "<img align=\"left\" width=\"64\" height=\"64\" src=\"https://raw.githubusercontent.com/wiki/PolyhedralDev/Terra/images/terra_logo.png\" alt=\"Terra Logo\">\n\n# Terra\n\nTerra is a modern world generation modding platform, primarily for Minecraft.\nTerra allows complete customization of world generation with an advanced API,\ntightly integrated with a powerful configuration system.\n\nTerra consists of several parts:\n\n* A voxel world generation API with emphasis on configuration and extensibility\n* Several platform implementations, the layer between the API and the platform\n  it's running on.\n* An addon loader, which allows addons to interface with the Terra API in a\n  platform-agnostic setting\n* Several \"core addons,\" which implement the \"default\" configurations of Terra.\n  These addons can be thought of as the config \"standard library\"\n\nTerra currently officially supports the Fabric mod loader and the Bukkit API\n(Paper and friends). We welcome Pull Requests implementing additional platforms!\n\n## Downloads:\n\n* Fabric: [Modrinth](https://modrinth.com/mod/terra)\n  / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/terra-world-generator)\n* Paper+ servers (Paper, Tuinity, Purpur,\n  etc): [SpigotMC](https://www.spigotmc.org/resources/85151/)\n\n## Building and Running Terra\n\nTo build, simply run `./gradlew build` (`gradlew.bat build` on Windows). This\nwill build all platforms, and produce JARs in `platforms/<platform>/build/libs`\n\n### Production JARs:\n\n* Bukkit: `Terra-<version>-shaded.jar`\n* Fabric: `Terra-<version>-shaded-mapped.jar`\n\n### Building a Specific Platform\n\nTo build a specific platform, run `gradlew :platforms:<platform>:build`.\n\nJARs are produced in `platforms/<platform>/build/libs`.\n\n### Running Minecraft in the IDE\n\nTo run Minecraft with Terra in the IDE (for testing) use the following tasks:\n\n* Bukkit\n    * `runServer` - Run the Paper test server with Terra installed.\n* Fabric\n    * `runClient` - Run a Minecraft Fabric client with Terra installed.\n    * `runServer` - Run a Minecraft Fabric server with Terra installed.\n\n## Contributing\n\nContributions are welcome! If you want to see a feature in Terra, please, open\nan issue, or implement it yourself and submit a PR!\nJoin the discord [here](https://discord.gg/PXUEbbF) if you would like to talk\nmore about the project!\n\n## Licensing\n\nParts of Terra are licensed under either the MIT License or the GNU General\nPublic License, version 3.0.\n\n* Our API is licensed under the [MIT License](https://github.com/PolyhedralDev/Terra/blob/master/LICENSE), to ensure that everyone\n  is able to freely use it however they want.\n* Our core addons are also licensed under the [MIT License](https://github.com/PolyhedralDev/Terra/blob/master/LICENSE), to ensure\n  that people can freely use code from them to learn and make their own addons,\n  without worrying about GPL infection.\n* Our platform-agnostic implementations and platform implementations are\n  licensed under\n  the [GNU General Public License, version 3.0](https://github.com/PolyhedralDev/Terra/blob/master/common/implementation/LICENSE),\n  to ensure that they remain free software wherever they are used.\n\nIf you're not sure which license a particular file is under, check:\n\n* The file's header\n* The LICENSE file in the closest parent folder of the file in question\n\n## Beta\n\nTerra is still in beta! While it is stable, it is not feature-complete. There is\na lot to be added!\n\n## Special Thanks\n\n[![YourKit-Logo](https://www.yourkit.com/images/yklogo.png)](https://www.yourkit.com/)\n\nYourKit has granted Polyhedral Development an open-source license to their\noutstanding Java profiler, allowing us to make our software as performant as it\ncan be!\n\nYourKit supports open source projects with innovative and intelligent tools for\nmonitoring and profiling Java and .NET applications. YourKit is the creator of\nthe\n[YourKit Java Profiler](https://www.yourkit.com/java/profiler/),\n[YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/),\nand [YourKit YouMonitor](https://www.yourkit.com/youmonitor/).\n\n",
+  "downloads": 20492,
+  "gallery": [],
+  "icon_url": "https://raw.githubusercontent.com/PolyhedralDev/Terra/master/platforms/fabric/src/main/resources/assets/terra/icon.png",
+  "id": "polyhedraldev/terra",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "@WIKI@",
+    "wiki": ""
+  },
+  "name": "Terra",
+  "server_version": "",
+  "source": "https://github.com/PolyhedralDev/Terra",
+  "stars": 793,
+  "summary": "Voxel world generation modding platform",
+  "updated_at": 1769787023,
+  "versions": [
+    {
+      "changelog": "This version adds full support for 3D biomes in the following addons:\r\n* 3D Noise Chunk Generator (3D biomes are sampled for noise)\r\n* Feature Generation Stage (Feature generator uses ranges in biome columns to place features)\r\n\r\nA number of optimisations regarding 3D biomes were added:\r\n* Addition of \"biome columns\" to avoid repeating expensive 3D computations\r\n* Optional override for a `BiomeProvider` implementation to return a \"base biome\" used in biome columns\r\n* More advanced biome caching\r\n* Finer control over biome caches\r\n\r\nSeveral other general-purpose optimisations were added:\r\n* TerraScript backend was rewritten to store LVs in an array-based table with reference and store nodes containing table indices, rather than storing in an ID-based hashmap\r\n* 3D Noise Chunk Generator was optimised to avoid biome lookups when possible\r\n* Adjacent palette locators no longer instantiate 4 extra `Column` instances\r\n* Iteration over `Range` using foreach was replaced with index-based iteration in hot code.\r\n\r\nThis version also adds a new core addon, the Biome Extrusion Provider.\r\n\r\nThe Extrusion Provider takes another biome provider as a parameter, which it uses as a \"base.\" Through \"extrusion\" layers, 3D biomes are inserted on top of the base biomes.\r\n\r\nThis release also fixes a Minecraft bug where bee entities access the world `random` instance upon instantiation, which during worldgen can potentially cause an exception due to a race condition (Fixes #327)\r\n",
+      "downloads": 12930,
+      "files": [
+        {
+          "filename": "Terra-bukkit-6.2.0-BETA+7d056bd88-shaded.jar",
+          "primary": true,
+          "size": 10366057,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.2.0/Terra-bukkit-6.2.0-BETA%2B7d056bd88-shaded.jar"
+        }
+      ],
+      "name": "6.2.0-BETA",
+      "prerelease": true,
+      "published_at": 1657260200,
+      "version": "6.2.0"
+    },
+    {
+      "changelog": "Adds support for Bukkit 1.19",
+      "downloads": 4070,
+      "files": [
+        {
+          "filename": "Terra-bukkit-6.1.2-BETA+9abac34b8-shaded.jar",
+          "primary": true,
+          "size": 10285565,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.1.2/Terra-bukkit-6.1.2-BETA%2B9abac34b8-shaded.jar"
+        }
+      ],
+      "name": "v6.1.2",
+      "prerelease": true,
+      "published_at": 1655131287,
+      "version": "6.1.2"
+    },
+    {
+      "changelog": "This version fixes an issue that occurs during initial installation on Windows.",
+      "downloads": 970,
+      "files": [
+        {
+          "filename": "Terra-bukkit-6.1.1-BETA+d93f11b5f-shaded.jar",
+          "primary": true,
+          "size": 10045032,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.1.1/Terra-bukkit-6.1.1-BETA%2Bd93f11b5f-shaded.jar"
+        }
+      ],
+      "name": "v6.1.1-BETA",
+      "prerelease": true,
+      "published_at": 1654655317,
+      "version": "6.1.1"
+    },
+    {
+      "changelog": "* Include overworld config version 1.1.0\r\n  * Added Arid Highlands biomes (by @ Eris#0075).\r\n  * Added Eucalyptus trees and forests biome.\r\n  * Added Sakura biomes.\r\n  * Added Palm Forest biome.\r\n  * Added new boulder type.\r\n  * Added small/big dripleaf features to many jungle-like biomes.\r\n  * Replaced Warm Hills biomes and variants with Chaparrals.\r\n  * Improved Highlands biomes (by @ Eris#0075).\r\n  * Improved Autumnal forest density and biome colors.\r\n  * Updated Evergreen tree types.\r\n  * Evergreen Forests now inherit from Rainforests.\r\n  * Amethyst crystals now generate in geodes.\r\n* Fix TerraScript `==` operation on Strings\r\n* Beardifier now produces air for bearded structures",
+      "downloads": 202,
+      "files": [
+        {
+          "filename": "Terra-bukkit-6.1.0-BETA+0feae25be-shaded.jar",
+          "primary": true,
+          "size": 10045119,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.1.0/Terra-bukkit-6.1.0-BETA%2B0feae25be-shaded.jar"
+        }
+      ],
+      "name": "Version 6.1.0",
+      "prerelease": true,
+      "published_at": 1654646817,
+      "version": "6.1.0"
+    },
+    {
+      "changelog": "Version 6 is a near complete rewrite of Terra; more changes were made during 6.0 development than the entirety of Terra development prior. Here's a short overview of the changes:\r\n\r\n* Addon API was completely separated from common implementations\r\n* Addon loader was rewritten to use \"bootstrap addons\" to define loading process\r\n* Config schemas are now implemented by \"core addons\" bundled with platform distributions\r\n* Brand new overworld config\r\n\r\nYou can see a full list of changes in the [6.0 tracking Pull Request](https://github.com/PolyhedralDev/Terra/pull/227).\r\n\r\nYou can read more about the new API at the [new Terra wiki](https://terra.polydev.org)",
+      "downloads": 1437,
+      "files": [
+        {
+          "filename": "Terra-bukkit-6.0.0-BETA+a9248435a-shaded.jar",
+          "primary": true,
+          "size": 10029395,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.0.0-BETA/Terra-bukkit-6.0.0-BETA%2Ba9248435a-shaded.jar"
+        }
+      ],
+      "name": "v6.0.0-BETA",
+      "prerelease": true,
+      "published_at": 1654111676,
+      "version": "6.0.0-BETA"
+    },
+    {
+      "changelog": "This is a **HIGHLY EXPERIMENTAL** snapshot of major version 6.0 development. Many large 6.0 features have been implemented in this snapshot, a lot hasn't been implemented yet, and **everything in this version is still subject to change**. \r\n\r\n# If you are a player, this release is **not** for you!\r\n## **This is a release for config developers and addon developers, for us to get feedback on new features/API. It is in no way playable; it does not even contain the default config, just a barebones template.**\r\n\r\nThis release is for Fabric, and works on both the client and server. \r\n\r\n## Some new/changed things\r\n### Config\r\n* Most configuration is now implemented via addons.\r\n* Removed `TREE` configs, replaced with `FEATURE`.\r\n* Config types are now registered (`type` key required in configs)\r\n* Metaconfiguration\r\n### API\r\n* Modularized API \r\n* Allow use of generic types for registries using `TypeKey`\r\n* Implement Tectonic 2.0 with preprocessor API\r\n\r\n### For a full list of changes/things that are going to be changed, see: #227 \r\n\r\n## Bundled Pack\r\nThis release bundles a [modified version](https://github.com/dfsek/TerraTemplatePack/tree/6.0.0) of the [Template Pack](https://github.com/Astrashh/TerraTemplatePack), which demonstrates many of the new addon-implemented features. It also bundles many of the new \"core addons,\" described in #227. \r\n\r\n## Everything in this version is subject to change\r\nConfig and addon developers, this release is for you to give feedback on the new features. You should not spend tons of time developing configs/addons for this experimental version, though, as everything in it is subject to change, so any configs/addons for this version will need to be, at the very least, refactored, or  completely rewritten for the final 6.0 release.",
+      "downloads": 304,
+      "files": [
+        {
+          "filename": "Terra-fabric-6.0.0-EXPERIMENTAL.1+af1520eb-shaded-mapped.jar",
+          "primary": true,
+          "size": 2660476,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v6.0.0-EXPERIMENTAL.1/Terra-fabric-6.0.0-EXPERIMENTAL.1%2Baf1520eb-shaded-mapped.jar"
+        }
+      ],
+      "name": "6.0.0 EXPERIMENTAL release 1",
+      "prerelease": true,
+      "published_at": 1626912588,
+      "version": "6.0.0-EXPERIMENTAL.1"
+    },
+    {
+      "changelog": "This is a pre-release for version 4.0.0, which completely redoes the Biome system to move from biome grids to the Biome Pipeline system. \r\n\r\nTo use this version you will need to use the attached default config (a ZIPped version of the [biome branch of the default config repo](https://github.com/PolyhedralDev/TerraDefaultConfig/tree/biome)) with `dump-default` disabled in the master `config.yml` file.\r\n\r\nDocumentation on the pipeline will be coming shortly. The pipeline in the included config is commented.",
+      "downloads": 387,
+      "files": [
+        {
+          "filename": "default.zip",
+          "primary": true,
+          "size": 564653,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v4.0.0a1/default.zip"
+        },
+        {
+          "filename": "Terra-bukkit-4.0.0-BETA+213182e-shaded.jar",
+          "primary": false,
+          "size": 3235144,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/v4.0.0a1/Terra-bukkit-4.0.0-BETA%2B213182e-shaded.jar"
+        }
+      ],
+      "name": "4.0.0 alpha 1",
+      "prerelease": true,
+      "published_at": 1612665906,
+      "version": "4.0.0a1"
+    },
+    {
+      "changelog": "This release fixes a bunch of issues with the latest alpha, and adds several new TerraScript features.\r\n\r\n**This is a pre-release. It is meant for testing. I advise against using it in production.**\r\n\r\n**Issues Fixed**\r\n* Fix memory leak involving structure caches.\r\n* Significantly improve TerraScript parser performance while simultaneously reducing memory usage during parsing.\r\n* Fix `setMark` and `getMark` misalignment causing marks to not work.\r\n* Eye of Ender redirection has been reimplemented.\r\n\r\n**New Stuff**\r\n* Added tons of new math functions to TerraScript, including but not limited to `floor`, `ceil`, `round`, `log`, `max` and `min`. In the future TerraScript will probably support a way to hook into Parsii for math.\r\n* Added `state` function to TerraScript. `state`, as the name implies, allows manipulating NBT data on blocks. Use cases include setting text on signs, and mob spawner attributes.\r\n* Added `print` function to TerraScript. It will, as the name implies, print a string to the console. As it is intended for debugging, it will only print if Debug Mode is on.",
+      "downloads": 110,
+      "files": [
+        {
+          "filename": "bukkit-3.0.0-BETA+44176f7-shaded.jar",
+          "primary": true,
+          "size": 2662120,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/3.0.0pre1/bukkit-3.0.0-BETA%2B44176f7-shaded.jar"
+        }
+      ],
+      "name": "v3.0.0 Pre-Release 1",
+      "prerelease": true,
+      "published_at": 1609926706,
+      "version": "3.0.0pre1"
+    },
+    {
+      "changelog": "This is an **ALPHA** release of Terra 3.0.0 for Bukkit.\r\n\r\nThis release is meant for previewing/testing of new features, and to give config pack devs a head start on updating their packs. **It is *NOT* meant for production use**\r\n\r\n3.0 is the largest update Terra has ever seen (almost 25k lines of diff!), and there's a lot of new stuff to cover!\r\n* **Platform-Agnostic Engine**\r\n    Terra's core engine is now entirely platform-agnostic. What does this mean? It means Terra no longer depends on Bukkit, or Minecraft in general. This preview only includes a Bukkit version, but we are currently working on a Fabric implementation, and plan to do a Sponge implementation as well.\r\n* **TerraScript**\r\n    TerraScript brings you the most powerful structure system ever seen in a world generator. TerraScript is a full-blown scripting language designed for you to make structures with. This alpha comes bundled with procedurally generated Oak and Spruce trees, and a procedurally generated Village, all made with TerraScript. Don't worry, exporting structures is still super easy; our export command will generate basic scripts for you, so if you just want a single-part structure, it's basically the same process as earlier versions. TerraScript simply adds on to the structure system, allowing you to create anything you want, with ease. We also have a conversion utility for converting the legacy `.tstructure` format to TerraScript.\r\n* **Dependency on Gaea Removed**\r\n    Gaea existed as a way for Terra and BetterEnd to share code. Now that BetterEnd has reached its EOL, Gaea is no longer needed. As such, it has been merged into Terra. You will not need Gaea installed to run future versions of Terra.",
+      "downloads": 82,
+      "files": [
+        {
+          "filename": "bukkit-3.0.0-BETA+6bac82d-shaded.jar",
+          "primary": true,
+          "size": 2535696,
+          "url": "https://github.com/PolyhedralDev/Terra/releases/download/3.0.0/bukkit-3.0.0-BETA%2B6bac82d-shaded.jar"
+        }
+      ],
+      "name": "v3.0.0 Alpha 1",
+      "prerelease": true,
+      "published_at": 1609559383,
+      "version": "3.0.0"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "technology"
+  ],
+  "created_at": 1765291929,
+  "dependencies": [],
+  "description": "# 🛡️ BlackBE Plugin for Allay\n\n> 一个强大的 Minecraft 服务器反作弊插件，自动检查玩家是否在 [BlackBE](https://blackbe.work) 数据库中被记录\n\n[![Java](https://img.shields.io/badge/Java-21+-orange.svg)](https://www.oracle.com/java/)\n[![Allay](https://img.shields.io/badge/Allay-0.18.0-blue.svg)](https://github.com/AllayMC/Allay)\n[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)\n\n## 📖 简介\n\nBlackBE 是一个为 Allay 服务器平台开发的插件，用于自动检测和拦截在 BlackBE 黑名单数据库中被记录的玩家。本插件原本是为 Endstone 平台使用 Python 开发的，现已完全移植到 Allay 平台，使用 Java 重写。\n\n## ✨ 功能特性\n\n- 🚫 **自动拦截** - 玩家加入时自动查询 BlackBE 数据库，拒绝黑名单玩家进入服务器\n- 🔍 **手动查询** - 管理员可通过命令查询任意玩家的黑名单状态\n- ⚡ **异步处理** - 所有 HTTP 请求均为异步，不会阻塞服务器主线程\n- 🎨 **彩色输出** - 使用 Minecraft 颜色代码美化所有输出信息\n- 🔐 **权限控制** - 细粒度的权限节点控制命令使用\n- 📝 **详细日志** - 完整的日志记录，便于调试和审计\n\n## 🎯 使用指南\n\n### 命令\n\n插件提供了一个主命令 `/blackbe`，包含以下子命令：\n\n#### 按玩家名查询\n```bash\n/blackbe name <玩家名>\n```\n查询指定玩家名是否在 BlackBE 数据库中。\n\n**示例：**\n```bash\n/blackbe name Steve\n```\n\n#### 按 QQ 号查询\n```bash\n/blackbe qq <QQ号>\n```\n查询指定 QQ 号关联的玩家是否在 BlackBE 数据库中。\n\n**示例：**\n```bash\n/blackbe qq 123456789\n```\n\n### 查询结果说明\n\n查询成功后，插件会显示以下信息：\n\n- ✅ **未找到记录** - 玩家未在黑名单中\n- ⚠️ **找到记录** - 玩家在黑名单中，显示详细信息：\n  - 玩家名称\n  - XUID\n  - 封禁原因\n  - 风险等级\n  - 关联 QQ 号\n\n### 🔐 权限节点\n\n| 权限节点 | 说明 | 默认 |\n|---------|------|------|\n| `blackbe.command` | 使用 `/blackbe` 命令的基础权限 | OP |\n| `blackbe.command.name` | 使用 `/blackbe name` 子命令 | OP |\n| `blackbe.command.qq` | 使用 `/blackbe qq` 子命令 | OP |\n\n### API 端点\n\n本插件使用 BlackBE 官方 API v3：\n```\nhttps://api.blackbe.work/openapi/v3/check\n```\n\n## 🐛 故障排除\n\n**Q: 插件加载失败**\n- 确保使用 Java 21 或更高版本\n- 检查 Allay 版本是否兼容 (0.18.0+)\n\n**Q: 查询总是失败**\n- 检查服务器网络连接\n- 确认 BlackBE API 服务可访问\n- 查看日志了解详细错误信息\n\n**Q: 玩家被错误拦截**\n- 检查日志中的黑名单信息\n- 确认玩家确实在 BlackBE 数据库中\n- 如有误判，请联系 BlackBE 官方申诉\n\n## 🔨 开发\n\n欢迎提交 Issue 和 Pull Request！\n\n1. Fork 本仓库\n2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)\n3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)\n4. 推送到分支 (`git push origin feature/AmazingFeature`)\n5. 开启 Pull Request\n\n## 📄 许可证\n\n本项目采用 MIT 许可证 - 详见 [LICENSE](https://github.com/smartcmd/BlackBE/blob/master/LICENSE) 文件",
+  "downloads": 3,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/blackbe",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/AllayMC/JavaPluginTemplate",
+    "wiki": ""
+  },
+  "name": "BlackBE",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/BlackBE",
+  "stars": 0,
+  "summary": "BlackBE integration for Allay server",
+  "updated_at": 1769288238,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/BlackBE/commits/0.1.0",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "BlackBE-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 3340290,
+          "url": "https://github.com/smartcmd/BlackBE/releases/download/0.1.0/BlackBE-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1765344938,
+      "version": "0.1.0"
+    }
+  ]
+}

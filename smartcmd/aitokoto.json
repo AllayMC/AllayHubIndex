@@ -1,0 +1,61 @@
+{
+  "api_version": "0.19.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1767091578,
+  "dependencies": [],
+  "description": "# Hitokoto 一言插件 🎯\n\n为 AllayMC 服务器提供「一言」句子展示，支持登录自动推送与命令手动获取。\n\n![img.png](https://raw.githubusercontent.com/smartcmd/Aitokoto/master/img.png)\n\n## ✨ 功能\n\n- 🎉 玩家加入时自动推送一言\n- 📌 `/hitokoto` 与 `/hk` 命令手动获取\n- 🧩 按类别自定义格式（a-h）\n- 🧯 API 异常时自动回退本地语录\n\n## 🧾 命令\n\n- `/hitokoto get` 手动获取一言\n- `/hitokoto reload` 重载配置（管理员）\n- `/hitokoto addformat <类型> <格式>` 添加类型格式（管理员）\n- `/hitokoto removeformat <类型> <序号>` 移除类型格式（管理员）\n- `/hitokoto listtypes` 列出所有类型\n- `/hitokoto listformats <类型>` 列出某类型的格式\n\n## 🔐 权限\n\n- `hitokoto.command` 基础命令\n- `hitokoto.admin` 管理命令\n\n## ⚙️ 配置\n\n配置文件位于 `plugins/Hitokoto/config.json`，首次启动自动生成。\n\n示例片段：\n\n```json\n{\n  \"apiUrl\": \"https://v1.hitokoto.cn/\",\n  \"typeFormats\": {\n    \"a\": [\"...\"],\n    \"b\": [\"...\"]\n  },\n  \"defaultFormats\": [\"...\"]\n}\n```\n\n## 📄 许可\n\n本项目使用 MIT License，详见 `LICENSE`。\n",
+  "downloads": 1,
+  "gallery": [
+    {
+      "created": "2026-01-31",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/Aitokoto/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/aitokoto",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/Aitokoto",
+    "wiki": ""
+  },
+  "name": "Aitokoto",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/Aitokoto",
+  "stars": 0,
+  "summary": "An AllayMC plugin that send a random quote from Hitokoto to the newly joined player",
+  "updated_at": 1769288152,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "Aitokoto-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 17939,
+          "url": "https://github.com/smartcmd/Aitokoto/releases/download/0.1.0/Aitokoto-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1767096183,
+      "version": "0.1.0"
+    }
+  ]
+}

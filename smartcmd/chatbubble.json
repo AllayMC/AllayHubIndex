@@ -1,0 +1,61 @@
+{
+  "api_version": "0.19.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "social"
+  ],
+  "created_at": 1767091017,
+  "dependencies": [],
+  "description": "# ChatBubble\n\nChatBubble shows player chat messages as floating DebugText above their heads.\n\n![img.png](https://raw.githubusercontent.com/smartcmd/ChatBubble/master/img.png)\n\n## License\n\nMIT License. See [LICENSE](https://github.com/smartcmd/ChatBubble/blob/master/LICENSE).",
+  "downloads": 5,
+  "gallery": [
+    {
+      "created": "2026-01-31",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/ChatBubble/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/chatbubble",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/ChatBubble",
+    "wiki": ""
+  },
+  "name": "ChatBubble",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/ChatBubble",
+  "stars": 0,
+  "summary": "ChatBubble shows player chat messages as floating DebugText above their heads.",
+  "updated_at": 1769288111,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "ChatBubble-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 3784,
+          "url": "https://github.com/smartcmd/ChatBubble/releases/download/0.1.0/ChatBubble-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1767102380,
+      "version": "0.1.0"
+    }
+  ]
+}

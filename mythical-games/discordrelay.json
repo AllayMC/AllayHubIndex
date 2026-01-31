@@ -1,0 +1,54 @@
+{
+  "api_version": "0.22.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+      "name": "Mythical-Games",
+      "url": "https://github.com/Mythical-Games"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1769011424,
+  "dependencies": [],
+  "description": "#  DiscordRelay for AllayMC Server Software\n\n![Banner](https://github.com/acktarbadulla/DiscordRelay-AllayMC/blob/master/20250227_181724.png)\n\n## Roadmap:\n\n * [x] Server Start and Stop Messages\n * [x] Player Join and Leave Messages\n * [x] Minecraft to Discord Chat Relay\n * [x] Discord to Minecraft Chat Relay\n * [x] /discord Command In-Game to get a discord server link\n * [x] Player Death Messages\n * [ ] Discord account linking for rewards & ranks\n * [ ] Discord-Minecraft / Vice versa Role syncing\n * [ ] Any Suggestions Please Let Me Know! Thanks\n\n## Important\nYou can customize everything in this plugin. From enabling only specific features to changing all the responses and chat format. Checkout our config.yml\n\nFor any support needed relating to an issue with the plugin or needing help to set it up, you may DM me on Discord!\n\n",
+  "downloads": 1,
+  "gallery": [],
+  "icon_url": "https://raw.githubusercontent.com/Mythical-Games/DiscordRelay/master/logo.png",
+  "id": "mythical-games/discordrelay",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/Mythical-Games/DiscordChat",
+    "wiki": ""
+  },
+  "name": "DiscordRelay",
+  "server_version": "",
+  "source": "https://github.com/Mythical-Games/DiscordRelay",
+  "stars": 0,
+  "summary": "A Simple Minecraft to Discord Relay for the AllayMC Server Software!",
+  "updated_at": 1769274511,
+  "versions": [
+    {
+      "changelog": "## Roadmap:\r\n\r\n * [x] Server Start and Stop Messages\r\n * [x] Player Join and Leave Messages\r\n * [x] Minecraft to Discord Chat Relay\r\n * [x] Discord to Minecraft Chat Relay\r\n * [x] /discord Command In-Game to get a discord server link\r\n * [x] Player Death Messages\r\n * [ ] Discord account linking for rewards & ranks\r\n * [ ] Discord-Minecraft / Vice versa Role syncing\r\n * [ ] Any Suggestions Please Let Me Know! Thanks",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "DiscordRelay-2.0.0-shaded.jar",
+          "primary": true,
+          "size": 19506079,
+          "url": "https://github.com/Mythical-Games/DiscordRelay/releases/download/2.0.0/DiscordRelay-2.0.0-shaded.jar"
+        }
+      ],
+      "name": "DiscordRelay - Latest version",
+      "prerelease": false,
+      "published_at": 1769015219,
+      "version": "2.0.0"
+    }
+  ]
+}

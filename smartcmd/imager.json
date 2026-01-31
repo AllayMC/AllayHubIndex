@@ -1,0 +1,61 @@
+{
+  "api_version": "0.17.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "decoration"
+  ],
+  "created_at": 1764834994,
+  "dependencies": [],
+  "description": "# Imager\n\nShow image in your Allay server!\n\n![img.png](https://raw.githubusercontent.com/smartcmd/Imager/master/img.png)\n\n## Usage\n\nMain command: `/imager`\n\nRight-click on an image to remove it\n\n\n## Permission\n\n- `imager.command`: permission to use `/imager` command\n- `imager.query_image_info`: permission to query image info by right-clicking it\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/Imager/blob/master/LICENSE) file for details.",
+  "downloads": 7,
+  "gallery": [
+    {
+      "created": "2026-01-31",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/Imager/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/imager",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/Imager",
+    "wiki": ""
+  },
+  "name": "Imager",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/Imager",
+  "stars": 2,
+  "summary": "Show image in your Allay server!",
+  "updated_at": 1769288294,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "Imager-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 730354,
+          "url": "https://github.com/smartcmd/Imager/releases/download/0.1.0/Imager-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1764863937,
+      "version": "0.1.0"
+    }
+  ]
+}

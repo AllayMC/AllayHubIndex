@@ -1,0 +1,37 @@
+{
+  "api_version": "",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+      "name": "AllayMC",
+      "url": "https://github.com/AllayMC"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1728022863,
+  "dependencies": [],
+  "description": "# Script Plugin Extension\n\nThis extension make allay able to load script plugins (javascript, python).\n\n## License\n\nThis project is licensed under the LGPL v3 License - see the [LICENSE](https://github.com/AllayMC/ScriptPluginExtension/blob/main/LICENSE) file for details.",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+  "id": "allaymc/scriptpluginextension",
+  "license": {
+    "id": "LGPL-3.0",
+    "name": "GNU Lesser General Public License v3.0",
+    "url": "https://spdx.org/licenses/LGPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "ScriptPluginExtension",
+  "server_version": "",
+  "source": "https://github.com/AllayMC/ScriptPluginExtension",
+  "stars": 1,
+  "summary": "An allay extension that make allay able to load script plugin such as javascript, python",
+  "updated_at": 1736189503,
+  "versions": []
+}

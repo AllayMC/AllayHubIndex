@@ -1,0 +1,93 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1765103217,
+  "dependencies": [],
+  "description": "# NBSAllay\n\nNote block song player for Allay server\n\n![img.png](https://raw.githubusercontent.com/smartcmd/NBSAllay/master/img.png)\n\n## Feature\n\n- Easy-to-use user interface.\n- Supports reading `.nbs`, `.mid`, `.txt`, `.mcsp`, `.mcsp2` and `.notebot` files (thanks to [NoteBlockLib](https://github.com/RaphiMC/NoteBlockLib))\n- Supports stereo sound.\n\n## Usage\n \nCommand: `/nbs` (require `nbsa.command` permission)\n\n- `/nbs play`: Choose and play a song.\n- `/nbs pause`: Pause playing.\n- `/nbs resume`: Resume playing.\n- `/nbs stop`: Stop playing.\n- `/nbs reload`: Reload songs.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/NBSAllay/blob/master/LICENSE) file for details.",
+  "downloads": 8,
+  "gallery": [
+    {
+      "created": "2026-01-31",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/NBSAllay/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/nbsallay",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/NBSAllay",
+    "wiki": ""
+  },
+  "name": "NBSAllay",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/NBSAllay",
+  "stars": 1,
+  "summary": "Note block song player for Allay server",
+  "updated_at": 1769288279,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/NBSAllay/compare/0.1.1...0.2.0",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "NBSAllay-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 3135456,
+          "url": "https://github.com/smartcmd/NBSAllay/releases/download/0.2.0/NBSAllay-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1765344851,
+      "version": "0.2.0"
+    },
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "NBSAllay-0.1.1-shaded.jar",
+          "primary": true,
+          "size": 3134698,
+          "url": "https://github.com/smartcmd/NBSAllay/releases/download/0.1.1/NBSAllay-0.1.1-shaded.jar"
+        }
+      ],
+      "name": "0.1.1",
+      "prerelease": false,
+      "published_at": 1765113651,
+      "version": "0.1.1"
+    },
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "NBSAllay-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 3134640,
+          "url": "https://github.com/smartcmd/NBSAllay/releases/download/0.1.0/NBSAllay-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1765113014,
+      "version": "0.1.0"
+    }
+  ]
+}

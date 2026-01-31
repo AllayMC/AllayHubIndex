@@ -1,0 +1,54 @@
+{
+  "api_version": "0.12.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/131894598?v=4",
+      "name": "ye111566",
+      "url": "https://github.com/ye111566"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1761144499,
+  "dependencies": [],
+  "description": "\r\n# AllayMenu\r\n\r\n\r\n## 安装方法 | Installation\r\n\r\n1.  将下载的 `*.jar` 文件放入服务端的 `plugins` 文件夹中。\r\n    Place the downloaded `*.jar` file into the `plugins` folder of your server.\r\n\r\n2.  在 `plugins` 文件夹内创建一个名为 `menu` 的新文件夹。\r\n    Create a new folder named `menu` inside the `plugins` folder.\r\n\r\n3.  在 `menu` 文件夹内，创建您的菜单配置文件，例如 `menu.json`。这个文件将作为右键点击钟时打开的主菜单。\r\n    Inside the `menu` folder, create your menu configuration file, e.g., `menu.json`. This file will serve as the main menu opened when right-clicking the clock.\r\n\r\n## 使用方法 | Usage\r\n\r\n1.  **打开菜单 | Opening a Menu**\r\n    *   在游戏中手持钟并对准地面右键点击，即可打开在 `menu` 文件夹中定义的默认菜单（通常是 `menu.json`）。\r\n        Hold a clock in the game, aim at the ground, and right-click to open the default menu (usually `menu.json`) defined in the `menu` folder.\r\n\r\n2.  **使用命令 | Using Commands**\r\n    *   作为玩家，您也可以使用命令来打开特定的菜单文件：\r\n        As a player, you can also use commands to open specific menu files:\r\n        bash\r\n        menu <filename.json>\r\n\r\n    *   例如，要打开 `shop.json`，请输入：\r\n        For example, to open `shop.json`, type:\r\n        bash\r\n        menu shop.json\r\n\r\n\r\n## 配置说明 | Configuration\r\n\r\n菜单的功能通过编辑 `menu` 文件夹内的 JSON 文件来配置。\r\nThe menu's functionality is configured by editing JSON files within the `menu` folder.\r\n\r\n### 配置示例 | Example Configuration\r\n\r\n下面是一个 `menu.json` 的示例配置：\r\nBelow is an example configuration for `menu.json`:\r\n\r\njson\r\n{\r\n    \"Button Display Text 1\": {\r\n        \"text\": \"Message text 1 after clicking the button\",\r\n        \"cmd\": \"msg @s hi\",\r\n        \"mode\": \"player\",\r\n        \"icon\": \"textures/ui/op\"\r\n    },\r\n    \"Button Display Text 2\": {\r\n        \"text\": \"Message text 2 after clicking the button\",\r\n        \"cmd\": \"title @a title hi\",\r\n        \"mode\": \"server\"\r\n    },\r\n    \"Button Display Text 3\": {\r\n        \"text\": \"Message text 3 after clicking the button\",\r\n        \"cmd\": \"title @a title hi sender.name\",\r\n        \"mode\": \"server\"\r\n    },\r\n    \"Open shop.json\": {\r\n        \"text\": \"Opened successfully\",\r\n        \"cmd\": \"menu shop.json\",\r\n        \"mode\": \"player\"\r\n    }\r\n}\r\n\r\n\r\n### 参数详解 | Parameter Details\r\n\r\n每个按钮都是一个 JSON 对象，包含以下属性：\r\nEach button is a JSON object with the following properties:\r\n\r\n*   `\"按钮显示文本\" | \"Button Display Text\"` (例如 E.g., `\"Button Display Text 1\"`): **必填 | Required**\r\n    *   **描述**: 按钮在菜单中显示的文字。\r\n    *   **Description**: The text displayed on the button in the menu.\r\n\r\n*   `text`: **必填 | Required**\r\n    *   **描述**: 玩家点击按钮后，聊天栏中显示的反馈信息。\r\n    *   **Description**: The feedback message displayed in the chat when a player clicks the button.\r\n\r\n*   `cmd`: **必填 | Required**\r\n    *   **描述**: 点击按钮后要执行的 Minecraft 命令。支持变量（如 `$sender.name$` 表示点击者的名字）。\r\n    *   **Description**: The Minecraft command to be executed when the button is clicked. Supports variables (e.g., `$sender.name$` for the clicker's name).\r\n\r\n*   `mode`: **必填 | Required**\r\n    *   **描述**: 命令的执行身份。\r\n    *   **Description**: The identity under which the command is executed.\r\n    *   **可选值 | Options**:\r\n        *   `\"player\"`: 以点击按钮的玩家身份执行命令。适用于如 `msg @s hi` 等个人命令。\r\n        *   `\"server\"`: 以服务器控制台身份执行命令。拥有更高权限，适用于如 `title @a title hi` 等全局命令。\r\n\r\n*   `icon`: *可选 | Optional*\r\n    *   **描述**: 按钮旁边显示的图标路径。路径相对于游戏资源包。如果不设置，则使用默认图标。\r\n    *   **Description**: The path to the icon image displayed next to the button. The path is relative to the game's resource pack. If not set, a default icon is used.\r\n\r\n## 注意事项 | Notes\r\n\r\n*   确保 JSON 文件的格式正确，可以使用 [JSON 验证工具](https://jsonlint.com/) 进行检查。\r\n*   Ensure your JSON file is correctly formatted. You can use a [JSON Validator](https://jsonlint.com/).\r\n*   在 `mode` 设置为 `\"player\"` 时，玩家需要拥有相应命令的执行权限。\r\n*   When `mode` is set to `\"player\"`, the player must have the necessary permissions to execute the corresponding command.\r\n*   `\"server\"` 模式通常权限更高，但请谨慎使用高危命令。\r\n*   The `\"server\"` mode generally has higher privileges, but use it cautiously for high-risk commands.\r\n\r\n",
+  "downloads": 6,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/131894598?v=4",
+  "id": "ye111566/allaymenu",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/ye111566/AllayMenu",
+    "wiki": ""
+  },
+  "name": "AllayMenu",
+  "server_version": "",
+  "source": "https://github.com/ye111566/AllayMenu",
+  "stars": 0,
+  "summary": "custom menu for allay",
+  "updated_at": 1761217135,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "AllayMenu-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 9309,
+          "url": "https://github.com/ye111566/AllayMenu/releases/download/0.1.0/AllayMenu-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1761199632,
+      "version": "0.1.0"
+    }
+  ]
+}

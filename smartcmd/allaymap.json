@@ -1,0 +1,125 @@
+{
+  "api_version": "0.18.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "management"
+  ],
+  "created_at": 1765789343,
+  "dependencies": [],
+  "description": "# AllayMap\n\nA minimalistic and lightweight real-time world map viewer for [Allay](https://github.com/AllayMC/Allay) servers, using vanilla map rendering style.\n\n![img.png](https://raw.githubusercontent.com/smartcmd/AllayMap/master/img.png)\n\n## Features\n\n- Real-time map rendering with vanilla Minecraft map colors\n- Multi-zoom support (6 zoom levels)\n- Biome-aware coloring (grass, foliage, water tinting)\n- Player tracking with live position updates\n- Multi-world and multi-dimension support\n- Lightweight web interface\n- Automatic chunk rendering on exploration\n\n## Installation\n\n1. Download the latest release from the releases page\n2. Place the JAR file in your Allay server's `plugins` folder\n3. Start or restart your server\n4. Access the map at `http://localhost:8080` (default port)\n\n## Configuration\n\nConfiguration file is located at `plugins/AllayMap/config.yml`:\n\n```yaml\n# Port number for the web interface\n# The map will be accessible at http://localhost:<port>\n# Make sure this port is not used by other applications\n# Valid range: 1-65535 (ports below 1024 may require admin privileges)\n# Default: 8080\nhttp-port: 8080\n\n# Interval in seconds between processing dirty (modified) chunks\n# Lower values = faster map updates but higher CPU usage\n# Higher values = slower map updates but lower CPU usage\n# Recommended: 30-120 seconds depending on server performance\n# Default: 60\nupdate-interval: 60\n\n# Whether to render blocks underwater\n# If disabled (false), water surfaces will show biome water color directly\n# If enabled (true), underwater blocks will be visible with water tint applied\n# Disabling this can improve map readability in ocean/river areas\n# Default: false\nrender-underwater-blocks: false\n\n# Whether to ignore the height map of the world\n# If disabled (false), the height map of the world will be used during map tile generation to improve the speed\n# If enabled (true), the map renderer will always traverse the blocks down from the dimension's maximum height\n# This would be useful when the height map of the world is incorrect (set to true)\n# Default: false\nignore-world-height-map: false\n```\n\n## Usage\n\n- Open `http://localhost:8080` in your browser\n- Use mouse wheel to zoom in/out\n- Click and drag to pan the map\n- Select different worlds/dimensions from the dropdown\n- Click on a player name to center the map on their location\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/AllayMap/blob/master/LICENSE) file for details.\n",
+  "downloads": 11,
+  "gallery": [
+    {
+      "created": "2026-01-31",
+      "description": "",
+      "title": "img.png",
+      "url": "https://raw.githubusercontent.com/smartcmd/AllayMap/master/img.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/allaymap",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/AllayMap",
+    "wiki": ""
+  },
+  "name": "AllayMap",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/AllayMap",
+  "stars": 1,
+  "summary": "AllayMap is a minimalistic and lightweight world map viewer for Allay servers, using the vanilla map rendering style",
+  "updated_at": 1769288182,
+  "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayMap/compare/0.2.1...0.2.2",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "AllayMap-0.2.2-shaded.jar",
+          "primary": true,
+          "size": 564791,
+          "url": "https://github.com/smartcmd/AllayMap/releases/download/0.2.2/AllayMap-0.2.2-shaded.jar"
+        }
+      ],
+      "name": "0.2.2",
+      "prerelease": false,
+      "published_at": 1766491236,
+      "version": "0.2.2"
+    },
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayMap/compare/0.2.0...0.2.1",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "AllayMap-0.2.1-shaded.jar",
+          "primary": true,
+          "size": 564790,
+          "url": "https://github.com/smartcmd/AllayMap/releases/download/0.2.1/AllayMap-0.2.1-shaded.jar"
+        }
+      ],
+      "name": "0.2.1",
+      "prerelease": false,
+      "published_at": 1766166804,
+      "version": "0.2.1"
+    },
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "AllayMap-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 564469,
+          "url": "https://github.com/smartcmd/AllayMap/releases/download/0.2.0/AllayMap-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1766048771,
+      "version": "0.2.0"
+    },
+    {
+      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayMap/compare/0.1.0...0.1.1",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "AllayMap-0.1.1-shaded.jar",
+          "primary": true,
+          "size": 564156,
+          "url": "https://github.com/smartcmd/AllayMap/releases/download/0.1.1/AllayMap-0.1.1-shaded.jar"
+        }
+      ],
+      "name": "0.1.1",
+      "prerelease": false,
+      "published_at": 1765956472,
+      "version": "0.1.1"
+    },
+    {
+      "changelog": "",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "AllayMap-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 552389,
+          "url": "https://github.com/smartcmd/AllayMap/releases/download/0.1.0/AllayMap-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1765884048,
+      "version": "0.1.0"
+    }
+  ]
+}

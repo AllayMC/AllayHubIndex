@@ -1,0 +1,54 @@
+{
+  "api_version": "0.19.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "social"
+  ],
+  "created_at": 1767092338,
+  "dependencies": [],
+  "description": "# HeadShow\n\nHeadShow is an AllayMC plugin that customizes player nametags and scoretags using PlaceholderAPI.\n\n## Requirements\n\n- Java 21 or higher\n- Allay server\n- PlaceholderAPI plugin\n\n## Installation\n\n1. Build the plugin:\n\n```bash\n./gradlew shadowJar\n```\n\n2. Copy the jar from `build/libs` into the server `plugins` directory.\n3. Install PlaceholderAPI and start the server.\n\n## Configuration\n\n`config.yml` is generated on first run.\n\n```yaml\nnametag: \"{player_name}\"\nscoretag: \"{player_ping}ms\"\nupdate-interval: 20\n```\n\n- `nametag` and `scoretag` support PlaceholderAPI variables.\n- `update-interval` is in ticks (20 ticks = 1 second).\n- Set `nametag` or `scoretag` to an empty string to clear it.\n\n## Development\n\n- `./gradlew runServer` to start a local server with the plugin.\n",
+  "downloads": 3,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/headshow",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/HeadShow",
+    "wiki": ""
+  },
+  "name": "HeadShow",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/HeadShow",
+  "stars": 1,
+  "summary": "An AllayMC plugin that can customize player's nametag and scoretag",
+  "updated_at": 1769288090,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "HeadShow-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 466582,
+          "url": "https://github.com/smartcmd/HeadShow/releases/download/0.1.0/HeadShow-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1767105006,
+      "version": "0.1.0"
+    }
+  ]
+}

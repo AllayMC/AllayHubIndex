@@ -1,0 +1,102 @@
+{
+  "api_version": "0.19.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+      "name": "AllayMC",
+      "url": "https://github.com/AllayMC"
+    }
+  ],
+  "categories": [
+    "library"
+  ],
+  "created_at": 1764597612,
+  "dependencies": [],
+  "description": "# EconomyAPI\n\n![Maven Central Version](https://img.shields.io/maven-central/v/org.allaymc/economy-api?label=economy-api)\n\nEconomyAPI is a plugin that unifies all economy plugins under one single API. The API can be used by both economy plugins\nproviding the API, and other plugins using the API (i.e. shop plugins). This allows for all plugins that require an economy\nto work with any economy plugin.\n\n> [!NOTE]\n> EconomyAPI cannot be used alone! It only provides abstract APIs for uniform calls and requires another economy plugin to\n> implement it. You must use an economy plugin that provides the EconomyAPI implementation.\n> EconomyAPI also requires [PlaceholderAPI](https://github.com/AllayMC/PlaceholderAPI) to work.\n\n## Usages\n\n### Use in Gradle\n\n```kts\nrepositories {\n    mavenCentral()\n}\n\ndependencies {\n    compileOnly(group = \"org.allaymc\", name = \"economy-api\", version = \"0.2.0\")\n}\n```\n\n### Use the API\n\n```java\nimport org.allaymc.economyapi.EconomyAPI;\nimport org.allaymc.economyapi.Account;\nimport org.allaymc.economyapi.Currency;\nimport java.math.BigDecimal;\nimport java.util.UUID;\n\npublic class Example {\n    public void example() {\n        // Get the api instance\n        EconomyAPI api = EconomyAPI.get();\n        // Create an account\n        UUID uuid = UUID.randomUUID();\n        Account account = api.getOrCreateAccount(uuid);\n        // Get the balance of the account for the default currency\n        Currency currency = api.getDefaultCurrency();\n        BigDecimal balance = account.getBalance(currency);\n        // Convert it to a string\n        String formattedBalance = currency.format(balance);\n        // More...\n    }\n}\n```\n\n### Implement the API\n\n```java\nimport org.allaymc.api.plugin.Plugin;\nimport org.allaymc.economyapi.EconomyAPI;\n\npublic class MyEconomyAPI extends Plugin implements EconomyAPI {\n    @Override\n    public void onLoad() {\n        // Set the api instance, note that EconomyAPI#API can only be set once\n        EconomyAPI.API.set(this);\n    }\n}\n```\n\n### Available Events\n\n- [x] AccountCreateEvent: Called when an account is created.\n- [x] AccountDeleteEvent: Called when an account is deleted.\n- [x] BalanceChangeEvent: Called when a change occurs in the balance of an account.\n- [x] BalanceTransferEvent: Called when a balance transfer occurs between two accounts.\n\n### Available Placeholders\n\nEconomyAPI provides the following placeholders:\n\n- [x] `{balance}`/`{balance|<currency_name>}`: balance of a player.\n- [x] `{currency_name}`: name of the default currency.\n- [x] `{currency_plural_name}`/`{currency_plural_name|<currency_name>}`: plural name of the default currency or given currency.\n- [x] `{currency_symbol}`/`{currency_symbol|<currency_name>}`: symbol of the default currency or given currency.\n\n## Contributing\n\nContributions are welcome! Feel free to fork the repository, improve the code, and submit pull requests with your\nchanges.\n\n## License\n\nThis project is licensed under the LGPL v3 License - see the [LICENSE](https://github.com/AllayMC/EconomyAPI/blob/master/LICENSE) file for details.",
+  "downloads": 18,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
+  "id": "allaymc/economyapi",
+  "license": {
+    "id": "LGPL-3.0",
+    "name": "GNU Lesser General Public License v3.0",
+    "url": "https://spdx.org/licenses/LGPL-3.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/AllayMC/EconomyAPI",
+    "wiki": ""
+  },
+  "name": "EconomyAPI",
+  "server_version": "",
+  "source": "https://github.com/AllayMC/EconomyAPI",
+  "stars": 1,
+  "summary": "EconomyAPI is a plugin that unifies all economy plugins under one single API",
+  "updated_at": 1769288548,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "EconomyAPI-0.2.2-shaded.jar",
+          "primary": true,
+          "size": 8448,
+          "url": "https://github.com/AllayMC/EconomyAPI/releases/download/0.2.2/EconomyAPI-0.2.2-shaded.jar"
+        }
+      ],
+      "name": "0.2.2",
+      "prerelease": false,
+      "published_at": 1767517593,
+      "version": "0.2.2"
+    },
+    {
+      "changelog": "**Full Changelog**: https://github.com/AllayMC/EconomyAPI/compare/0.2.0...0.2.1",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "EconomyAPI-0.2.1-shaded.jar",
+          "primary": true,
+          "size": 8448,
+          "url": "https://github.com/AllayMC/EconomyAPI/releases/download/0.2.1/EconomyAPI-0.2.1-shaded.jar"
+        }
+      ],
+      "name": "0.2.1",
+      "prerelease": false,
+      "published_at": 1765477082,
+      "version": "0.2.1"
+    },
+    {
+      "changelog": "**Full Changelog**: https://github.com/AllayMC/EconomyAPI/compare/0.1.0...0.2.0",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "EconomyAPI-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 8420,
+          "url": "https://github.com/AllayMC/EconomyAPI/releases/download/0.2.0/EconomyAPI-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1765449768,
+      "version": "0.2.0"
+    },
+    {
+      "changelog": "",
+      "downloads": 5,
+      "files": [
+        {
+          "filename": "EconomyAPI-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 7061,
+          "url": "https://github.com/AllayMC/EconomyAPI/releases/download/0.1.0/EconomyAPI-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1764671675,
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "api_version": "0.21.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+      "name": "smartcmd",
+      "url": "https://github.com/smartcmd"
+    }
+  ],
+  "categories": [
+    "social"
+  ],
+  "created_at": 1768214513,
+  "dependencies": [],
+  "description": "# 🔔 MentionSound\n\n> 📢 Get sound notifications when someone mentions you in chat!\n\nAn [AllayMC](https://github.com/AllayMC/Allay) plugin that plays a sound when a player is mentioned in chat via `@playerName` or `@here`.\n\n## ✨ Features\n\n- 🎵 **Name Mentions** - Play a sound when someone types `@yourName`\n- 📣 **@here Mentions** - Notify all online players with `@here`\n- 🔧 **Customizable Settings** - Each player can configure their own preferences\n- 🎚️ **Adjustable Pitch** - Fine-tune the sound pitch (0.5 - 2.0)\n- 💾 **Persistent Settings** - Settings are saved per-player in YAML files\n- 🌐 **Multi-language Support** - English (en_US) and Chinese (zh_CN)\n- 👥 **Names with Spaces** - Supports `@\"player name\"` and `@player name` formats\n\n## 📦 Installation\n\n1. Download the latest `MentionSound-x.x.x-shaded.jar` from releases\n2. Place it in your Allay server's `plugins` folder\n3. Restart the server\n\n## 🎮 Commands\n\n| Command                   | Description                   |\n|---------------------------|-------------------------------|\n| `/mentionsound`           | Show help information         |\n| `/mentionsound settings`  | Open the settings form UI     |\n| `/mentionsound soundlist` | Display available sound names |\n\n**Alias:** `/mentsound`\n\n## ⚙️ Settings\n\nPlayers can customize the following settings via the in-game form:\n\n| Setting                  | Description                       | Default      |\n|--------------------------|-----------------------------------|--------------|\n| 🔔 Enable @name mentions | Toggle name mention notifications | ✅ On         |\n| 🎵 Name mention sound    | Sound to play for name mentions   | `note.pling` |\n| 📣 Enable @here mentions | Toggle @here notifications        | ✅ On         |\n| 🎵 @here mention sound   | Sound to play for @here           | `note.pling` |\n| 🎚️ Sound pitch          | Pitch multiplier (0.5 - 2.0)      | 1.0          |\n\n## 🎵 Common Sounds\n\n```\nnote.pling          note.bell           note.chime\nnote.harp           note.xylophone      random.levelup\nrandom.orb          random.pop          random.click\nrandom.toast        mob.villager.yes    mob.villager.no\nui.toast.challenge_complete\n```\n\nYou can use any valid Minecraft Bedrock Edition sound name!\n\n## 🔨 Building from Source\n\n### Prerequisites\n- ☕ Java 21 or higher\n- 🐘 Gradle\n\n### Build\n\n```bash\n./gradlew shadowJar\n```\n\nThe compiled JAR will be in `build/libs/MentionSound-x.x.x-shaded.jar`\n\n### Test with Local Server\n\n```bash\n./gradlew runServer\n```\n\n## 📋 Requirements\n\n- 🎮 AllayMC Server (API 0.21.0+)\n- ☕ Java 21+\n\n## 📄 License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/MentionSound/blob/master/LICENSE) file for details.\n\n## 🙏 Credits\n\n- Original PocketMine-MP version by [DavyCraft648](https://github.com/DavyCraft648/MentionSound)\n- AllayMC port by [daoge_cmd](https://github.com/smartcmd)\n",
+  "downloads": 2,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
+  "id": "smartcmd/mentionsound",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/smartcmd/MentionSound",
+    "wiki": ""
+  },
+  "name": "MentionSound",
+  "server_version": "",
+  "source": "https://github.com/smartcmd/MentionSound",
+  "stars": 0,
+  "summary": "Get sound notification when someone mentions you | AllayMC plugin",
+  "updated_at": 1769288013,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "MentionSound-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 344516,
+          "url": "https://github.com/smartcmd/MentionSound/releases/download/0.1.0/MentionSound-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1768218898,
+      "version": "0.1.0"
+    }
+  ]
+}
