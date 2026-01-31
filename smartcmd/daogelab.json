@@ -13,7 +13,7 @@
   "created_at": 1753363998,
   "dependencies": [],
   "description": "# DaogeLab\n\nA DgLab plugin for Minecraft: Bedrock Edition running in [Allay](https://github.com/AllayMC/Allay) platform.\n\n<img src=\"https://raw.githubusercontent.com/smartcmd/DaogeLab/master/img.png\" alt=\"Logo\" width=\"768\" height=\"480\">\n\nThis plugin is a port of [Minecraft-DG-LAB](https://github.com/DancingSnow0517/Minecraft-DG-LAB).\n\n## Feature\n\n- Supports DGLab device connectivity and control.\n- Provide QR code scanning connection interface.\n- Injury feedback system.\n\n## Installation\n\n- Download the `.jar` file from release or action.\n- Put it in your `plugins` folder.\n- Restart the server. Configuration file will be generated in `plugins/DaogeLab/config.yml`\n- After editing the configuration file, restart the server again. Enjoy it.\n\nFor how to install Allay, please refer to https://docs.allaymc.org.\n\n## Usage\n\n- Enter the server.\n- Execute the command `/dglab connect`, and then a QR code will be displayed.\n- Open your DgLab APP, choose `Socket Control` and scan the QR code.\n- If connected successfully, the strength of A/B channels will be displayed in top right corner.\n- Use command `/dglab disconnect` to disconnect.\n\n## Acknowledgement\n\n- [Minecraft-DG-LAB](https://github.com/DancingSnow0517/Minecraft-DG-LAB): Code reference\n- [DG-LAB-OPENSOURCE](https://github.com/DG-LAB-OPENSOURCE/DG-LAB-OPENSOURCE): Protocol reference\n\n## License\n\nThis project is licensed under the AGPL-3 License - see the [LICENSE](https://github.com/smartcmd/DaogeLab/blob/master/LICENSE) file for details.",
-  "downloads": 20,
+  "downloads": 21,
   "gallery": [
     {
       "created": "2026-01-31",
@@ -43,7 +43,7 @@
   "versions": [
     {
       "changelog": "**Full Changelog**: https://github.com/smartcmd/DaogeLab/compare/0.2.0...0.3.0",
-      "downloads": 6,
+      "downloads": 7,
       "files": [
         {
           "filename": "DaogeLab-0.3.0-shaded.jar",
