@@ -13,7 +13,7 @@
   "created_at": 1768151972,
   "dependencies": [],
   "description": "# ChainMining\n\nA chain mining plugin for [AllayMC](https://github.com/AllayMC/Allay) that automatically breaks adjacent blocks of the same type when mining.\n\n## Features\n\n- **Chain Mining**: When you break a block that is in the chainable blocks list, all adjacent blocks of the same type will also be broken automatically.\n- **Sneak to Activate**: Chain mining only triggers when sneaking (configurable).\n- **Chain Message**: Shows how many blocks were chain-mined (configurable).\n- **Configurable Block List**: Customize which blocks can be chain-mined via configuration file or in-game GUI.\n- **Max Chain Size Limit**: Set a maximum number of blocks to prevent lag and abuse.\n- **In-Game GUI Configuration**: Use `/chainmining` command to configure the plugin with an intuitive form-based GUI.\n- **Multi-Language Support**: Supports English (en_US) and Chinese (zh_CN).\n- **Hot Reload**: Configuration can be reloaded without restarting the server.\n\n## Installation\n\n1. Download the latest release from the [Releases](https://github.com/smartcmd/ChainMining/releases) page.\n2. Place the `.jar` file in your AllayMC server's `plugins` directory.\n3. Start or restart the server.\n\n## Commands\n\n| Command | Alias | Description | Permission |\n|---------|-------|-------------|------------|\n| `/chainmining` | `/cm` | Opens the configuration GUI | `chainmining.command` |\n\n## Configuration\n\nThe configuration file is located at `plugins/ChainMining/config.yml`.\n\n```yaml\n# List of block identifiers that can be chain-mined\n# Use full identifiers like 'minecraft:oak_log'\nchainable-blocks:\n  - minecraft:oak_log\n  - minecraft:birch_log\n  - minecraft:spruce_log\n  - minecraft:jungle_log\n  - minecraft:acacia_log\n  - minecraft:dark_oak_log\n  - minecraft:mangrove_log\n  - minecraft:cherry_log\n  - minecraft:crimson_stem\n  - minecraft:warped_stem\n  - minecraft:coal_ore\n  - minecraft:deepslate_coal_ore\n  - minecraft:iron_ore\n  - minecraft:deepslate_iron_ore\n  - minecraft:gold_ore\n  - minecraft:deepslate_gold_ore\n  - minecraft:diamond_ore\n  - minecraft:deepslate_diamond_ore\n  - minecraft:emerald_ore\n  - minecraft:deepslate_emerald_ore\n  - minecraft:lapis_ore\n  - minecraft:deepslate_lapis_ore\n  - minecraft:redstone_ore\n  - minecraft:deepslate_redstone_ore\n  - minecraft:copper_ore\n  - minecraft:deepslate_copper_ore\n  - minecraft:nether_gold_ore\n  - minecraft:nether_quartz_ore\n  - minecraft:ancient_debris\n\n# Maximum number of blocks to chain mine at once\n# Higher values may cause lag, recommended: 64-128\nmax-chain-size: 64\n\n# If true, chain mining only triggers when the player is sneaking\nrequire-sneaking: true\n\n# If true, show a message to the player when chain mining is triggered\nshow-chain-message: true\n```\n\n## In-Game Configuration\n\nUse the `/chainmining` command to open the configuration GUI where you can:\n\n- **View Chainable Blocks**: See all currently configured chainable blocks.\n- **Add Block**: Add a new block to the chainable list by entering its identifier.\n- **Remove Block**: Remove a block from the chainable list.\n- **Set Max Chain Size**: Adjust the maximum number of blocks that can be chain-mined at once.\n- **Toggle Settings**: Enable/disable sneak requirement and chain message display.\n\n## How It Works\n\nWhen a player breaks a block:\n1. The plugin checks if the player is sneaking (if `require-sneaking` is enabled).\n2. The plugin checks if the block type is in the chainable blocks list.\n3. If yes, it uses a BFS (Breadth-First Search) algorithm to find all adjacent blocks of the same type.\n4. Each found block is broken automatically, with proper item drops and experience.\n5. The algorithm respects the max chain size limit to prevent lag.\n6. A message is sent to the player showing how many blocks were mined (if `show-chain-message` is enabled).\n\n## Building from Source\n\n```bash\n# Clone the repository\ngit clone https://github.com/smartcmd/ChainMining.git\ncd ChainMining\n\n# Build the plugin\n./gradlew shadowJar\n\n# The built jar will be in build/libs/\n```\n\n## Testing\n\n```bash\n# Run a test server with the plugin\n./gradlew runServer\n```\n\n## Requirements\n\n- Java 21 or higher\n- AllayMC Server (API version 0.20.0+)\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/ChainMining/blob/master/LICENSE) file for details.\n\n## Author\n\n- **daoge_cmd** - [GitHub](https://github.com/smartcmd)\n",
-  "downloads": 0,
+  "downloads": 2,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "smartcmd/chainmining",
@@ -33,5 +33,22 @@
   "stars": 0,
   "summary": "A chain mining plugin for AllayMC that automatically breaks adjacent blocks of the same type when mining",
   "updated_at": 1769288029,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "ChainMining-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 477465,
+          "url": "https://github.com/smartcmd/ChainMining/releases/download/0.1.0/ChainMining-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1768208911,
+      "version": "0.1.0"
+    }
+  ]
 }
