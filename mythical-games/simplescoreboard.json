@@ -13,7 +13,7 @@
   "created_at": 1760974852,
   "dependencies": [],
   "description": "# 🧾 SimpleScoreboard\n*A lightweight and customizable scoreboard plugin for AllayMC.*\n\n![Scoreboard Preview](https://github.com/Mythical-Games/SimpleScoreboard/blob/master/Screenshot_20251020_234057.jpg)\n\n---\n\n## ✨ Features\n- 🚀 Lightweight and performance-friendly  \n- ⚙️ Fully configurable title and lines in `config.yml`  \n- 🧩 Supports placeholders via [AllayMC PlaceholderAPI (PAPI)](https://github.com/AllayMC/PlaceholderAPI)  \n- 🔄 Automatically updates scoreboard values in real-time  \n\n---\n\n## 📦 Installation\n1. Download the latest **SimpleScoreboard** `.jar` file.  \n2. Place it in your server’s `plugins/` folder.  \n3. Restart or reload your AllayMC server.  \n4. Edit the generated `config.yml` file to customize your scoreboard.  \n\n---\n",
-  "downloads": 10,
+  "downloads": 11,
   "gallery": [],
   "icon_url": "https://raw.githubusercontent.com/Mythical-Games/SimpleScoreboard/master/logo.png",
   "id": "mythical-games/simplescoreboard",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "Update to Allay-API:0.22.0 - Latest version",
-      "downloads": 1,
+      "downloads": 2,
       "files": [
         {
           "filename": "SimpleScoreboard-2.0.0-shaded.jar",
