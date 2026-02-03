@@ -13,7 +13,7 @@
   "created_at": 1767091017,
   "dependencies": [],
   "description": "# ChatBubble\n\nChatBubble shows player chat messages as floating DebugText above their heads.\n\n![img.png](https://raw.githubusercontent.com/smartcmd/ChatBubble/master/img.png)\n\n## License\n\nMIT License. See [LICENSE](https://github.com/smartcmd/ChatBubble/blob/master/LICENSE).",
-  "downloads": 5,
+  "downloads": 6,
   "gallery": [
     {
       "created": "2026-01-31",
@@ -43,7 +43,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 5,
+      "downloads": 6,
       "files": [
         {
           "filename": "ChatBubble-0.1.0-shaded.jar",
