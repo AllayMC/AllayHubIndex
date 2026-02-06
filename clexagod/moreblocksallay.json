@@ -13,7 +13,7 @@
   "created_at": 1769166307,
   "dependencies": [],
   "description": "# MoreBlocks\n\n<img src=\"https://raw.githubusercontent.com/ClexaGod/MoreBlocksAllay/main/tools/icon.png\" alt=\"MoreBlocks Logo\" width=\"256\" />\n\n**MoreBlocks** is an Allay server plugin adapted from **MultiBlock** resources,\nadding 714 new block variants. The entire resource pack is embedded in the plugin.\n\n## Features\n- 714 custom block variants\n- Direction + vertical half model transformations\n- Stonecutter recipes\n- Creative groups under Construction\n- Embedded Resource Pack (single jar)\n\n## Screenshots\n<img src=\"https://raw.githubusercontent.com/ClexaGod/MoreBlocksAllay/main/tools/creative.jpg\" alt=\"Creative Menu\" width=\"700\" />\n<img src=\"https://raw.githubusercontent.com/ClexaGod/MoreBlocksAllay/main/tools/creative2.jpg\" alt=\"Creative Menu 2\" width=\"700\" />\n<img src=\"https://raw.githubusercontent.com/ClexaGod/MoreBlocksAllay/main/tools/craft.jpg\" alt=\"Stonecutter Recipes\" width=\"700\" />\n\n## Requirements\n- Allay server\n\n## Installation\n1) Build:\n```\n./gradlew build\n```\n2) Copy the jar to your server's `plugins` directory.\n3) If your server does not distribute embedded resource packs,\n   register `src/main/resources/assets/resource_pack` manually.\n\n## Usage\n- Blocks are listed under **Creative > Construction**.\n- Recipes are available in the **stonecutter**.\n\n## Supported Languages\nbg_BG, cs_CZ, da_DK, de_DE, el_GR, en_GB, en_US, es_ES, es_MX, fi_FI, fr_CA, fr_FR,\nhu_HU, id_ID, it_IT, ja_JP, ko_KR, nb_NO, nl_NL, pl_PL, pt_BR, pt_PT, ru_RU, sk_SK,\nsv_SE, tr_TR, uk_UA, zh_CN, zh_TW\n\n## Project Layout\n```\nsrc/main/java/MoreBlocks/ClexaGod/moreblocks\nsrc/main/resources/assets/resource_pack\n```\n\n## License\nThis project is licensed under the terms in `LICENSE`.\n",
-  "downloads": 4,
+  "downloads": 5,
   "gallery": [
     {
       "created": "2026-01-31",
@@ -61,7 +61,7 @@
   "versions": [
     {
       "changelog": "MoreBlocks 0.1.0",
-      "downloads": 4,
+      "downloads": 5,
       "files": [
         {
           "filename": "MoreBlocks-0.1.0.jar",
