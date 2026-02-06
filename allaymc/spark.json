@@ -18,7 +18,7 @@
   "created_at": 1729439183,
   "dependencies": [],
   "description": "<h1 align=\"center\">\n\t<img\n\t\talt=\"spark\"\n\t\tsrc=\"https://i.imgur.com/ykHn9vx.png\">\n</h1>\n\n# spark-extra-platforms\n\nThis repository contains implementations of [spark](https://github.com/lucko/spark) for additional platforms.\n\nThese releases do not receive the same level of support as the main spark plugins/mods. They are provided as-is, and may be out of date or contain bugs. If you run into problems, please open an issue on GitHub and/or raise a pull request to fix!\n\n#### Useful Links\n* [**Website**](https://spark.lucko.me/) - browse the project homepage\n* [**Documentation**](https://spark.lucko.me/docs) - read documentation and usage guides\n* [**Downloads**](https://ci.lucko.me/job/spark-extra-platforms/) - latest plugin/mod downloads\n\n## License\n\nspark is free & open source. It is released under the terms of the GNU GPLv3 license. Please see [`LICENSE.txt`](https://github.com/AllayMC/SparkAllay/blob/feat/allay-platform/LICENSE.txt) for more information. \n",
-  "downloads": 35,
+  "downloads": 37,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
   "id": "allaymc/spark",
@@ -41,7 +41,7 @@
   "versions": [
     {
       "changelog": "adapt allay-api 0.17.0",
-      "downloads": 17,
+      "downloads": 19,
       "files": [
         {
           "filename": "spark-1.10.142-SNAPSHOT-allay.jar",
