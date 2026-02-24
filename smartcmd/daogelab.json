@@ -37,9 +37,9 @@
   "name": "DaogeLab",
   "server_version": "",
   "source": "https://github.com/smartcmd/DaogeLab",
-  "stars": 3,
+  "stars": 4,
   "summary": "A DgLab plugin for Minecraft: Bedrock Edition running in Allay platform",
-  "updated_at": 1769287983,
+  "updated_at": 1771953854,
   "versions": [
     {
       "changelog": "**Full Changelog**: https://github.com/smartcmd/DaogeLab/compare/0.2.0...0.3.0",
