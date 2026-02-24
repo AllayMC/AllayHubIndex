@@ -1,5 +1,5 @@
 {
-  "api_version": "0.24.0",
+  "api_version": "0.25.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/174959205?v=4",
@@ -30,9 +30,9 @@
   "name": "NSSpawn",
   "server_version": "",
   "source": "https://github.com/neversay7569/NSSpawn",
-  "stars": 0,
+  "stars": 1,
   "summary": "Плагин на спавн для Allay / AllayMC",
-  "updated_at": 1748109480,
+  "updated_at": 1771934112,
   "versions": [
     {
       "changelog": "Plugin for Allay",
