@@ -35,9 +35,9 @@
   "name": "HuHoBot",
   "server_version": "",
   "source": "https://github.com/HuHoBot/KotlinMergeAdapter",
-  "stars": 3,
+  "stars": 4,
   "summary": "HuHoBot for Allay,Spigot,NkMot,Velocity,BungeeCord enabling the official QQ bot to connect to your server.",
-  "updated_at": 1770831025,
+  "updated_at": 1772285127,
   "versions": [
     {
       "changelog": "# HuHoBot-Adapter v2.0.9\r\n\r\nfeat(bot): 优化重连机制并更新配置版本\r\n- 重构了 \\`ClientManager\\` 中的重连逻辑，改用异步任务调度替代同步等待\r\n\r\nfeat(spigot): 优化重连机制并更新配置版本\r\n- 更新配置，添加\\`CommandSender\\`配置项，移除\\`CommandExecutionSort\\`配置项\r\n\r\n### 构建信息\r\n- 构建时间: 2026-02-06T13:13:32Z\r\n- 提交哈希: [17ad2ecb8df05a5a9b52cece33273c22c09d2266](https://github.com/HuHoBot/KotlinMergeAdapter/commit/17ad2ecb8df05a5a9b52cece33273c22c09d2266)\r\n",
