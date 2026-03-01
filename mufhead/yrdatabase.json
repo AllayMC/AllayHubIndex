@@ -30,9 +30,9 @@
   "name": "YRDatabase",
   "server_version": "",
   "source": "https://github.com/MufHead/YRDatabase",
-  "stars": 1,
+  "stars": 2,
   "summary": "nk-support",
-  "updated_at": 1770349220,
+  "updated_at": 1772354903,
   "versions": [
     {
       "changelog": "## Downloads\r\n- yrdatabase-allay-2.0.0.jar\r\n- yrdatabase-nukkit-2.0.0.jar\r\n- yrdatabase-waterdog.jar\r\n- yrdatabase-api.jar\r\n- yrdatabase-core.jar\r\n\r\n## Notes\r\n- Multi-platform build with session bridge support\r\n- JitPack artifacts available under com.github.MufHead.YRDatabase\r\n",
