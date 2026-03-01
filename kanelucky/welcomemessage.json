@@ -13,7 +13,7 @@
   "created_at": 1768963747,
   "dependencies": [],
   "description": "# ✨ Welcome Message\n- Send a title and subtitle message or a chat message when a player joins the server\n# ⚙️ Configuration (config.yml)\n```yml\ntypes:\n  chat: false\n  title: true\n  actionbar: false\ntitle:\n  title: §2Welcome to the server!\n  subtitle: Play your way\nchat:\n  message: §2Welcome to the server!\nactionbar:\n  message: §2Welcome to the server!\n```\n# 📸 Capture\n![picture.png](https://raw.githubusercontent.com/Kanelucky/WelcomeMessage/master/picture.png)\n",
-  "downloads": 3,
+  "downloads": 5,
   "gallery": [
     {
       "created": "2026-02-10",
@@ -43,7 +43,7 @@
   "versions": [
     {
       "changelog": "Add actionbar message",
-      "downloads": 2,
+      "downloads": 4,
       "files": [
         {
           "filename": "WelcomeMessage-0.1.2-all.jar",
