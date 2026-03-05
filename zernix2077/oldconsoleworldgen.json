@@ -45,8 +45,24 @@
   "source": "https://github.com/zernix2077/OldConsoleWorldgen",
   "stars": 1,
   "summary": "AllayMC plugin to bring back minecraft legacy console edition world generation.",
-  "updated_at": 1772725084,
+  "updated_at": 1772730157,
   "versions": [
+    {
+      "changelog": "",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "OldConsoleWorldGen-0.1.2-shaded.jar",
+          "primary": true,
+          "size": 100129,
+          "url": "https://github.com/zernix2077/OldConsoleWorldgen/releases/download/0.1.2/OldConsoleWorldGen-0.1.2-shaded.jar"
+        }
+      ],
+      "name": "0.1.2",
+      "prerelease": false,
+      "published_at": 1772730220,
+      "version": "0.1.2"
+    },
     {
       "changelog": "",
       "downloads": 2,
