@@ -1,5 +1,5 @@
 {
-  "api_version": "0.25.0",
+  "api_version": "0.26.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
@@ -32,8 +32,24 @@
   "source": "https://github.com/AllayMC/RockArchive",
   "stars": 0,
   "summary": "RockArchive is a high-performance world storage format for AllayMC powered by RocksDB.",
-  "updated_at": 1771000201,
+  "updated_at": 1773072797,
   "versions": [
+    {
+      "changelog": "**Full Changelog**: https://github.com/AllayMC/RockArchive/compare/0.1.0...0.2.0",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "RockArchive-0.2.0-shaded.jar",
+          "primary": true,
+          "size": 72782943,
+          "url": "https://github.com/AllayMC/RockArchive/releases/download/0.2.0/RockArchive-0.2.0-shaded.jar"
+        }
+      ],
+      "name": "0.2.0",
+      "prerelease": false,
+      "published_at": 1773073073,
+      "version": "0.2.0"
+    },
     {
       "changelog": "**Full Changelog**: https://github.com/AllayMC/RockArchive/commits/0.1.0",
       "downloads": 2,
