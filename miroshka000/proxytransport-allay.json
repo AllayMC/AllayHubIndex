@@ -1,0 +1,60 @@
+{
+  "api_version": "0.26.0-SNAPSHOT",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
+      "name": "Miroshka000",
+      "url": "https://github.com/Miroshka000"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1771351609,
+  "dependencies": [],
+  "description": "<div align=\"center\">\n\n# 🚚 ProxyTransport\n\n**High-performance QUIC and TCP transport bridge for Allay and WaterdogPE**\n\n![License](https://img.shields.io/badge/License-MIT-blue.svg)\n![Version](https://img.shields.io/badge/Version-1.0.0--SNAPSHOT%20%2F%202.1.0--SNAPSHOT-green.svg)\n![Platform](https://img.shields.io/badge/Platform-Allay%20%2B%20Waterdog-orange.svg)\n\n<br>\n\n[![Русский](https://img.shields.io/badge/Language-Русский-red?style=for-the-badge&logo=google-translate&logoColor=white)](README_RU.md)\n\n</div>\n\n---\n\n**ProxyTransport** is a high-performance transport bridge for **Allay** and **WaterdogPE** that forwards Bedrock traffic over **QUIC** or **TCP** without adding an extra gameplay protocol layer. It uses a shared core pipeline, supports Docker service names, and is designed for many backend servers behind one proxy.\n\n### ✨ Features\n- **QUIC Transport**: Fast downstream connections with bidirectional QUIC streams between WaterdogPE and Allay.\n- **TCP Transport**: Compatibility fallback for environments where QUIC is not required.\n- **Shared Core**: One common runtime for framing, compression, codecs, and transport login handling.\n- **Docker Friendly**: Supports backend addresses like `lobby:19132` and other container service names.\n- **Operational Safety**: Includes login timeout, packet rate limiting, per-IP connection tracking, and temporary self-signed certificate generation.\n\n### 📦 Modules\n| Module | Platform | Description |\n|---------|----------|-------------|\n| `transport-allay` | Allay | Accepts QUIC proxy connections and forwards them into the Allay network stack. |\n| `transport-waterdog` | WaterdogPE | Registers `quic` and `tcp` backend types for downstream connections. |\n| `transport-core` | Shared | Provides the common transport runtime, codecs, framing, compression, and stream handling. |\n\n### 🛠️ Usage\n1. **Build the project**: Run `./gradlew build`.\n2. **Install the Allay plugin**: Put `ProxyTransport-Allay-1.0.0-SNAPSHOT.jar` from `transport-allay/build/libs` into the Allay `plugins` folder.\n3. **Install the WaterdogPE plugin**: Put `ProxyTransport-2.1.0-SNAPSHOT.jar` from `transport-waterdog/build/libs` into the WaterdogPE `plugins` folder.\n4. **Configure backend transport**: Use the downstream type `quic` or `tcp` in your WaterdogPE backend configuration.\n5. **Start Allay**: If no certificate files exist, ProxyTransport-Allay will generate a temporary self-signed certificate automatically.\n\n### 🚩 Configuration\n| Option | Default | Description |\n|------------|-------------|-------------|\n| `certPath` | `certificates/cert.pem` | Relative path to the QUIC certificate file. |\n| `keyPath` | `certificates/key.pem` | Relative path to the QUIC private key file. |\n| `maxStreamsPerConnection` | `4096` | Maximum bidirectional streams per Waterdog connection. |\n| `connectionLimitPerIp` | `16` | Maximum simultaneous QUIC connections per IP. |\n| `maxPacketsPerSecond` | `4096` | Maximum packet rate per stream before disconnect. |\n| `loginTimeoutMs` | `5000` | Time limit in milliseconds for the initial proxy login frame. |\n\n### 🔌 Output Jars\n| Artifact | Path | Description |\n|-------|----------|-------------|\n| `ProxyTransport-Allay-1.0.0-SNAPSHOT.jar` | `transport-allay/build/libs` | Allay plugin. |\n| `ProxyTransport-2.1.0-SNAPSHOT.jar` | `transport-waterdog/build/libs` | WaterdogPE plugin. |\n| `transport-core-1.0.0-SNAPSHOT.jar` | `transport-core/build/libs` | Shared internal library module. |\n\n---\n\n<div align=\"center\">\n    <br>\n    <p>Created by <b>Miroshka</b> for <b>Allay</b> and <b>WaterdogPE</b> with ❤️</p>\n</div>\n",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
+  "id": "miroshka000/proxytransport-allay",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "ProxyTransport-Allay",
+  "server_version": "",
+  "source": "https://github.com/Miroshka000/ProxyTransport-Allay",
+  "stars": 0,
+  "summary": "",
+  "updated_at": 1773001457,
+  "versions": [
+    {
+      "changelog": "Automated release for ProxyTransport.\r\n\r\nIncluded plugins:\r\n- `ProxyTransport-Allay-*.jar` - Allay plugin\r\n- `ProxyTransport-*.jar` - WaterdogPE plugin\r\n\r\n\r\n**Full Changelog**: https://github.com/Miroshka000/ProxyTransport-Allay/commits/v1.0.0-SNAPSHOT",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "ProxyTransport-2.1.0-SNAPSHOT.jar",
+          "primary": false,
+          "size": 32663387,
+          "url": "https://github.com/Miroshka000/ProxyTransport-Allay/releases/download/v1.0.0-SNAPSHOT/ProxyTransport-2.1.0-SNAPSHOT.jar"
+        },
+        {
+          "filename": "ProxyTransport-Allay-1.0.0-SNAPSHOT.jar",
+          "primary": true,
+          "size": 33103849,
+          "url": "https://github.com/Miroshka000/ProxyTransport-Allay/releases/download/v1.0.0-SNAPSHOT/ProxyTransport-Allay-1.0.0-SNAPSHOT.jar"
+        }
+      ],
+      "name": "ProxyTransport v1.0.0-SNAPSHOT",
+      "prerelease": false,
+      "published_at": 1773001589,
+      "version": "1.0.0-SNAPSHOT"
+    }
+  ]
+}
