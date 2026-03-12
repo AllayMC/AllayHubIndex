@@ -30,9 +30,9 @@
   "name": "NetherWorldGen",
   "server_version": "",
   "source": "https://github.com/ClexaGod/NetherWorldGen",
-  "stars": 2,
+  "stars": 3,
   "summary": "Custom Nether generator plugin for Allay",
-  "updated_at": 1772751289,
+  "updated_at": 1773333424,
   "versions": [
     {
       "changelog": "",
