@@ -1,0 +1,37 @@
+{
+  "api_version": "0.26.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/216477222?v=4",
+      "name": "Kanelucky",
+      "url": "https://github.com/Kanelucky"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1773565919,
+  "dependencies": [],
+  "description": "# SimpleTPA\n\nA lightweight and simple **tpa plugin** for **AllayMC**\n\n**SimpleTPA** allows players to send teleport requests, accept or deny them, and manage teleport interactions easily.\n\n---\n## Commands\n| Command               | Description                       |\n|-----------------------|-----------------------------------|\n| `/tpahelp`            | Show a list of simpletpa commands |\n| `/tpa <player>`       | Send a teleport request           |\n| `/tpahere <player>`   | Ask player to teleport to you     |\n| `/tpaaccept`          | Accept teleport request           |\n| `/tpadeny`            | Deny teleport request             |\n| `/tpablock <player>`  | Block TPA requests                |\n| `/tpaunlock <player>` | Unblock TPA requests              |\n| `/tpareload`          | Reload plugin config              |\n\n---\n# Configuration (config.yml)\n- The plugin uses a `config.yml` file located in the `plugins/SimpleTPA/` directory. On first run, it will automatically create a default configuration file.\n\n## config.yml Structure\n```yaml\nmessages:\n  request-sent: '&aTeleport request sent to {player}'\n  request-sent-here: '&aTeleport request sent to {player}'\n  request-received: '&e{player} wants to teleport to you.'\n  request-received-here: '&e{player} wants you to teleport to them.'\n  request-instruction: '&eUse /tpaaccept to accept or /tpadeny to deny.'\n  accept-teleporting: '&aTeleporting to {player}...'\n  accept-teleported-to-you: '&a{player} teleported to you.'\n  accept-you-teleported: '&aTeleporting to {player}...'\n  accept-player-teleported: '&a{player} teleported to you.'\n  deny-success: '&eYou denied the teleport request.'\n  deny-notified: '&c{player} denied your teleport request.'\n  block-success: '&aBlocked {player} from sending teleport requests.'\n  block-already: '&e{player} is already blocked.'\n  unblock-success: '&aUnblocked {player}.'\n  unblock-not-blocked: '&e{player} is not blocked.'\n  error-no-request: '&cYou don''t have any pending teleport requests.'\n  error-request-expired: '&cThe teleport request has expired.'\n  error-player-offline: '&cThe player is no longer online.'\n  error-already-pending: '&cThis player already has a pending request.'\n  error-blocked: '&cThis player has blocked your teleport requests.'\n  error-self-teleport: '&cYou cannot send a teleport request to yourself!'\n  error-self-block: '&cYou cannot block yourself!'\n```\n---\n# Permissions\n\n`tpahelp`\n- Permission: `simpletpa.tpahelp.use`\n\n`tpa <player>`\n- Permission: `simpletpa.tpa.use`\n\n`tpaaccept`\n- Permission: `simpletpa.tpaaccept.use`\n\n`tpadeny`\n- Permission: `simpletpa.tpadeny.use`\n\n`tpahere`\n- Permission: `simpletpa.tpahere.use`\n\n`tpablock <player>`\n- Permission: `simpletpa.tpablock.use`\n\n`tpaunblock <player>`\n- Permission: `simpletpa.tpaunblock.use`\n\n`tpareload`\n- Permission: `simpletpa.tpareload.use`\n---",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/216477222?v=4",
+  "id": "kanelucky/simpletpa",
+  "license": {
+    "id": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://spdx.org/licenses/Apache-2.0.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/Kanelucky/SimpleTPA",
+    "wiki": ""
+  },
+  "name": "SimpleTPA",
+  "server_version": "",
+  "source": "https://github.com/Kanelucky/SimpleTPA",
+  "stars": 0,
+  "summary": "A lightweight and simple tpa plugin for AllayMC",
+  "updated_at": 1773626678,
+  "versions": []
+}
