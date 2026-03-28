@@ -37,8 +37,42 @@
   "source": "https://github.com/HuHoBot/KotlinMergeAdapter",
   "stars": 4,
   "summary": "HuHoBot for Allay,Spigot,NkMot,Velocity,BungeeCord enabling the official QQ bot to connect to your server.",
-  "updated_at": 1772285127,
+  "updated_at": 1774715009,
   "versions": [
+    {
+      "changelog": "# HuHoBot-Adapter v2.1.0\n\nfeat(bot): 添加文本过滤功能以清理命令响应中的ANSI转义序列\n- 在所有服务器实现中添加filterRegex配置选项\n\n### 构建信息\n- 构建时间: 2026-03-28T16:26:47Z\n- 提交哈希: [3c4a7cbb54d131702b9bd06945eae22449a7aebf](https://github.com/HuHoBot/KotlinMergeAdapter/commit/3c4a7cbb54d131702b9bd06945eae22449a7aebf)\n",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "HuHoBot-2.1.0-Allay.jar",
+          "primary": true,
+          "size": 9226538,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.0/HuHoBot-2.1.0-Allay.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.0-Nukkit-MOT.jar",
+          "primary": false,
+          "size": 8725790,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.0/HuHoBot-2.1.0-Nukkit-MOT.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.0-Proxy.jar",
+          "primary": false,
+          "size": 10434762,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.0/HuHoBot-2.1.0-Proxy.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.0-Spigot.jar",
+          "primary": false,
+          "size": 8985658,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.0/HuHoBot-2.1.0-Spigot.jar"
+        }
+      ],
+      "name": "HuHoBot v2.1.0",
+      "prerelease": false,
+      "published_at": 1774715208,
+      "version": "2.1.0"
+    },
     {
       "changelog": "# HuHoBot-Adapter v2.0.9\r\n\r\nfeat(bot): 优化重连机制并更新配置版本\r\n- 重构了 \\`ClientManager\\` 中的重连逻辑，改用异步任务调度替代同步等待\r\n\r\nfeat(spigot): 优化重连机制并更新配置版本\r\n- 更新配置，添加\\`CommandSender\\`配置项，移除\\`CommandExecutionSort\\`配置项\r\n\r\n### 构建信息\r\n- 构建时间: 2026-02-06T13:13:32Z\r\n- 提交哈希: [17ad2ecb8df05a5a9b52cece33273c22c09d2266](https://github.com/HuHoBot/KotlinMergeAdapter/commit/17ad2ecb8df05a5a9b52cece33273c22c09d2266)\r\n",
       "downloads": 120,
