@@ -37,8 +37,42 @@
   "source": "https://github.com/HuHoBot/KotlinMergeAdapter",
   "stars": 4,
   "summary": "HuHoBot for Allay,Spigot,NkMot,Velocity,BungeeCord enabling the official QQ bot to connect to your server.",
-  "updated_at": 1775235894,
+  "updated_at": 1775414328,
   "versions": [
+    {
+      "changelog": "# HuHoBot-Adapter v2.1.2\n\nfeat(motd): 添加 Markdown 渲染支持和优化在线玩家列表显示\n- 在配置中添加 useMarkdown 选项以控制 MOTD 渲染方式\n- 优化 ClientManager 中的 MOTD 发送接口，分离玩家名称和文本模板参数\n\n### 构建信息\n- 构建时间: 2026-04-05T18:42:27Z\n- 提交哈希: [93ae7d24efefe7fb42d11e3251a6faa4cfc552b5](https://github.com/HuHoBot/KotlinMergeAdapter/commit/93ae7d24efefe7fb42d11e3251a6faa4cfc552b5)\n",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "HuHoBot-2.1.2-Allay.jar",
+          "primary": true,
+          "size": 9348386,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.2/HuHoBot-2.1.2-Allay.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.2-Nukkit-MOT.jar",
+          "primary": false,
+          "size": 8836949,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.2/HuHoBot-2.1.2-Nukkit-MOT.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.2-Proxy.jar",
+          "primary": false,
+          "size": 10515266,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.2/HuHoBot-2.1.2-Proxy.jar"
+        },
+        {
+          "filename": "HuHoBot-2.1.2-Spigot.jar",
+          "primary": false,
+          "size": 9269438,
+          "url": "https://github.com/HuHoBot/KotlinMergeAdapter/releases/download/v2.1.2/HuHoBot-2.1.2-Spigot.jar"
+        }
+      ],
+      "name": "HuHoBot v2.1.2",
+      "prerelease": false,
+      "published_at": 1775414548,
+      "version": "2.1.2"
+    },
     {
       "changelog": "# HuHoBot-Adapter v2.1.1\n\nchore(build): 更新项目依赖版本并修复包导入路径\n- 修复部分服务器由于\\`Kotlin\\`依赖问题无法正确运行\n\n### 构建信息\n- 构建时间: 2026-04-03T17:09:08Z\n- 提交哈希: [4e712b80ea47121d77858f5ce45e1b914724e846](https://github.com/HuHoBot/KotlinMergeAdapter/commit/4e712b80ea47121d77858f5ce45e1b914724e846)\n",
       "downloads": 7,
