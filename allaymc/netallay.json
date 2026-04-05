@@ -1,5 +1,5 @@
 {
-  "api_version": "0.27.0",
+  "api_version": "0.28.0-SNAPSHOT",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
@@ -30,9 +30,9 @@
   "name": "NetAllay",
   "server_version": "",
   "source": "https://github.com/AllayMC/NetAllay",
-  "stars": 2,
+  "stars": 3,
   "summary": "适用于Allay的网易我的世界客户端通信插件",
-  "updated_at": 1775065282,
+  "updated_at": 1775391461,
   "versions": [
     {
       "changelog": "## What's Changed\r\n* 支持网易商城方面的数据包和事件监听 by @MufHead in https://github.com/AllayMC/NetAllay/pull/1\r\n\r\n## New Contributors\r\n* @MufHead made their first contribution in https://github.com/AllayMC/NetAllay/pull/1\r\n\r\n**Full Changelog**: https://github.com/AllayMC/NetAllay/commits/0.1.1",
