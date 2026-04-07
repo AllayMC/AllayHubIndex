@@ -1,0 +1,61 @@
+{
+  "api_version": "0.27.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/110056737?v=4",
+      "name": "zernix2077",
+      "url": "https://github.com/zernix2077"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1774554991,
+  "dependencies": [],
+  "description": "# WorldEdit\n\nA Java reimplementation of the classic WorldEdit plugin for Allay.\n\nImplements general, navigation, region, and clipboard commands. Documentation is available at https://worldedit.enginehub.org/en/latest/commands/.\n\nCommands use a single slash instead of two to preserve bedrock client auto-completion capabilities. Debug boxes are used for selections and can be disabled via `/selboxtoggle`.\n\n## Screenshots\n![Screenshot](https://raw.githubusercontent.com/zernix2077/WorldEdit/master/images/screenshot.png)\n\n## Install\n- Download the .jar file from the releases page\n- Place it in the ./plugins folder\n- Restart the server\n- Enjoy!\n\n",
+  "downloads": 1,
+  "gallery": [
+    {
+      "created": "2026-04-07",
+      "description": "",
+      "title": "Screenshot",
+      "url": "https://raw.githubusercontent.com/zernix2077/WorldEdit/master/images/screenshot.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/110056737?v=4",
+  "id": "zernix2077/worldedit",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/Zernix/WorldEdit",
+    "wiki": ""
+  },
+  "name": "WorldEdit",
+  "server_version": "0.11.0",
+  "source": "https://github.com/zernix2077/WorldEdit",
+  "stars": 1,
+  "summary": "AllayMC WorldEdit reimplementation plugin",
+  "updated_at": 1774608117,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "WorldEdit-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 188455,
+          "url": "https://github.com/zernix2077/WorldEdit/releases/download/0.1.0/WorldEdit-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1774573492,
+      "version": "0.1.0"
+    }
+  ]
+}
