@@ -37,8 +37,8 @@
   "name": "ServerInfo",
   "server_version": "",
   "source": "https://github.com/smartcmd/ServerInfo",
-  "stars": 1,
+  "stars": 2,
   "summary": "Show some information through scoreboard & bossbar",
-  "updated_at": 1769288319,
+  "updated_at": 1776520529,
   "versions": []
 }
