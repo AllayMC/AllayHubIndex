@@ -13,7 +13,7 @@
   "created_at": 1766477121,
   "dependencies": [],
   "description": "# 😊 Amoji\n\nAn emoji plugin for [AllayMC](https://github.com/AllayMC/Allay) server that displays emoji particle effects above players' heads!\n\n![img.png](https://raw.githubusercontent.com/smartcmd/Amoji/master/img.png)\n\n## ✨ Features\n\n- 🎭 Display emoji particle effects above players' heads\n- 💬 Auto-detect emoji phrases in chat messages\n- 📝 Customizable emoji names and trigger phrases\n- 🎮 Simple GUI for selecting emojis\n\n## 📦 Installation\n\n1. Download the latest release from [Releases](https://github.com/smartcmd/Amoji/releases)\n2. Place the JAR file into your server's `plugins` folder\n3Restart the server\n\n## 📋 Commands\n\n| Command  | Aliases       | Description                   | Permission            |\n|----------|---------------|-------------------------------|-----------------------|\n| `/emoji` | `/emj`, `/ej` | Opens the emoji selection GUI | `amoji.command.emoji` |\n\n## ⚙️ Configuration\n\n### config.yml\n\n```yaml\n# Enable/disable automatic emoji display when players chat\nauto-emoji: true\n```\n\n### emoji.yml\n\nDefines the display names for each emoji:\n\n```yaml\nsmiley: Smiley\ngrimacing: Grimacing\ngrin: Grin\njoy: Joy\nsmile: Smile\n# ... and more\n```\n\n### emoji-phrases.yml\n\nDefines trigger phrases that will automatically display emojis above players when they chat:\n\n```yaml\njoy:\n  - \"haha\"\n  - \"hhhh\"\n  - \"lmao\"\n  - \"lmfao\"\nsmile:\n  - \"welcome\"\n  - \"wlc\"\nheart_eyes:\n  - \"love\"\n  - \"<3\"\n# ... and more\n```\n\n## 🎨 Available Emojis\n\n| Emoji | ID                           | Description                  |\n|-------|------------------------------|------------------------------|\n| 😊    | smiley                       | Smiley                       |\n| 😬    | grimacing                    | Grimacing                    |\n| 😀    | grin                         | Grin                         |\n| 😂    | joy                          | Joy                          |\n| 😄    | smile                        | Smile                        |\n| 😅    | sweat_smile                  | Sweat smile                  |\n| 😆    | laughing                     | Laughing                     |\n| 😇    | innocent                     | Innocent                     |\n| 😉    | wink                         | Wink                         |\n| 😊    | blush                        | Blush                        |\n| 🙂    | slight_smile                 | Slight smile                 |\n| 🙃    | upside_down                  | Upside down                  |\n| ☺️    | relaxed                      | Relaxed                      |\n| 😋    | yum                          | Yum                          |\n| 😌    | relieved                     | Relieved                     |\n| 😍    | heart_eyes                   | Heart eyes                   |\n| 😘    | kissing_heart                | Kissing heart                |\n| 😗    | kissing                      | Kissing                      |\n| 😙    | kissing_smiling_eyes         | Kissing smiling eyes         |\n| 😚    | kissing_closed_eyes          | Kissing closed eyes          |\n| 😜    | stuck_out_tongue_winking_eye | Stuck out tongue winking eye |\n| 😝    | stuck_out_tongue_closed_eyes | Stuck out tongue closed eyes |\n| 😛    | stuck_out_tongue             | Stuck out tongue             |\n| 🤑    | money_mouth                  | Money mouth                  |\n| 😎    | sunglasses                   | Sunglasses                   |\n| 😏    | smirk                        | Smirk                        |\n| 😶    | no_mouth                     | No mouth                     |\n| 😐    | neutral_face                 | Neutral face                 |\n| 😑    | expressionless               | Expressionless               |\n| 😒    | unamused                     | Unamused                     |\n| 🙄    | rolling_eyes                 | Rolling eyes                 |\n| 😳    | flushed                      | Flushed                      |\n| 😞    | disappointed                 | Disappointed                 |\n| 😟    | worried                      | Worried                      |\n| 😠    | angry                        | Angry                        |\n| 😡    | rage                         | Rage                         |\n| 😔    | pensive                      | Pensive                      |\n| 😕    | confused                     | Confused                     |\n| 🙁    | slight_frown                 | Slight frown                 |\n| ☹️    | frowning2                    | Frowning 2                   |\n\n## 📄 License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/Amoji/blob/master/LICENSE) file for details.\n",
-  "downloads": 0,
+  "downloads": 12,
   "gallery": [
     {
       "created": "2026-01-31",
@@ -40,5 +40,22 @@
   "stars": 0,
   "summary": "An emoji plugin for AllayMC server that displays emoji particle effects above players' heads!",
   "updated_at": 1769288200,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 12,
+      "files": [
+        {
+          "filename": "Amoji-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 18192,
+          "url": "https://github.com/smartcmd/Amoji/releases/download/0.1.0/Amoji-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1766480210,
+      "version": "0.1.0"
+    }
+  ]
 }

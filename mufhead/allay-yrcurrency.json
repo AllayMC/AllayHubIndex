@@ -33,5 +33,22 @@
   "stars": 0,
   "summary": "基于Allay的货币系统插件",
   "updated_at": 1770349246,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "## Changes\n- Added auto-flush config and scheduled cache persistence\n- Added /eco flush to persist cache on demand\n- Added transaction logging for admin commands\n- Improved database schema handling (id column, last_updated format)\n- Added README with usage and placeholders\n",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "Allay-YRCurrency-1.0.0-SNAPSHOT.jar",
+          "primary": true,
+          "size": 59083,
+          "url": "https://github.com/MufHead/Allay-YRCurrency/releases/download/v1.0.0/Allay-YRCurrency-1.0.0-SNAPSHOT.jar"
+        }
+      ],
+      "name": "v1.0.0",
+      "prerelease": false,
+      "published_at": 1770348700,
+      "version": "1.0.0"
+    }
+  ]
 }

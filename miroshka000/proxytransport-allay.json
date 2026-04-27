@@ -33,5 +33,28 @@
   "stars": 0,
   "summary": "High-performance QUIC and TCP transport bridge for Allay and WaterdogPE",
   "updated_at": 1773748586,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "Automated release for ProxyTransport.\r\n\r\nIncluded plugins:\r\n- `ProxyTransport-Allay-*.jar` - Allay plugin\r\n- `ProxyTransport-*.jar` - WaterdogPE plugin\r\n\r\n\r\n**Full Changelog**: https://github.com/Miroshka000/ProxyTransport-Allay/commits/v1.0.0-SNAPSHOT",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "ProxyTransport-2.1.0-SNAPSHOT.jar",
+          "primary": false,
+          "size": 32663387,
+          "url": "https://github.com/Miroshka000/ProxyTransport-Allay/releases/download/v1.0.0-SNAPSHOT/ProxyTransport-2.1.0-SNAPSHOT.jar"
+        },
+        {
+          "filename": "ProxyTransport-Allay-1.0.0-SNAPSHOT.jar",
+          "primary": true,
+          "size": 33103849,
+          "url": "https://github.com/Miroshka000/ProxyTransport-Allay/releases/download/v1.0.0-SNAPSHOT/ProxyTransport-Allay-1.0.0-SNAPSHOT.jar"
+        }
+      ],
+      "name": "ProxyTransport v1.0.0-SNAPSHOT",
+      "prerelease": false,
+      "published_at": 1773001589,
+      "version": "1.0.0-SNAPSHOT"
+    }
+  ]
 }

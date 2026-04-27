@@ -13,7 +13,7 @@
   "created_at": 1766000597,
   "dependencies": [],
   "description": "<div align=\"center\">\n\n# 🏷️ Holograms For Allay\n\n**Powerful and Flexible Hologram System for Allay**\n\n![License](https://img.shields.io/badge/License-MIT-blue.svg)\n![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)\n![Platform](https://img.shields.io/badge/Platform-Allay-orange.svg)\n\n<br>\n\n[![Русский](https://img.shields.io/badge/Язык-Русский-red?style=for-the-badge&logo=google-translate&logoColor=white)](README_RU.md)\n\n</div>\n\n---\n\n**Holograms** is a feature-rich hologram plugin for **Allay** servers. Create floating text displays with multi-line support, per-player localization, and PlaceholderAPI integration. Perfect for server info, rules, welcomes, and dynamic displays.\n\n### ✨ Features\n- **Easy Creation**: GUI-based hologram creation and editing via forms.\n- **Multi-line Support**: Create holograms with multiple floating text lines.\n- **Per-locale Translations**: Different text for different player languages.\n- **PlaceholderAPI Support**: Dynamic placeholders like player names, stats, etc.\n- **Auto-update**: Configurable refresh interval for dynamic content.\n- **Position Control**: Set exact coordinates or use current position.\n- **Persistent Storage**: Holograms saved in JSON format.\n- **Performance**: Optimized with per-player rendering system.\n\n### 🎮 Commands\n| Command | Permission | Description |\n|---------|------------|-------------|\n| `/holo create` | `holograms.admin` | Open hologram creation form. |\n| `/holo edit [name]` | `holograms.admin` | Edit a hologram (nearest if no name). |\n| `/holo delete [name]` | `holograms.admin` | Delete a hologram. |\n| `/holo list` | `holograms.admin` | List all holograms. |\n| `/holo tp <name>` | `holograms.admin` | Teleport to a hologram. |\n| `/holo locale <name>` | `holograms.admin` | Manage hologram translations. |\n| `/holo reload` | `holograms.admin` | Reload all holograms. |\n\n### 📝 Hologram Options\n| Option | Description |\n|--------|-------------|\n| **Name** | Unique identifier for the hologram. |\n| **Lines** | Text content (use `\\n` for line breaks). |\n| **Multi-line** | Each line as separate floating text. |\n| **Update Interval** | Seconds between placeholder refreshes (-1 = disabled). |\n| **Line Spacing** | Distance between multi-line texts. |\n| **Position** | X, Y, Z coordinates in the world. |\n\n### 🌍 Localization\nCreate different text for each language! Players see holograms in their client language.\n\nSupported locales: `en_US`, `ru_RU`, `zh_CN`, `de_DE`, `fr_FR`, `es_ES`, `pt_BR`, `ja_JP`, `ko_KR`, `uk_UA`\n\n### 🧩 PlaceholderAPI\nUse any PlaceholderAPI placeholders in your holograms:\n- `%player_name%` — Player's name\n- `%player_level%` — Player's level\n- `%server_online%` — Online players count\n- And many more from other plugins!\n\n### ⚙️ Configuration\n```json\n{\n  \"updateInterval\": 20,\n  \"defaultLocale\": \"en_US\",\n  \"defaultLineSpacing\": 0.25,\n  \"maxHologramDistance\": 32,\n  \"supportedLocales\": [\"en_US\", \"ru_RU\", ...]\n}\n```\n\n| Option | Description |\n|--------|-------------|\n| `updateInterval` | Default update interval in seconds. |\n| `defaultLocale` | Fallback language. |\n| `defaultLineSpacing` | Space between lines. |\n| `maxHologramDistance` | Max distance to find nearest hologram. |\n\n### 📦 Installation\n1. Download the latest release.\n2. Place the `.jar` file in your `plugins` folder.\n3. Restart the server.\n4. Use `/holo create` to start!\n\n### 🔗 Dependencies\n- **Required**: Allay Server\n- **Optional**: PlaceholderAPI (for dynamic placeholders)\n\n---\n\n<div align=\"center\">\n    <br>\n    <p>Created by <b>Miroshka</b> specifically for <b>Allay</b> with ❤️</p>\n</div>\n",
-  "downloads": 0,
+  "downloads": 3,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
   "id": "miroshka000/hologramsallay",
@@ -33,5 +33,22 @@
   "stars": 1,
   "summary": "Holograms For Allay",
   "updated_at": 1772923796,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "Holograms-1.0.0.jar",
+          "primary": true,
+          "size": 37402,
+          "url": "https://github.com/Miroshka000/HologramsAllay/releases/download/v1.0.0/Holograms-1.0.0.jar"
+        }
+      ],
+      "name": "Release v1.0.0",
+      "prerelease": false,
+      "published_at": 1766001212,
+      "version": "1.0.0"
+    }
+  ]
 }
