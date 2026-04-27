@@ -13,7 +13,7 @@
   "created_at": 1766222124,
   "dependencies": [],
   "description": "<div align=\"center\">\n\n# 🌀 Aether\n\n**Advanced Routing System for WaterdogPE & Allay**\n\n![License](https://img.shields.io/badge/License-GPL%203.0-blue.svg)\n![Version](https://img.shields.io/badge/Version-0.1.0-green.svg)\n![Java](https://img.shields.io/badge/Java-21+-purple.svg)\n![Allay](https://img.shields.io/badge/Allay-0.27.0-orange.svg)\n![WaterdogPE](https://img.shields.io/badge/WaterdogPE-2.0+-blue.svg)\n\n<br>\n\n[![Русский](https://img.shields.io/badge/Язык-Русский-red?style=for-the-badge&logo=google-translate&logoColor=white)](README_RU.md)\n\n</div>\n\n---\n\n**Aether** is a powerful and lightweight two-plugin routing system designed for **WaterdogPE** and **Allay** networks. It replaces the old bloated stack with a clean, predictable architecture.\n\n### ✨ Features\n- **Embedded ProxyTransport on Allay**: No separate `ProxyTransport-Allay` jar needed — it's built right in.\n- **Lobby Portals**: Region-based portals with cooldowns, targeting specific servers or groups.\n- **Join Routing**: Route new players by group and permission rules on first connection.\n- **Maintenance Mode**: Global maintenance with bypass permissions and fallback routing.\n- **LuckPerms Integration**: Portal access checks and placeholders on the Allay side.\n- **PlaceholderAPI Integration**: Node, router, global, and LuckPerms placeholders.\n- **Localized Messages**: All user-facing text stored in `messages.yml` with MiniMessage templates.\n- **Metrics Export**: Prometheus-compatible `/metrics` endpoint on WaterdogPE.\n- **Minimal Architecture**: Only `core`, `allay`, and `waterdog` — nothing extra.\n\n### 🏗️ Architecture\n```text\nBedrock Client\n      |\n      v\nWaterdogPE\n  + Aether-Waterdog\n  + ProxyTransport-Waterdog\n      |\n      | control-plane + routing\n      v\nAllay Node\n  + Aether-Allay\n  + embedded ProxyTransport-Allay runtime\n```\n\n### 📦 Plugin Layout\n| Plugin | Platform | Role |\n|--------|----------|------|\n| `Aether-Waterdog` | WaterdogPE | Router, node registry, join routing, maintenance, metrics |\n| `Aether-Allay` | Allay | Node heartbeat, embedded transport runtime, portals, placeholders |\n| `ProxyTransport-Waterdog` | WaterdogPE | External transport plugin (required separately) |\n\n### 🎮 Commands\n#### Waterdog\n| Command | Description |\n|---------|-------------|\n| `/aether status` | Show router summary. |\n| `/aether nodes` | Show all known nodes. |\n| `/aether reload` | Reload Aether config. |\n| `/aether route <player> <server:...\\|group:...>` | Force-route a player. |\n| `/aether maintenance on [reason]` | Enable maintenance mode. |\n| `/aether maintenance off` | Disable maintenance mode. |\n\n#### Allay\n| Command | Description |\n|---------|-------------|\n| `/aether status` | Show node and router state. |\n| `/aether reload` | Reload Allay-side config. |\n| `/aether portal <id>` | Trigger a configured portal manually. |\n\n### 📊 Placeholders\n| Placeholder | Description |\n|-------------|-------------|\n| `%aether_router_connected%` | Router connection status |\n| `%aether_router_maintenance%` | Maintenance mode status |\n| `%aether_global_online%` | Total players online |\n| `%aether_global_max%` | Max player capacity |\n| `%aether_node_id%` | Current node ID |\n| `%aether_node_online%` | Players on current node |\n| `%aether_node_tps%` | Current node TPS |\n| `%aether_lp_primary_group%` | LuckPerms primary group |\n| `%aether_lp_prefix%` | LuckPerms prefix |\n\n### 📁 Config Files\n#### Allay\n| File | Purpose |\n|------|---------|\n| `config.yml` | Node identity, router connection, embedded transport, PlaceholderAPI, LuckPerms |\n| `messages.yml` | Localized MiniMessage templates |\n| `portals.yml` | Lobby portal regions and targets |\n\n#### Waterdog\n| File | Purpose |\n|------|---------|\n| `config.yml` | Control-plane bind, groups, join rules, maintenance, metrics |\n| `messages.yml` | Localized router messages |\n\n### 🛠️ Installation\n#### WaterdogPE\n1. Install `ProxyTransport-Waterdog` as a separate plugin.\n2. Place `Aether-Waterdog-0.1.0.jar` into the proxy `plugins/` folder.\n3. Ensure your Waterdog backend server names match Aether node `serverId`.\n4. Set the same `sharedSecret` on both Waterdog and Allay.\n5. Restart the proxy.\n\n#### Allay\n1. Place `Aether-Allay-0.1.0.jar` into the server plugin folder.\n2. Configure `serverId`, groups, public address, and router connection.\n3. Place QUIC certificate files in the configured transport paths (if embedded transport is enabled).\n4. Restart the server.\n\n### 📋 Requirements\n- **Java 21+**\n- **Allay 0.27.0**\n- **WaterdogPE 2.0+**\n- **ProxyTransport-Waterdog** on the proxy\n- **LuckPerms** (optional, recommended)\n- **PlaceholderAPI** (optional, Allay only)\n\n### 🔨 Build\n```bash\ngit clone https://github.com/Miroshka000/Aether.git\ncd Aether\n./gradlew build\n```\n\nOutput jars:\n- `aether-allay/build/libs/Aether-Allay-0.1.0.jar`\n- `aether-waterdog/build/libs/Aether-Waterdog-0.1.0.jar`\n\n### ⚠️ Important Notes\n- Aether does **not** replace `ProxyTransport-Waterdog`.\n- Aether does **not** use the old web panel, addons system, distributed PDC, or legacy bridge modules.\n- This is a clean rewrite from scratch.\n\n---\n\n<div align=\"center\">\n    <br>\n    <p>Created by <b>Miroshka</b> for clean <b>WaterdogPE + Allay</b> networks with ❤️</p>\n</div>\n",
-  "downloads": 2,
+  "downloads": 0,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
   "id": "miroshka000/aether",
@@ -33,28 +33,5 @@
   "stars": 3,
   "summary": "⚡ Aether Network Core - High-Performance Network Bridge for WaterdogPE & AllayMC",
   "updated_at": 1775296698,
-  "versions": [
-    {
-      "changelog": "## Aether v0.1.0\n\nClean `0.1.x` generation of Aether for AllayMC and WaterdogPE.\n\n### Downloads\n\n- `Aether-Allay-*.jar` - install on each Allay node\n- `Aether-Waterdog-*.jar` - install on WaterdogPE proxy\n\n### Included in this line\n\n- embedded ProxyTransport runtime inside Aether\n- lobby portals\n- PlaceholderAPI integration\n- LuckPerms integration on Allay\n- routing, maintenance mode and diagnostics on Waterdog\n\n### Notes\n\n- `ProxyTransport-Waterdog` no longer needs to be installed separately when using `Aether-Waterdog`\n- QUIC backend type is configured in Waterdog `config.yml`\n\nFull changelog: https://github.com/Miroshka000/Aether/commits/v0.1.0\n",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "Aether-Allay-0.1.0.jar",
-          "primary": true,
-          "size": 38018544,
-          "url": "https://github.com/Miroshka000/Aether/releases/download/v0.1.0/Aether-Allay-0.1.0.jar"
-        },
-        {
-          "filename": "Aether-Waterdog-0.1.0.jar",
-          "primary": false,
-          "size": 41569950,
-          "url": "https://github.com/Miroshka000/Aether/releases/download/v0.1.0/Aether-Waterdog-0.1.0.jar"
-        }
-      ],
-      "name": "Aether v0.1.0",
-      "prerelease": false,
-      "published_at": 1775296971,
-      "version": "0.1.0"
-    }
-  ]
+  "versions": []
 }

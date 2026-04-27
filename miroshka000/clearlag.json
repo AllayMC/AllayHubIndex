@@ -33,22 +33,5 @@
   "stars": 0,
   "summary": "🧹 Automatic cleanup plugin for dropped items and mobs on AllayMC",
   "updated_at": 1772923489,
-  "versions": [
-    {
-      "changelog": "",
-      "downloads": 0,
-      "files": [
-        {
-          "filename": "ClearLag-0.1.0-shaded.jar",
-          "primary": true,
-          "size": 484382,
-          "url": "https://github.com/Miroshka000/ClearLag/releases/download/v0.1.0/ClearLag-0.1.0-shaded.jar"
-        }
-      ],
-      "name": "ClearLag v0.1.0",
-      "prerelease": false,
-      "published_at": 1772891229,
-      "version": "0.1.0"
-    }
-  ]
+  "versions": []
 }
