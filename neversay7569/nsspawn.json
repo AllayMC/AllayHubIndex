@@ -1,5 +1,5 @@
 {
-  "api_version": "master-SNAPSHOT",
+  "api_version": "0.27.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/174959205?v=4",
@@ -13,7 +13,7 @@
   "created_at": 1747747136,
   "dependencies": [],
   "description": "```NSSpawn```\n\nNSSpawn плагин на спавн для ядра AllayMC / Allay.\nNSSpawn добавит 2 команды \n- /setspawn\n- /spawn\nДумаю объяснять что они делают не нужно.\nИнформация о спавне хранится в конфиге!\n",
-  "downloads": 0,
+  "downloads": 9,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/174959205?v=4",
   "id": "neversay7569/nsspawn",
@@ -33,5 +33,22 @@
   "stars": 1,
   "summary": "Плагин на спавн для Allay / AllayMC",
   "updated_at": 1771934112,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "Plugin for Allay",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "NSSpawn-1.0-SNAPSHOT.jar",
+          "primary": true,
+          "size": 9025,
+          "url": "https://github.com/neversay7569/NSSpawn/releases/download/1.0.0/NSSpawn-1.0-SNAPSHOT.jar"
+        }
+      ],
+      "name": "NSSpawn",
+      "prerelease": false,
+      "published_at": 1747747340,
+      "version": "1.0.0"
+    }
+  ]
 }
