@@ -13,7 +13,7 @@
   "created_at": 1768963747,
   "dependencies": [],
   "description": "# ✨ Welcome Message\n- Send a title and subtitle message or a chat message when a player joins the server\n# ⚙️ Configuration (config.yml)\n```yml\ntypes:\n  chat: false\n  title: true\n  actionbar: false\ntitle:\n  title: §2Welcome to the server!\n  subtitle: Play your way\nchat:\n  message: §2Welcome to the server!\nactionbar:\n  message: §2Welcome to the server!\n```\n# 📸 Capture\n![picture.png](https://raw.githubusercontent.com/Kanelucky/WelcomeMessage/master/picture.png)\n",
-  "downloads": 0,
+  "downloads": 5,
   "gallery": [
     {
       "created": "2026-04-07",
@@ -40,5 +40,54 @@
   "stars": 1,
   "summary": "A simple AllayMC plugin that sends a message when a player joins the game",
   "updated_at": 1774951842,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "Add actionbar message",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "WelcomeMessage-0.1.2-all.jar",
+          "primary": true,
+          "size": 1710875,
+          "url": "https://github.com/Kanelucky/WelcomeMessage/releases/download/v0.1.2/WelcomeMessage-0.1.2-all.jar"
+        }
+      ],
+      "name": "v0.1.2",
+      "prerelease": false,
+      "published_at": 1770260354,
+      "version": "0.1.2"
+    },
+    {
+      "changelog": "",
+      "downloads": 1,
+      "files": [
+        {
+          "filename": "WelcomeMessage-0.1.1-all.jar",
+          "primary": true,
+          "size": 1710975,
+          "url": "https://github.com/Kanelucky/WelcomeMessage/releases/download/v0.1.1/WelcomeMessage-0.1.1-all.jar"
+        }
+      ],
+      "name": "v0.1.1",
+      "prerelease": false,
+      "published_at": 1769391072,
+      "version": "0.1.1"
+    },
+    {
+      "changelog": "",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "WelcomeMessage-0.1.0-all.jar",
+          "primary": true,
+          "size": 1710612,
+          "url": "https://github.com/Kanelucky/WelcomeMessage/releases/download/v0.1.0/WelcomeMessage-0.1.0-all.jar"
+        }
+      ],
+      "name": "v0.1.0",
+      "prerelease": false,
+      "published_at": 1768971727,
+      "version": "0.1.0"
+    }
+  ]
 }

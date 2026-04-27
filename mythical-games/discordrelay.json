@@ -33,22 +33,5 @@
   "stars": 0,
   "summary": "A Simple Minecraft to Discord Relay for the AllayMC Server Software!",
   "updated_at": 1776513668,
-  "versions": [
-    {
-      "changelog": "## Roadmap:\r\n\r\n * [x] Server Start and Stop Messages\r\n * [x] Player Join and Leave Messages\r\n * [x] Minecraft to Discord Chat Relay\r\n * [x] Discord to Minecraft Chat Relay\r\n * [x] /discord Command In-Game to get a discord server link\r\n * [x] Player Death Messages\r\n * [ ] Discord account linking for rewards & ranks\r\n * [ ] Discord-Minecraft / Vice versa Role syncing\r\n * [ ] Any Suggestions Please Let Me Know! Thanks",
-      "downloads": 0,
-      "files": [
-        {
-          "filename": "DiscordRelay-2.0.0-shaded.jar",
-          "primary": true,
-          "size": 19506217,
-          "url": "https://github.com/Mythical-Games/DiscordRelay/releases/download/2.0.0/DiscordRelay-2.0.0-shaded.jar"
-        }
-      ],
-      "name": "DiscordRelay - Latest version",
-      "prerelease": false,
-      "published_at": 1769015219,
-      "version": "2.0.0"
-    }
-  ]
+  "versions": []
 }

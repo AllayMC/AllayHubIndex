@@ -13,7 +13,7 @@
   "created_at": 1774760018,
   "dependencies": [],
   "description": "# AllayStone\n\nA python plugin loader and runtime for AllayMC using GraalPython, inspired by Endstone.\n\n## Build\n\n```powershell\n./gradlew shadowJar\n```\n\nThis produces `build/libs/AllayStone-<version>-shaded.jar`.\n\n## Install\n\n1. Copy the shaded jar into the Allay server `plugins/` directory.\n2. Start the server.\n\nAllayStone manages a Python prefix at `plugins/.local`.\n\n- Wheel files copied into `plugins/*.whl` are installed into `plugins/.local` automatically during startup.\n- Editable installs are also supported:\n\n```powershell\npython -m pip install -e <plugin-project> --prefix <server>/plugins/.local\n```\n\nFor `./gradlew runServer`, the managed prefix is `build/run/plugins/.local`.\n\n## Remove Plugin\n\nStop the server before removing a Python plugin.\n\n- Wheel install: delete the matching `.whl` file from `plugins/`. AllayStone will remove that plugin and any now-unreferenced installed dependencies from `plugins/.local` on the next startup.\n- Editable install: uninstall from the managed prefix.\n\n```powershell\n& { $env:PYTHONPATH = \"<server>/plugins/.local/Lib/site-packages\"; try { python -m pip uninstall allaystone-<plugin-name> } finally { Remove-Item Env:PYTHONPATH -ErrorAction SilentlyContinue } }\n```\n\nFor `./gradlew runServer`, replace `<server>/plugins/.local` with `build/run/plugins/.local`.\n\n## Python Plugin Format\n\nPython plugins are regular Python distributions.\n\n- Distribution name: `allaystone-<plugin-name>`\n- Exactly one `[project.entry-points.allaystone]` entry\n- Entry point class must inherit from `allaystone.Plugin`\n\n`allaystone.Plugin` exposes:\n\n- metadata fields such as `version`, `api_version`, `description`, `authors`, `website`, `depend`, and `soft_depend`\n- lifecycle methods `on_load`, `on_enable`, and `on_disable`\n- runtime fields injected by AllayStone: `server`, `logger`, `data_folder`, `name`, and `java_plugin`\n\n## Reloading\n\n```text\n/plugin reload <name>\n/plugin reloadall\n```\n\nReloading does this:\n\n1. call the current instance's `on_disable()`\n2. rebuild the plugin's GraalPy context\n3. create a new Python plugin instance\n4. call `on_load()` and `on_enable()` on the new instance\n\n- Wheel plugins are reinstalled from `plugins/*.whl` before the new context is created.\n- Editable plugins are reloaded from the current source tree already linked into `plugins/.local`.\n- If reload fails after `on_disable()`, the plugin stays disabled until it is reloaded successfully or the server is restarted.\n- Metadata changes such as `name`, `version`, `api_version`, and dependencies still require a full restart.\n- Plugin cleanup is still the plugin author's responsibility. Unregister listeners, commands, and long-lived tasks in `on_disable()`.\n\n## Plugin Template\n\nUse the template repository to start a new Python plugin:\n\nhttps://github.com/smartcmd/AllayStoneTemplate\n\nTypical workflow:\n\n```powershell\ngit clone https://github.com/smartcmd/AllayStoneTemplate.git\ncd AllayStoneTemplate\npython -m pip wheel . --no-deps --wheel-dir dist\n```\n\n- Wheel: copy `dist/*.whl` into the server `plugins/` directory.\n- Editable:\n\n```powershell\npython -m pip install -e . --prefix <server>/plugins/.local\n```\n\n## Python Stubs\n\nAllayStone also generates and bundles:\n\n- `allay.api` Python stubs\n- the `allaystone` helper package used by Python plugins\n\nBuild the local stub package:\n\n```powershell\n./gradlew preparePythonStubPackage\ncd build/generated/python-stub-package\npython -m pip install -e .\n```\n\nGitHub Releases also publish a wheel for the generated stubs:\n\n```powershell\npython -m pip install https://github.com/smartcmd/AllayStone/releases/download/<tag>/<wheel-file>.whl\n```\n\nThis wheel is for editor support and GraalPy interop. In normal CPython, importing `allay.api.*` at runtime will fail because the generated package uses GraalPy `java.type()` bindings.\n",
-  "downloads": 4,
+  "downloads": 0,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "smartcmd/allaystone",
@@ -33,102 +33,5 @@
   "stars": 1,
   "summary": "A python plugin loader & runtime for AllayMC using GraalPython, inspired by Endstone",
   "updated_at": 1774882792,
-  "versions": [
-    {
-      "changelog": "",
-      "downloads": 0,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.5-shaded.jar",
-          "primary": true,
-          "size": 90592075,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.5/AllayStone-0.1.5-shaded.jar"
-        }
-      ],
-      "name": "0.1.5",
-      "prerelease": false,
-      "published_at": 1774878365,
-      "version": "0.1.5"
-    },
-    {
-      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayStone/compare/0.1.3...0.1.4",
-      "downloads": 1,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.2-SNAPSHOT-shaded.jar",
-          "primary": true,
-          "size": 90128745,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.4/AllayStone-0.1.2-SNAPSHOT-shaded.jar"
-        }
-      ],
-      "name": "0.1.4",
-      "prerelease": false,
-      "published_at": 1774786347,
-      "version": "0.1.4"
-    },
-    {
-      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayStone/compare/0.1.2...0.1.3",
-      "downloads": 0,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.2-SNAPSHOT-shaded.jar",
-          "primary": true,
-          "size": 90122154,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.3/AllayStone-0.1.2-SNAPSHOT-shaded.jar"
-        }
-      ],
-      "name": "0.1.3",
-      "prerelease": false,
-      "published_at": 1774783990,
-      "version": "0.1.3"
-    },
-    {
-      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayStone/compare/0.1.1...0.1.2",
-      "downloads": 2,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.2-SNAPSHOT-shaded.jar",
-          "primary": true,
-          "size": 90000691,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.2/AllayStone-0.1.2-SNAPSHOT-shaded.jar"
-        }
-      ],
-      "name": "0.1.2",
-      "prerelease": false,
-      "published_at": 1774779704,
-      "version": "0.1.2"
-    },
-    {
-      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayStone/compare/0.1.0...0.1.1",
-      "downloads": 0,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.1-SNAPSHOT-shaded.jar",
-          "primary": true,
-          "size": 89999166,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.1/AllayStone-0.1.1-SNAPSHOT-shaded.jar"
-        }
-      ],
-      "name": "0.1.1",
-      "prerelease": false,
-      "published_at": 1774777569,
-      "version": "0.1.1"
-    },
-    {
-      "changelog": "**Full Changelog**: https://github.com/smartcmd/AllayStone/commits/0.1.0",
-      "downloads": 1,
-      "files": [
-        {
-          "filename": "AllayStone-0.1.0-shaded.jar",
-          "primary": true,
-          "size": 89974721,
-          "url": "https://github.com/smartcmd/AllayStone/releases/download/0.1.0/AllayStone-0.1.0-shaded.jar"
-        }
-      ],
-      "name": "0.1.0",
-      "prerelease": false,
-      "published_at": 1774775390,
-      "version": "0.1.0"
-    }
-  ]
+  "versions": []
 }

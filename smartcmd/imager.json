@@ -13,7 +13,7 @@
   "created_at": 1764834994,
   "dependencies": [],
   "description": "# Imager\n\nShow image in your Allay server!\n\n![img.png](https://raw.githubusercontent.com/smartcmd/Imager/master/img.png)\n\n## Usage\n\nMain command: `/imager`\n\nRight-click on an image to remove it\n\n\n## Permission\n\n- `imager.command`: permission to use `/imager` command\n- `imager.query_image_info`: permission to query image info by right-clicking it\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/Imager/blob/master/LICENSE) file for details.",
-  "downloads": 7,
+  "downloads": 0,
   "gallery": [
     {
       "created": "2026-04-07",
@@ -40,22 +40,5 @@
   "stars": 2,
   "summary": "Show image in your Allay server!",
   "updated_at": 1769288294,
-  "versions": [
-    {
-      "changelog": "",
-      "downloads": 7,
-      "files": [
-        {
-          "filename": "Imager-0.1.0-shaded.jar",
-          "primary": true,
-          "size": 730354,
-          "url": "https://github.com/smartcmd/Imager/releases/download/0.1.0/Imager-0.1.0-shaded.jar"
-        }
-      ],
-      "name": "0.1.0",
-      "prerelease": false,
-      "published_at": 1764863937,
-      "version": "0.1.0"
-    }
-  ]
+  "versions": []
 }
