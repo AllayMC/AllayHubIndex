@@ -35,9 +35,9 @@
   "name": "HuHoBot",
   "server_version": "",
   "source": "https://github.com/HuHoBot/KotlinMergeAdapter",
-  "stars": 4,
+  "stars": 5,
   "summary": "HuHoBot for Allay,Spigot,NkMot,Velocity,BungeeCord enabling the official QQ bot to connect to your server.",
-  "updated_at": 1775414328,
+  "updated_at": 1777360608,
   "versions": [
     {
       "changelog": "# HuHoBot-Adapter v2.1.2\n\nfeat(motd): 添加 Markdown 渲染支持和优化在线玩家列表显示\n- 在配置中添加 useMarkdown 选项以控制 MOTD 渲染方式\n- 优化 ClientManager 中的 MOTD 发送接口，分离玩家名称和文本模板参数\n\n### 构建信息\n- 构建时间: 2026-04-05T18:42:27Z\n- 提交哈希: [93ae7d24efefe7fb42d11e3251a6faa4cfc552b5](https://github.com/HuHoBot/KotlinMergeAdapter/commit/93ae7d24efefe7fb42d11e3251a6faa4cfc552b5)\n",
