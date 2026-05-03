@@ -1,0 +1,99 @@
+{
+  "api_version": "0.25.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/110056737?v=4",
+      "name": "zernix2077",
+      "url": "https://github.com/zernix2077"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1772508141,
+  "dependencies": [],
+  "description": "# Legacy Console Edition WorldGen\n\nRe-implementation of a Minecraft Legacy Console Edition world generation based on https://github.com/smartcmd/MinecraftConsoles to be used in AllayMC.\n\nOriginal generation\n![Original generation](https://raw.githubusercontent.com/zernix2077/LCEWorldGen/master/images/original.png)\n\nAllay reimplementation\n![Allay reimplementation](https://raw.githubusercontent.com/zernix2077/LCEWorldGen/master/images/allay.png)\n\n# Features\n\n- Biomes\n- Terrain noise\n- Caves and canyons\n- Ores\n- Trees, tall grass, flowers, mushrooms, reeds, cactus, pumpkins, water lilies, and jungle vines\n\n# Not supported\n\n- Villages, strongholds, temples, mineshafts, or any other structures\n- Lakes and dungeons\n- Nether or End generation\n- Exact block-for-block parity with the original client\n\n# Install\n\n- Download .jar file from releases\n- Put it into ./plugins folder\n- Create a world in ./worlds/world-settings.yml with `generator-type: OLD_CONSOLE_OVERWORLD` and `generator-preset: seed=<your-seed-here>`\n- Restart the server\n- Enjoy!\n\n",
+  "downloads": 16,
+  "gallery": [
+    {
+      "created": "2026-05-03",
+      "description": "",
+      "title": "Original generation",
+      "url": "https://raw.githubusercontent.com/zernix2077/LCEWorldGen/master/images/original.png"
+    },
+    {
+      "created": "2026-05-03",
+      "description": "",
+      "title": "Allay reimplementation",
+      "url": "https://raw.githubusercontent.com/zernix2077/LCEWorldGen/master/images/allay.png"
+    }
+  ],
+  "icon_url": "https://avatars.githubusercontent.com/u/110056737?v=4",
+  "id": "zernix2077/lceworldgen",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "LCEWorldGen",
+  "server_version": "",
+  "source": "https://github.com/zernix2077/LCEWorldGen",
+  "stars": 3,
+  "summary": "AllayMC plugin to bring back minecraft legacy console edition world generation.",
+  "updated_at": 1777756760,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "OldConsoleWorldGen-0.1.2-shaded.jar",
+          "primary": true,
+          "size": 100129,
+          "url": "https://github.com/zernix2077/LCEWorldGen/releases/download/0.1.2/OldConsoleWorldGen-0.1.2-shaded.jar"
+        }
+      ],
+      "name": "0.1.2",
+      "prerelease": false,
+      "published_at": 1772730220,
+      "version": "0.1.2"
+    },
+    {
+      "changelog": "",
+      "downloads": 3,
+      "files": [
+        {
+          "filename": "OldConsoleWorldGen-0.1.1-shaded.jar",
+          "primary": true,
+          "size": 92442,
+          "url": "https://github.com/zernix2077/LCEWorldGen/releases/download/0.1.1/OldConsoleWorldGen-0.1.1-shaded.jar"
+        }
+      ],
+      "name": "0.1.1",
+      "prerelease": false,
+      "published_at": 1772583044,
+      "version": "0.1.1"
+    },
+    {
+      "changelog": "",
+      "downloads": 2,
+      "files": [
+        {
+          "filename": "OldConsoleWorldGen-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 91951,
+          "url": "https://github.com/zernix2077/LCEWorldGen/releases/download/0.1.0/OldConsoleWorldGen-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "0.1.0",
+      "prerelease": false,
+      "published_at": 1772509787,
+      "version": "0.1.0"
+    }
+  ]
+}
