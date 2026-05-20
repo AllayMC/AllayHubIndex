@@ -1,0 +1,37 @@
+{
+  "api_version": "0.28.0-SNAPSHOT",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/255675679?v=4",
+      "name": "Aitokoto",
+      "url": "https://github.com/Aitokoto"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1773076635,
+  "dependencies": [],
+  "description": "# Aether",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/255675679?v=4",
+  "id": "aitokoto/aether",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "Aether",
+  "server_version": "",
+  "source": "https://github.com/Aitokoto/Aether",
+  "stars": 0,
+  "summary": "Aether mod for Allay platform",
+  "updated_at": 1779048091,
+  "versions": []
+}

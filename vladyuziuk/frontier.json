@@ -1,0 +1,37 @@
+{
+  "api_version": "0.16.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/32974013?v=4",
+      "name": "VladYuziuk",
+      "url": "https://github.com/VladYuziuk"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1763177511,
+  "dependencies": [],
+  "description": "",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/32974013?v=4",
+  "id": "vladyuziuk/frontier",
+  "license": {
+    "id": "ARR",
+    "name": "All Rights Reserved",
+    "url": ""
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "Frontier",
+  "server_version": "",
+  "source": "https://github.com/VladYuziuk/Frontier",
+  "stars": 0,
+  "summary": "A simple simulator written on AllayMC",
+  "updated_at": 1763177543,
+  "versions": []
+}
