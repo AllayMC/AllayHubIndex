@@ -30,9 +30,9 @@
   "name": "AllayStone",
   "server_version": "",
   "source": "https://github.com/smartcmd/AllayStone",
-  "stars": 1,
+  "stars": 0,
   "summary": "A python plugin loader & runtime for AllayMC using GraalPython, inspired by Endstone",
-  "updated_at": 1774882792,
+  "updated_at": 1778436672,
   "versions": [
     {
       "changelog": "",

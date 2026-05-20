@@ -13,7 +13,7 @@
   "created_at": 1765437749,
   "dependencies": [],
   "description": "# 📊 Sidebar Plugin for AllayMC\n\nA customizable sidebar plugin for **AllayMC Bedrock Edition** servers.\n\n## ✨ Features\n\n- ✅ Display customizable sidebar on the right side of the player's screen  \n- 📝 Fully configurable sidebar title and content  \n- 🔧 Supports **PlaceholderAPI** variables  \n- 🔁 Configurable auto-refresh interval  \n- ♻️ Hot-reloadable using `/plugin reload Sidebar`\n\n## 📦 Installation\n\n1. 📁 Place the generated `Sidebar-x.y.z-shaded.jar` into your server's `plugins` directory  \n2. ✔️ Ensure **PlaceholderAPI** is installed  \n3. 🚀 Start the server — the plugin will generate the configuration file automatically\n\n## ⚙️ Configuration\n\nThe configuration file is located at:\n\n```\nplugins/Sidebar/config.yml\n```\n\n```yml\n# Update period (in ticks, 20 ticks = 1 second)\nupdate_period: 20\n\nsidebar:\n  # Sidebar title\n  title: Welcome to AllayMC!\n\n  # Sidebar content (each line is a list item)\n  content:\n    - \"Name: §a{player_name}\"\n    - \"Ping: §a{ping}\"\n    - \"Pos: §a{x},{y},{z}\"\n    - \"Dimension: §a{dimension_id}\"\n    - \"Online: §a{online}/{max_online}\"\n    - \"Time: §a{month}/{day}/{hour}\"\n```\n\n## 🔁 PlaceholderAPI Support\n\nAll text fields (**title**, **content**, **messages**, **commands**) support\n🔧 **PlaceholderAPI** placeholders.\n\n📚 For a complete list, see:\n👉 [https://github.com/AllayMC/PlaceholderAPI](https://github.com/AllayMC/PlaceholderAPI)\n\n## 🧩 Commands\n\nThe plugin itself does **not** add custom commands.\nUse AllayMC’s built-in hot reload:\n\n```\n/plugin reload Sidebar\n```\n\n## 🛠️ Building\n\n```bash\n./gradlew shadowJar\n```\n\n📁 The output JAR will be generated at:\n\n```\nbuild/libs/Sidebar-0.1.0-shaded.jar\n```\n\n## 📚 Dependencies\n\n* 🧱 **AllayMC API 0.18.0+**\n* 🔧 **PlaceholderAPI**\n\n## 📄 License\n\n🪪 This project is open source and released under the **MIT License**.",
-  "downloads": 8,
+  "downloads": 9,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "smartcmd/sidebar",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "**Full Changelog**: https://github.com/smartcmd/Sidebar/commits/0.1.0",
-      "downloads": 8,
+      "downloads": 9,
       "files": [
         {
           "filename": "Sidebar-0.1.0-shaded.jar",

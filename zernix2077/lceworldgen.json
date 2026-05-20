@@ -43,9 +43,9 @@
   "name": "LCEWorldGen",
   "server_version": "",
   "source": "https://github.com/zernix2077/LCEWorldGen",
-  "stars": 4,
+  "stars": 5,
   "summary": "AllayMC plugin to bring back minecraft legacy console edition world generation.",
-  "updated_at": 1777883231,
+  "updated_at": 1778353563,
   "versions": [
     {
       "changelog": "",
