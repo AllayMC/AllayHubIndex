@@ -1,5 +1,5 @@
 {
-  "api_version": "0.27.0",
+  "api_version": "0.28.0",
   "authors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
@@ -13,7 +13,7 @@
   "created_at": 1740664326,
   "dependencies": [],
   "description": "# EconomyAPI for AllayMC Server Software\nSupporting both SQLITE3 and MongoDB\nBecause MongoDB is the GOAT\n\n![Banner](https://github.com/acktarbadulla/EconomyAPI-AllayMC/blob/master/20250227_210202.jpg)\n\n# Commands\nCommand | Aliases | Description | use\n--- | --- | --- | ---\n`/setmoney` | `/sm` | Set A Players Total Balance | op\n`/addmoney` | `/am` | Add Money To A Players Balance | op\n`/reducemoney` | `/rm` | Reduce Money From A Players Balance | op\n`/balance` | `/bal /money` | See Your / Other Players Balance | all\n\n# Repository\n```xml\n<repositories>\n        <repository>\n                <id>jitpack.io</id>\n                <url>https://jitpack.io</url>\n        </repository>\n</repositories>\n```\n\n# Dependency\n```xml\n<dependency>\n\t    <groupId>com.github.acktarbadulla</groupId>\n\t    <artifactId>EconomyAPI-AllayMC</artifactId>\n\t    <version>1.0.1</version>\n</dependency>\n```\n\n# For Developer\n```java\n/**\n * GET A PLAYERS BALANCE\n * @param (string) playername\n * @return (double) balance\n*/\nEconomyAPI.getInstance().getDatabase().getBalance(\"playername\");\n\n/**\n * SET A PLAYERS BALANCE\n * @param (string) playername | (double) balance\n * @return void\n*/\nEconomyAPI.getInstance().getDatabase().setBalance(\"playername\", 100000.0);\n\n/**\n * ADD MONEY TO A PLAYERS BALANCE\n * @param (string) playername | (double) amount\n * @return void\n*/\nEconomyAPI.getInstance().getDatabase().addBalance(\"playername\", 500.0);\n\n/**\n * REDUCE A PLAYERS BALANCE\n * @param (string) playername | (double) amount\n * @return (boolean) true if successfull | false if not enough money\n*/\nEconomyAPI.getInstance().getDatabase().subtractBalance(\"playername\", 500.0);\n\n/**\n * CHECK IF PLAYER HAS ACCOUNT\n * @param (string) playername\n * @return (boolean) true if has account | false if no account\n*/\nEconomyAPI.getInstance().getDatabase().hasAccount(\"playername\");\n```\n",
-  "downloads": 11,
+  "downloads": 12,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/61796163?v=4",
   "id": "acktarbadulla/economyapi",
@@ -52,7 +52,7 @@
     },
     {
       "changelog": "Basic Economy system for AllayMC\r\n\r\nProviding both SQLITE3 and MONGODB database option\r\n\r\n**Because MongoDB is the GOAT**",
-      "downloads": 2,
+      "downloads": 3,
       "files": [
         {
           "filename": "EconomyAPI-1.0.0-SNAPSHOT-shaded.jar",

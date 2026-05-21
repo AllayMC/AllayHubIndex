@@ -19,7 +19,7 @@
     }
   ],
   "description": "# 💸 Mythical-Economy\n\nA simple economy plugin for **AllayMC** servers, designed for stability and performance. Mythical Economy offers seamless integration with other plugins and provides robust support for multiple database types.\n\n![Mythical-Economy](https://github.com/Mythical-Games/Mythical-Economy/blob/master/Screenshot_20251026_174036_com.mojang.minecraftpe.jpg)\n---\n\n## ✨ Features\n\n* **Database Flexibility:** Choose between **SQLite** (local, file-based) for simplicity or **MongoDB** (remote) for high-performance, scalable environments.\n* **Global PAPI Placeholder:** Easily display player balances anywhere with the **PlaceholderAPI** (PAPI) placeholder:\n    * `{balance}` - Shows the player's current money balance.\n* **Standard Economy Commands:** Includes all the essential commands you need to manage your server's currency.\n* **API-Ready:** Built with developers in mind, offering a straightforward API for other plugins to interact with player balances.\n\n---\n\n## ⚙️ Installation\n\n1.  Place the `MythicalEconomy-X.X.X.jar` file into your server's `plugins/` directory.\n2.  (Optional but Recommended) Install **PlaceholderAPI** if you wish to use the global balance placeholder.\n3.  Start or restart your server.\n4.  Configure your database settings in the generated `config.yml` file.\n\n---\n",
-  "downloads": 4,
+  "downloads": 5,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
   "id": "mythical-games/bettereconomy",
@@ -58,7 +58,7 @@
     },
     {
       "changelog": "* ",
-      "downloads": 1,
+      "downloads": 2,
       "files": [
         {
           "filename": "Mythical-Economy-1.0.0-shaded.jar",

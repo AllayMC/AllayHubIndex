@@ -13,7 +13,7 @@
   "created_at": 1719056286,
   "dependencies": [],
   "description": "﻿# BouncyBlocksMX\n\nMulti-platform Minecraft plugin with shared bounce logic and separate adapters for Nukkit and AllayMC.\n\n## Modules\n\n- `bouncy-core` - shared bounce rules, config parsing and fall-damage protection\n- `bouncy-platform-nukkit` - Nukkit plugin on Java 17\n- `bouncy-platform-allay` - AllayMC plugin on Java 21\n\n## Build\n\n```bash\n./gradlew build\n```\n\nWindows:\n\n```powershell\n.\\gradlew.bat build\n```\n\n## Artifacts\n\n- `bouncy-platform-nukkit/build/libs/bouncy-platform-nukkit-1.5.0.jar`\n- `bouncy-platform-allay/build/libs/bouncy-platform-allay-1.5.0.jar`\n\n## Runtime\n\n- Nukkit module targets Java 17\n- AllayMC module targets Java 21\n\n## Configuration\n\nExample config:\n\n```yaml\nTriggerBlocks:\n  - \"70\"\n  - \"72\"\n\nBouncyBlocks:\n  \"57\": 3.0\n  \"41\": 2.0\n  \"42\": 1.0\n```\n\n`TriggerBlocks` defines the blocks a player must stand on.\n`BouncyBlocks` maps the support block under the trigger block to jump power.\n",
-  "downloads": 4,
+  "downloads": 5,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/173544653?v=4",
   "id": "miroshka000/bouncyblocksmx",
@@ -58,7 +58,7 @@
     },
     {
       "changelog": "🌟 BouncyBlocksMX Plugin Update! 🚀\r\nWe’re excited to announce a significant update for BouncyBlocksMX! This refactor brings cleaner code, improved performance, and exciting new features:\r\n\r\nRefactored Architecture: Bouncy block management is now handled by a separate BouncyBlockManager class, streamlining the code.\r\nNew BouncyTask System: Periodic checks ensure players are smoothly launched when on bouncy blocks, reducing lag.\r\nEnhanced Fall Damage Logic: No more fall damage for players, ensuring smooth landings!\r\nSound Effects: Players now hear anvil sounds when jumping, adding to the fun!\r\nStay tuned for more!",
-      "downloads": 3,
+      "downloads": 4,
       "files": [
         {
           "filename": "BouncyBlocksMX-1.5.jar",

@@ -13,7 +13,7 @@
   "created_at": 1770319910,
   "dependencies": [],
   "description": "# YRCurrency\n\nAllay 多货币经济插件，支持余额缓存、交易记录、排行榜与 PlaceholderAPI。\n\n## 依赖\n\n- Allay 0.19.x\n- Java 21\n- YRDatabase（必需）\n- PlaceholderAPI（可选，占位符功能）\n\n## 安装\n\n1. 安装 YRDatabase 插件。\n2. 将 `YRCurrency-*.jar` 放入 `plugins` 目录。\n3. 启动服务端生成配置，按需修改 `config.yml`。\n4. 重启或执行 `/eco reload` 使配置生效。\n\n## 功能\n\n- 多货币配置（符号、格式、小数位、范围）\n- `/money` 玩家经济指令\n- `/eco` 管理员指令（含 `flush` 强制落库）\n- 交易记录入库\n- 自动定时持久化缓存\n- PlaceholderAPI 占位符\n\n## 指令\n\n- `/money`：查看自身余额\n- `/money pay <player> <amount> [currency]`：转账\n- `/money top [currency] [page]`：排行\n\n- `/eco give <player> <amount> [currency]`\n- `/eco take <player> <amount> [currency]`\n- `/eco set <player> <amount> [currency]`\n- `/eco reset <player> [currency]`\n- `/eco see <player> [currency]`\n- `/eco flush`：强制持久化缓存\n- `/eco reload`\n\n## 权限\n\n- `yrcurrency.use`：使用 `/money`\n- `yrcurrency.pay`：转账\n- `yrcurrency.top`：排行\n- `yrcurrency.admin.*`：管理员权限\n- `yrcurrency.admin.flush`：允许 `/eco flush`\n\n## PlaceholderAPI\n\n前缀：`yrcurrency`\n\n- `{yrcurrency_balance}`\n- `{yrcurrency_balance_formatted}`\n- `{yrcurrency_balance|coin}`\n- `{yrcurrency_balance_formatted|coin}`\n- `{yrcurrency_currency}`\n- `{yrcurrency_currency|coin}`\n- `{yrcurrency_symbol}`\n- `{yrcurrency_symbol|coin}`\n\n## 自动持久化\n\n`auto-flush` 会定时把 Redis 缓存写回持久层：\n\n```yaml\nauto-flush:\n  enabled: true\n  interval-seconds: 300\n```\n\n需要手动刷新时使用 `/eco flush`。\n\n## 构建\n\n```bash\ngradlew.bat build\n```\n\n构建产物位于 `build/libs`。\n",
-  "downloads": 0,
+  "downloads": 1,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/40874260?v=4",
   "id": "mufhead/allay-yrcurrency",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "## Changes\n- Added auto-flush config and scheduled cache persistence\n- Added /eco flush to persist cache on demand\n- Added transaction logging for admin commands\n- Improved database schema handling (id column, last_updated format)\n- Added README with usage and placeholders\n",
-      "downloads": 0,
+      "downloads": 1,
       "files": [
         {
           "filename": "Allay-YRCurrency-1.0.0-SNAPSHOT.jar",
