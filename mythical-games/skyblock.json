@@ -1,0 +1,54 @@
+{
+  "api_version": "0.27.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+      "name": "Mythical-Games",
+      "url": "https://github.com/Mythical-Games"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1780173135,
+  "dependencies": [],
+  "description": "# VIBE-SKYBLOCK\n## a NOT vibe-coded skyblock plugin for allaymc!\n\n![JOINEFFECT](https://github.com/Mythical-Games/Skyblock/blob/main/lv_0_20260531013839.gif)\n![ISLAND](https://github.com/Mythical-Games/Skyblock/blob/main/Screenshot_2026-05-31-00-34-36-26_5c8300b655012b1930f2e0a7b81bf6a9.jpg)\n![CREATE](https://github.com/Mythical-Games/Skyblock/blob/main/Screenshot_2026-05-31-01-16-45-64_5c8300b655012b1930f2e0a7b81bf6a9.jpg)\n![MENU1](https://github.com/Mythical-Games/Skyblock/blob/main/Screenshot_2026-05-31-01-17-00-17_5c8300b655012b1930f2e0a7b81bf6a9.jpg)\n![MENU2](https://github.com/Mythical-Games/Skyblock/blob/main/Screenshot_2026-05-31-01-17-04-06_5c8300b655012b1930f2e0a7b81bf6a9.jpg)\n",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+  "id": "mythical-games/skyblock",
+  "license": {
+    "id": "ARR",
+    "name": "All Rights Reserved",
+    "url": ""
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/skyblock",
+    "wiki": ""
+  },
+  "name": "Skyblock",
+  "server_version": "",
+  "source": "https://github.com/Mythical-Games/Skyblock",
+  "stars": 0,
+  "summary": "A NOT vibe-coded skyblock plugin for AllayMC!",
+  "updated_at": 1780181085,
+  "versions": [
+    {
+      "changelog": "VERY OPTIMISED & LIGHTWEIGHT\r\n\r\nLoad world when player joins\r\nUnload world after player leaves\r\nActually delete world files after user /is delete\r\n\r\n+ Cherry on top join effect",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "vibe-skyblock-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 343501,
+          "url": "https://github.com/Mythical-Games/Skyblock/releases/download/0.1.0/vibe-skyblock-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "VIBE-SKYBLOCK",
+      "prerelease": false,
+      "published_at": 1780180817,
+      "version": "0.1.0"
+    }
+  ]
+}
