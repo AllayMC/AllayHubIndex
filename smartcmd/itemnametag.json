@@ -13,7 +13,7 @@
   "created_at": 1768239770,
   "dependencies": [],
   "description": "# 🏷️ ItemNameTag\n\n[![AllayMC](https://img.shields.io/badge/AllayMC-Plugin-blue)](https://github.com/AllayMC/Allay)\n[![Java](https://img.shields.io/badge/Java-21+-orange)](https://www.oracle.com/java/)\n\n> 🎮 Make dropped item nametags visible!\n\n## ✨ Features\n\n- 🔖 Automatically displays nametags for dropped items on the ground\n- 📝 Display format: `Item Name §ax Count`\n- 💚 Count portion displayed in green for clear visibility\n- 🔧 Supports items with custom names\n\n## 📦 Installation\n\n1. 📥 Download the latest `.jar` file from [Releases](https://github.com/smartcmd/ItemNameTag/releases)\n2. 📁 Place the `.jar` file into your server's `plugins` directory\n3. 🔄 Restart the server\n\n## 🛠️ Building from Source\n\n```bash\n# Clone the repository\ngit clone https://github.com/smartcmd/ItemNameTag.git\n\n# Navigate to project directory\ncd ItemNameTag\n\n# Build the plugin\n./gradlew shadowJar\n```\n\nAfter building, find the generated jar file in the `build/libs` directory.\n\n## 📋 Requirements\n\n- ☕ Java 21 or higher\n- 🖥️ AllayMC Server 0.21.0+\n\n## 🎯 Preview\n\nDropped items will display nametags in the following format:\n\n```\nDiamond §ax64\n```\n\nThe `x64` portion will be displayed in green.\n\n## 📜 License\n\nThis project is licensed under the MIT License - see the [LICENSE](https://github.com/smartcmd/ItemNameTag/blob/master/LICENSE) file for details.\n\n## 🤝 Contributing\n\nIssues and Pull Requests are welcome!\n\n## 👨‍💻 Author\n\n- **daoge_cmd** - [GitHub](https://github.com/smartcmd)\n\n---\n\n⭐ If you find this plugin helpful, please give it a Star!\n",
-  "downloads": 26,
+  "downloads": 29,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "smartcmd/itemnametag",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 26,
+      "downloads": 29,
       "files": [
         {
           "filename": "ItemNameTag-0.1.0-shaded.jar",
