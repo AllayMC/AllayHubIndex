@@ -1,0 +1,54 @@
+{
+  "api_version": "0.27.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+      "name": "Mythical-Games",
+      "url": "https://github.com/Mythical-Games"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1780696098,
+  "dependencies": [],
+  "description": "",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
+  "id": "mythical-games/factions",
+  "license": {
+    "id": "ARR",
+    "name": "All Rights Reserved",
+    "url": ""
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/AllayMC/Factions",
+    "wiki": ""
+  },
+  "name": "Factions",
+  "server_version": "",
+  "source": "https://github.com/Mythical-Games/Factions",
+  "stars": 0,
+  "summary": "A NOT vibe-coded Factions plugin for Allay!",
+  "updated_at": 1780697870,
+  "versions": [
+    {
+      "changelog": "",
+      "downloads": 0,
+      "files": [
+        {
+          "filename": "Factions-0.1.0-shaded.jar",
+          "primary": true,
+          "size": 14746162,
+          "url": "https://github.com/Mythical-Games/Factions/releases/download/0.1.0/Factions-0.1.0-shaded.jar"
+        }
+      ],
+      "name": "Factions - AllayMC",
+      "prerelease": false,
+      "published_at": 1780697568,
+      "version": "0.1.0"
+    }
+  ]
+}
