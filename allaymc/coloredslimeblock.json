@@ -13,7 +13,7 @@
   "created_at": 1768874303,
   "dependencies": [],
   "description": "# ColoredSlimeBlock\n\nA plugin for [AllayMC](https://github.com/AllayMC/Allay) that adds 16 colored slime blocks to the game.\n\n![img.png](https://raw.githubusercontent.com/AllayMC/ColoredSlimeBlock/master/img.png)\n\n## Features\n\n- **16 Colors**: Red, Orange, Yellow, Lime, Green, Light Blue, Blue, Cyan, Purple, Magenta, Pink, Brown, White, Light Gray, Gray, Black\n- **Bounce Effect**: Entities bounce when landing on colored slime blocks (same as vanilla slime)\n- **No Fall Damage**: 100% fall damage reduction when landing on colored slime blocks\n- **Piston Mechanics**: Same-colored blocks stick together, different colors do NOT stick to each other\n- **Crafting Recipes**: Slime Block + Dye = Colored Slime Block\n- **Creative Inventory**: All blocks available in the Nature category\n\n## Requirements\n\n- AllayMC 0.23.0-SNAPSHOT or later\n\n## Installation\n\n1. Download the latest release from [Releases](https://github.com/AllayMC/ColoredSlimeBlock/releases)\n2. Place the `.jar` file in your server's `plugins` folder\n3. Restart the server\n\n## Building\n\n```bash\n./gradlew build\n```\n\nThe built plugin will be located at `build/libs/`.\n\n## Crafting\n\nEach colored slime block can be crafted using:\n- 1x Slime Block\n- 1x Dye (corresponding color)\n\n| Color      | Dye            |\n|------------|----------------|\n| Red        | Red Dye        |\n| Orange     | Orange Dye     |\n| Yellow     | Yellow Dye     |\n| Lime       | Lime Dye       |\n| Green      | Green Dye      |\n| Light Blue | Light Blue Dye |\n| Blue       | Blue Dye       |\n| Cyan       | Cyan Dye       |\n| Purple     | Purple Dye     |\n| Magenta    | Magenta Dye    |\n| Pink       | Pink Dye       |\n| Brown      | Brown Dye      |\n| White      | White Dye      |\n| Light Gray | Light Gray Dye |\n| Gray       | Gray Dye       |\n| Black      | Black Dye      |\n\n## License\n\nThis project is open source.\n",
-  "downloads": 11,
+  "downloads": 12,
   "gallery": [
     {
       "created": "2026-03-03",
@@ -43,7 +43,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 11,
+      "downloads": 12,
       "files": [
         {
           "filename": "ColoredSlimeBlock-0.1.0-shaded.jar",

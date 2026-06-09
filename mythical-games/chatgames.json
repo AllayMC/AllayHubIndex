@@ -19,7 +19,7 @@
     }
   ],
   "description": "# 🎮 ChatGames\n\n**ChatGames** is a fun and lightweight **chat-based minigame plugin** for AllayMC servers!  \nEngage your players with brain teasers, word games, math challenges, and Minecraft trivia — all directly in chat! 💬✨  \nRewards are given via Mythical-Economy. 💰\n\n---\n\n![Mythical-Games](https://github.com/Mythical-Games/ChatGames/blob/master/Screenshot_20251109_230925_com.mojang.minecraftpe.jpg)\n\n## 🚀 Features\n\n- 🧮 **Quick Math** – Solve problems before others!\n- 🔢 **Guess the Number** – Can you find the secret number?\n- 🏰 **Minecraft Trivia** – Test your Minecraft knowledge!\n- 🔄 **Sequence Guess** – Predict the next number in the pattern.\n- 💬 **Guess the Word** – Solve riddles and hints.\n- 🔀 **Word Unscramble** – Unscramble letters fast!\n- ⌨️ **Fast Type** – Type phrases quickly.\n- ❓ **Missing Letter** – Guess the missing letters in words.\n- 🎲 Random rewards (money via Mythical-Economy)\n- 👥 Games only start if players are online, reducing server load\n- ⚙️ Fully configurable via `config.yml`\n\n---\n\n## 📜 License\n\nMIT License © 2025 MythicalGames\n",
-  "downloads": 4,
+  "downloads": 5,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/234893066?v=4",
   "id": "mythical-games/chatgames",
@@ -42,7 +42,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 4,
+      "downloads": 5,
       "files": [
         {
           "filename": "ChatGames-1.0.0-shaded.jar",
