@@ -30,9 +30,9 @@
   "name": "DiscordRelay",
   "server_version": "",
   "source": "https://github.com/acktarbadulla/DiscordRelay-AllayMC",
-  "stars": 1,
+  "stars": 2,
   "summary": "A Simple Minecraft to Discord Relay for the AllayMC Server Software!",
-  "updated_at": 1740809265,
+  "updated_at": 1781053640,
   "versions": [
     {
       "changelog": "**[×] Server Start and Stop Messages**\r\n**[×] Player Join and Leave Messages**\r\n**[×] Minecraft to Discord Chat Relay**\r\n**[×] Discord to Minecraft Chat Relay**\r\n**[×] /discord Command In-Game**\r\n**[×] Player Death Messages**",
