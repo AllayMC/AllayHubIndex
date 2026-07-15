@@ -13,7 +13,7 @@
   "created_at": 1768226076,
   "dependencies": [],
   "description": "# 🔍 WAILA - What Am I Looking At\n\n> 🎮 An AllayMC server plugin that lets you easily view block information!\n\n[![AllayMC](https://img.shields.io/badge/AllayMC-0.2.1-blue)](https://github.com/AllayMC/Allay)\n[![Java](https://img.shields.io/badge/Java-21-orange)](https://www.oracle.com/java/)\n[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)\n\n## ✨ Features\n\n### 📦 Basic Block Information\n- 🏷️ Block identifier display\n- ⏱️ Break time (dynamically calculated based on held tool)\n- ✅ Harvestability check\n- 📍 Block coordinates and distance\n\n### 🎯 Special Block Support\n| Block Type         | Displayed Info    |\n|--------------------|-------------------|\n| 🍰 Cake            | Remaining slices  |\n| 🌾 Crops           | Growth stage      |\n| 🔴 Redstone Wire   | Signal strength   |\n| 🚪 Doors/Trapdoors | Open/Closed state |\n| 🗑️ Composter      | Compost level     |\n\n### 🏭 Block Entity Support\n| Block Entity                    | Displayed Info            |\n|---------------------------------|---------------------------|\n| 🔥 Furnace/Blast Furnace/Smoker | Stored XP, fuel, progress |\n| ⚗️ Brewing Stand                | Brew time, fuel           |\n| 💎 Beacon                       | Effect types              |\n| 📦 Containers                   | Item count/capacity       |\n| 🎵 Jukebox                      | Currently playing record  |\n| ⚡ Comparator                    | Output signal strength    |\n| 🎹 Note Block                   | Note pitch                |\n\n## 📥 Installation\n\n1. Download the latest plugin JAR file\n2. Place the JAR file in the `plugins` folder of your AllayMC server\n3. Restart the server\n4. Start using it! 🎉\n\n## 🎮 Usage\n\nNo commands needed! Simply:\n\n1. 👀 Look at any block\n2. 📱 Information will automatically display in the ActionBar\n3. 🔄 Auto-refreshes every 100ms\n\n## 🌍 Language Support\n\n| Language          | Code    | Status |\n|-------------------|---------|--------|\n| 🇺🇸 English (US) | `en_US` | ✅      |\n| 🇬🇧 English (UK) | `en_GB` | ✅      |\n| 🇨🇳 简体中文         | `zh_CN` | ✅      |\n| 🇹🇼 繁體中文         | `zh_TW` | ✅      |\n\nLanguage automatically switches based on the player's client settings!\n\n## 🛠️ Development\n\n### Build the Project\n\n```bash\n./gradlew build\n```\n\n### Project Structure\n\n```\nsrc/main/java/me/daoge/waila/\n├── 📄 WAILA.java           # Main plugin class\n├── 📄 TrKeys.java          # Translation key constants\n├── 📁 info/\n│   └── 📄 BlockInfoBuilder.java  # Block info builder\n└── 📁 util/\n    ├── 📄 RayCastUtil.java      # Raycast utility\n    └── 📄 RayCastResult.java    # Raycast result\n```\n\n### Dependencies\n\n- ☕ Java 21+\n- 🎮 AllayMC API 0.2.1+\n\n## 📜 Credits\n\nThis project is ported from [LSE_Waila](https://github.com/ZMBlocks/LSE_Waila). Thanks to the original author **小小的子沐呀** for the open-source contribution! 🙏\n\n## 📄 License\n\nThis project is licensed under the MIT License.\n\n<p align=\"center\">\n  Made with ❤️ for AllayMC\n</p>\n",
-  "downloads": 71,
+  "downloads": 72,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/60499296?v=4",
   "id": "smartcmd/waila",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 71,
+      "downloads": 72,
       "files": [
         {
           "filename": "WAILA-0.1.0-shaded.jar",
