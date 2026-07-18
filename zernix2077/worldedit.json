@@ -13,7 +13,7 @@
   "created_at": 1774554991,
   "dependencies": [],
   "description": "# WorldEdit\n\nA Java reimplementation of the classic WorldEdit plugin for Allay.\n\nImplements general, navigation, region, and clipboard commands. Documentation is available at https://worldedit.enginehub.org/en/latest/commands/.\n\nCommands use a single slash instead of two to preserve bedrock client auto-completion capabilities. Debug boxes are used for selections and can be disabled via `/selboxtoggle`.\n\n## Screenshots\n![Screenshot](https://raw.githubusercontent.com/zernix2077/WorldEdit/master/images/screenshot.png)\n\n## Install\n- Download the .jar file from the releases page\n- Place it in the ./plugins folder\n- Restart the server\n- Enjoy!\n\n",
-  "downloads": 9,
+  "downloads": 10,
   "gallery": [
     {
       "created": "2026-04-07",
@@ -43,7 +43,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 9,
+      "downloads": 10,
       "files": [
         {
           "filename": "WorldEdit-0.1.0-shaded.jar",
