@@ -13,7 +13,7 @@
   "created_at": 1779250295,
   "dependencies": [],
   "description": "# TreeCap\n\nTreeCap is an AllayMC plugin that lets players cut down an entire tree by breaking one log with an allowed axe.\n\nThe plugin is designed for Minecraft: Bedrock Edition servers running AllayMC. It detects valid trees, breaks connected logs, optionally removes nearby leaves, and drops the blocks naturally.\n\n## Features\n\n- Cuts connected logs of the same tree.\n- Detects vanilla logs automatically using AllayMC block tags.\n- Supports custom log IDs through configuration.\n- Optional leaf breaking.\n- Configurable maximum block limit.\n- Configurable allowed tools.\n- Optional sneak requirement.\n- Tree validation using soil and nearby leaves.\n- Bundles required configuration libraries into the release jar.\n\n## Configuration (config.yml)\n\nDefault configuration:\n\n```yaml\n# TreeCap Configuration\n# Enable/Disable the plugin\nenabled: true\n# If enabled, players must sneak to activate tree cutting\nsneak-required: false\nmax-blocks: 500\n# Tools allowed to trigger TreeCap\nallowed-tools:\n  - minecraft:wooden_axe\n  - minecraft:stone_axe\n  - minecraft:iron_axe\n  - minecraft:golden_axe\n  - minecraft:diamond_axe\n  - minecraft:netherite_axe\n  - minecraft:copper_axe\n# One of these blocks must be under the tree\nallowed-soil:\n  - minecraft:dirt\n  - minecraft:grass_block\n  - minecraft:podzol\n  - minecraft:coarse_dirt\n  - minecraft:dirt_with_roots\n  - minecraft:mud\n  - minecraft:crimson_nylium\n  - minecraft:warped_nylium\n  - minecraft:moss_block\n# Extra blocks considered tree logs. Vanilla logs are detected automatically.\nlog-blocks: []\n# If enabled, leaves will be automatically broken when a tree is cut\nbreak-leaves: false\n# Minimum number of leaves required around the tree? (0 = Check disabled)\nmin-leaves: 5\n```\n## License\n\nThis project is licensed under **Apache License 2.0**. Please see the [LICENSE](https://github.com/Kanelucky/TreeCap/blob/master/LICENSE) file for details.\n",
-  "downloads": 1,
+  "downloads": 3,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/216477222?v=4",
   "id": "kanelucky/treecap",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 1,
+      "downloads": 3,
       "files": [
         {
           "filename": "TreeCap-0.1.0-all.jar",

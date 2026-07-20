@@ -13,7 +13,7 @@
   "created_at": 1770992672,
   "dependencies": [],
   "description": "# RockArchive\n\nRockArchive is a high-performance world storage plugin for [AllayMC](https://github.com/AllayMC/Allay) powered by [RocksDB](https://rocksdb.org/).\n\nIt replaces traditional LevelDB-based world storage with a modern, highly configurable backend that offers improved compression efficiency, better\nwrite concurrency, and scalable compaction strategies for large-scale servers.\n\n## Features\n\n- **ZSTD Compression** — Uses ZSTD for both regular and bottommost-level compaction, delivering better compression ratios than LevelDB's default Snappy/Zlib.\n- **Bloom Filter** — 10-bit Bloom filter on data blocks to speed up point lookups (`containChunk`, entity reads, etc.).\n- **Concurrent Background Jobs** — Automatically scales background flush/compaction threads to half the available CPU cores.\n- **Drop-in Replacement** — Registers as a `ROCKSDB` world storage factory; just set the storage type in your world configuration.\n\n## Installation\n\n1. Download the latest release JAR from [Releases](https://github.com/AllayMC/RockArchive/releases).\n2. Place the JAR in your AllayMC server's `plugins/` directory.\n3. Edit `worlds/world-settings.yml`, set `storage-type` to `ROCKSDB`:\n\n```yaml\nworlds:\n  world:\n    storage-type: ROCKSDB\n```\n\n4. Restart the server.\n\n## License\n\nThis project is licensed under the MIT License — see the [LICENSE](https://github.com/AllayMC/RockArchive/blob/master/LICENSE) file for details.",
-  "downloads": 7,
+  "downloads": 9,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/127004695?v=4",
   "id": "allaymc/rockarchive",
@@ -52,7 +52,7 @@
     },
     {
       "changelog": "**Full Changelog**: https://github.com/AllayMC/RockArchive/commits/0.1.0",
-      "downloads": 5,
+      "downloads": 7,
       "files": [
         {
           "filename": "RockArchive-0.1.0-shaded.jar",
