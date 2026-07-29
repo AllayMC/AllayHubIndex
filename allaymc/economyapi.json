@@ -31,9 +31,9 @@
   "name": "EconomyAPI",
   "server_version": "",
   "source": "https://github.com/AllayMC/EconomyAPI",
-  "stars": 1,
+  "stars": 2,
   "summary": "EconomyAPI is a plugin that unifies all economy plugins under one single API",
-  "updated_at": 1782499252,
+  "updated_at": 1785313500,
   "versions": [
     {
       "changelog": "",
