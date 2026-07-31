@@ -13,7 +13,7 @@
   "created_at": 1769628715,
   "dependencies": [],
   "description": "# Better Knockback\n\nPlugin to make knockback on Allay feel more PocketMine–like.\n\nIn vanilla Minecraft (and Allay), punching a player during a jump sends them far too high into the air, while punching a player as they’re falling lifts them by too small an amount (pvp combos almost impossible). This happens because knockback is applied to the player’s current motion vector: a punch during a jump sets the Y motion to 0.42 + 0.4 = 0.92, while during a PvP-like fall it becomes -0.2 + 0.4 = 0.2.\n\nThis plugin resolves the issue in the same way PocketMine-MP does: previous motion is not taken into account when applying knockback, and the player always receives the exact same vertical elevation and horizontal amplitude.\n\n# Install\n\n- Download .jar file from releases\n- Put it into ./plugins folder\n- Restart the server\n- Enjoy!\n\n",
-  "downloads": 6,
+  "downloads": 7,
   "gallery": [],
   "icon_url": "https://avatars.githubusercontent.com/u/110056737?v=4",
   "id": "zernix2077/betterknockback",
@@ -36,7 +36,7 @@
   "versions": [
     {
       "changelog": "",
-      "downloads": 6,
+      "downloads": 7,
       "files": [
         {
           "filename": "BetterKnockback-0.1.0-shaded.jar",
