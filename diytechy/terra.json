@@ -33,7 +33,7 @@
   "created_at": 1767472429,
   "dependencies": [],
   "description": "# ⚠️ This is NOT Terra. This is a Vibe-Coded Abomination. ⚠️\n\nLet's get the important part out of the way first, in bold, so nobody can say they\nweren't warned:\n\n> **This repository is not Terra.** It is a personal, vibe-coded fork that has\n> wandered off from the real [Terra](https://github.com/PolyhedralDev/Terra)\n> project, eaten some things it shouldn't have, and is now wearing Terra's\n> skin. The wonderful people at Polyhedral Development did not write this, did\n> not review this, and are not responsible for whatever this does to your world\n> save.\n\nIf you came here looking for the actual, supported, community-loved world\ngenerator, **turn around now** and go to the real thing.\n\n## What is this, then?\n\nThis is my own project, for my own Minecraft world, left out in the open in case\nanyone else wants to poke it with a stick. It exists to do exactly two things:\n\n1. Run on **Minecraft 26.2 (Paper 26.2)**, and\n2. Generate a world pack that mashes together the major community-driven Terra\n   packs into one combined experience:\n   **[CHIMERA](https://github.com/diytechy/CHIMERA)**.\n\nThat's the whole mission. Everything in here bends toward making *my* world boot\nand look the way I want it to. It was built by vibes, prompts, and stubbornness —\n**not** by formal review, careful benchmarking, or anything resembling\nengineering discipline.\n\n## The Rules of Engagement (please read)\n\n* **Found a bug? Raise it HERE.** Open an issue on *this* repo. Do **not** go\n  file it on the real Terra project. They didn't do this. You will only confuse\n  and sadden them.\n* **Unless** you have actually reproduced the issue against *stock, upstream\n  Terra* and proven it lives in their scope — then, sure, that's a real Terra\n  bug and belongs with Terra. The bar is \"I proved it exists upstream,\" not \"it\n  broke and Terra is the closest name on the box.\"\n* **My support is best-effort, and \"best\" may be very small.** This is a hobby\n  fork for one world. I may fix your issue tomorrow, in six months, or never. No\n  promises, no SLAs, no hard feelings.\n* **This is not official, not community-supported, and not blessed by anyone.**\n  It's a thing I made. You're welcome to try it. Caveat emptor, and bring a\n  backup of your save.\n\n## What's been done to poor Terra\n\nThis fork has diverged substantially from upstream Terra's 1.21.11 line. The\nfull, gory accounting lives in\n[investigations/Branch-vs-Upstream-1.21.11.md](https://github.com/diytechy/Terra/blob/main/investigations/Branch-vs-Upstream-1.21.11.md).\nThe highlights, derived from that document and the code itself:\n\n* **Multi-platform, sort of.** Targets MC 26.2 / Paper 26.2 on **JDK 25**. The\n  live build graph covers **Bukkit/Paper, CLI, Allay, Minestom, Fabric, and\n  NeoForge**. **Fabric** and **NeoForge** were rebuilt without architectury\n  (it hasn't ported to the 26.x line) — both now compile green, but their\n  *runtime* is unverified, so treat them as WIP. One caveat: upstream Minestom\n  has no 26.2 build yet, so the Minestom platform is pinned to a 26.1.x build\n  and lags the rest of the stack. **Forge, Quilt, and Sponge** remain dormant\n  (`.disabled`). All the disabled platforms' sources still sit in the tree,\n  quietly rotting.\n* **A custom pack-publishing pipeline.** Every merge to `main` cuts a\n  `VIBE-`tagged GitHub release with built platform jars, and the build pulls and\n  bundles the CHIMERA pack (treated as *required* — a missing CHIMERA fails the\n  build).\n* **Heavily reworked terrain engine.** The 3D chunk generator\n  (`ChunkInterpolator`, `Sampler3D`, `NoiseChunkGenerator3D`), a from-scratch\n  rewrite of the noise `CacheSampler` (literally committed with the message\n  *\"Claude's cache rewrite - UNTESTED\"*), a new chunk-scoped caching layer in the\n  biome pipeline plus a `StructureSearchBiomeProvider`, a new max-Y biome\n  extrusion type, new surface-locator addons, and DendryTerra / BubblesOnChunkGen\n  integrations.\n* **NMS post-processors** that fill in vanilla-like behaviour after generation:\n  chest and BrushableBlock loot, beehive population, End gateway teleport\n  targets, and bedrock suppression around End crystals.\n* **Custom forks of upstream libraries** (Tectonic and Seismic, see below),\n  resolved from a public `diytechy` Repsy repo.\n\n**Enormous flashing caveat:** none of these changes have been formally reviewed,\nproperly benchmarked, or validated against upstream. They could be subtly wrong.\nThey could **reduce performance**. They could generate beautiful terrain on\nTuesday and cursed terrain on Wednesday. They exist because they made my world\nwork, not because they're correct.\n\n## The other abominations it depends on\n\nThis fork doesn't stop at Terra — it drags two of Terra's own dependencies down\nwith it. Both are similarly vibe-augmented forks:\n\n### Vibe-augmented Seismic — https://github.com/diytechy/Seismic\n\nFork of [PolyhedralDev/Seismic](https://github.com/PolyhedralDev/Seismic),\npinned as `2.5.7-PATCHED`. Notable changes:\n\n* **Fixed two real bugs in `OpenSimplex2SSampler` 2D `getNoiseRaw`** — an `a1`\n  attenuation term missing its `+ a0` (which was exposing the raw simplex\n  lattice as visible seams across the whole output), and a `y2` coordinate using\n  the wrong unskew constant. Both found by diffing against the already-correct\n  derivative variant and verifying algebraically.\n* Added local / Repsy publishing (no GPG) and a `publishToMavenLocal` finalizer\n  for patch testing.\n\n### Vibe-augmented Tectonic — https://github.com/diytechy/Tectonic\n\nFork of [PolyhedralDev/Tectonic](https://github.com/PolyhedralDev/Tectonic),\npinned as `4.3.2-diytechy`. Notable changes:\n\n* **A session-scoped type-load cache** (`beginSession()` / `endSession()` on\n  `ConfigLoader`) that deduplicates type-load results across configs sharing\n  inherited raw YAML from a common parent — thread-safe because Terra loads\n  configs in a parallel stream. **This API does not exist upstream**, and this\n  fork's Terra calls it directly, so you cannot simply drop back to stock\n  Tectonic.\n* **Java 25 retargeting**, including a `ScopedValue` (`CURRENT_DEPTH`) for the\n  `DepthTracker` instead of threading it through every call frame, plus assorted\n  reflective-loader changes. Gradle bumped to 9.2.1. A broader roadmap of\n  Java-25-era ideas lives in\n  [Tectonic's Java25Improvements.md](https://github.com/diytechy/Tectonic/blob/master/Java25Improvements.md).\n\nSame disclaimer applies to both: unreviewed, vibe-driven, here because they made\nmy world work.\n\n## Building\n\nIf you really want to build this thing: `./gradlew build` (`gradlew.bat build`\non Windows). You will need a JDK 25 toolchain reachable by Gradle, and network\naccess to the `diytechy` Repsy artifacts (should be public) for the custom Tectonic/Seismic/pack\ndependencies — a clean offline checkout will not build.\n\n## Licensing\n\nThis is a fork of Terra and inherits Terra's licensing. Nothing here changes\nthat — all credit for the underlying platform belongs to Polyhedral Development.\n\nParts of Terra are licensed under either the MIT License or the GNU General\nPublic License, version 3.0.\n\n* The API is licensed under the [MIT License](https://github.com/diytechy/Terra/blob/main/LICENSE).\n* The core addons are also licensed under the [MIT License](https://github.com/diytechy/Terra/blob/main/LICENSE).\n* The platform-agnostic implementations and platform implementations are\n  licensed under the\n  [GNU General Public License, version 3.0](https://github.com/diytechy/Terra/blob/main/common/implementation/LICENSE).\n\nIf you're not sure which license a particular file is under, check the file's\nheader or the LICENSE file in the closest parent folder.\n\n## Credit where it's due\n\nThe real Terra is the work of [Polyhedral Development](https://github.com/PolyhedralDev)\nand its contributors. They built something genuinely excellent. I vibe-coded on\ntop of it for my own amusement. Please direct your admiration to them — and your\nbug reports to me.",
-  "downloads": 0,
+  "downloads": 69,
   "gallery": [],
   "icon_url": "https://raw.githubusercontent.com/diytechy/Terra/main/platforms/fabric/src/main/resources/assets/terra/icon.png",
   "id": "diytechy/terra",
@@ -53,5 +53,356 @@
   "stars": 0,
   "summary": "Voxel world generation modding platform",
   "updated_at": 1782609987,
-  "versions": []
+  "versions": [
+    {
+      "changelog": "## What's Changed\n* Multi-platform MC 26.1/26.2 support: Fabric & NeoForge ports, Minestom revival, and 26.2 registry-freeze fix by @diytechy in https://github.com/diytechy/Terra/pull/11\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260612-4b970c6dd...VIBE-20260628-6118e3dd0",
+      "downloads": 11,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": true,
+          "size": 10659512,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-allay-7.0.0-BETA-6118e3dd0-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": false,
+          "size": 26683006,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-cli-7.0.0-BETA-6118e3dd0-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-fabric-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": false,
+          "size": 10606535,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-fabric-7.0.0-BETA-6118e3dd0-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": false,
+          "size": 13441839,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-minestom-7.0.0-BETA-6118e3dd0-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-neoforge-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": false,
+          "size": 10501599,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-neoforge-7.0.0-BETA-6118e3dd0-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-paper-7.0.0-BETA-6118e3dd0-shaded.jar",
+          "primary": false,
+          "size": 14073454,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260628-6118e3dd0/Terra-VIBE-paper-7.0.0-BETA-6118e3dd0-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260628-6118e3dd0",
+      "prerelease": false,
+      "published_at": 1782610350,
+      "version": "VIBE-20260628-6118e3dd0"
+    },
+    {
+      "changelog": "## What's Changed\n* Chimera version bump by @diytechy in https://github.com/diytechy/Terra/pull/10\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260603-87a805015...VIBE-20260612-4b970c6dd",
+      "downloads": 15,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": true,
+          "size": 10582981,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-allay-7.0.0-BETA-4b970c6dd-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": false,
+          "size": 26592914,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-cli-7.0.0-BETA-4b970c6dd-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-fabric-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": false,
+          "size": 10529749,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-fabric-7.0.0-BETA-4b970c6dd-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": false,
+          "size": 13365308,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-minestom-7.0.0-BETA-4b970c6dd-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-neoforge-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": false,
+          "size": 10424814,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-neoforge-7.0.0-BETA-4b970c6dd-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-paper-7.0.0-BETA-4b970c6dd-shaded.jar",
+          "primary": false,
+          "size": 13999420,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260612-4b970c6dd/Terra-VIBE-paper-7.0.0-BETA-4b970c6dd-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260612-4b970c6dd",
+      "prerelease": false,
+      "published_at": 1781304645,
+      "version": "VIBE-20260612-4b970c6dd"
+    },
+    {
+      "changelog": "## What's Changed\n* Platform cleanup by @diytechy in https://github.com/diytechy/Terra/pull/9\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260602-f02d24363...VIBE-20260603-87a805015",
+      "downloads": 8,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": true,
+          "size": 10583004,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-allay-7.0.0-BETA-87a805015-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": false,
+          "size": 26592948,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-cli-7.0.0-BETA-87a805015-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-fabric-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": false,
+          "size": 10529772,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-fabric-7.0.0-BETA-87a805015-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": false,
+          "size": 13365331,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-minestom-7.0.0-BETA-87a805015-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-neoforge-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": false,
+          "size": 10424838,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-neoforge-7.0.0-BETA-87a805015-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-paper-7.0.0-BETA-87a805015-shaded.jar",
+          "primary": false,
+          "size": 13999443,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260603-87a805015/Terra-VIBE-paper-7.0.0-BETA-87a805015-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260603-87a805015",
+      "prerelease": false,
+      "published_at": 1780488339,
+      "version": "VIBE-20260603-87a805015"
+    },
+    {
+      "changelog": "## What's Changed\n* Bump to next version by @diytechy in https://github.com/diytechy/Terra/pull/8\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260601-fd677b186...VIBE-20260602-f02d24363",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": true,
+          "size": 10582338,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-allay-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-bukkit-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 13998776,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-bukkit-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 26592162,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-cli-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-fabric-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 10529106,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-fabric-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-merged-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 5986994,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-merged-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 13364664,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-minestom-7.0.0-BETA-f02d24363-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-neoforge-7.0.0-BETA-f02d24363-shaded.jar",
+          "primary": false,
+          "size": 10424170,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260602-f02d24363/Terra-VIBE-neoforge-7.0.0-BETA-f02d24363-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260602-f02d24363",
+      "prerelease": false,
+      "published_at": 1780359252,
+      "version": "VIBE-20260602-f02d24363"
+    },
+    {
+      "changelog": "## What's Changed\n* Dev by @diytechy in https://github.com/diytechy/Terra/pull/7\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260531-bdb012975...VIBE-20260601-fd677b186",
+      "downloads": 7,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": true,
+          "size": 10582310,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-allay-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-bukkit-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 13998749,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-bukkit-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 26592134,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-cli-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-fabric-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 10529079,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-fabric-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-merged-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 5986967,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-merged-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 13364637,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-minestom-7.0.0-BETA-fd677b186-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-neoforge-7.0.0-BETA-fd677b186-shaded.jar",
+          "primary": false,
+          "size": 10424143,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260601-fd677b186/Terra-VIBE-neoforge-7.0.0-BETA-fd677b186-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260601-fd677b186",
+      "prerelease": false,
+      "published_at": 1780286357,
+      "version": "VIBE-20260601-fd677b186"
+    },
+    {
+      "changelog": "## What's Changed\n* Dev by @diytechy in https://github.com/diytechy/Terra/pull/6\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260516-230000011...VIBE-20260531-bdb012975",
+      "downloads": 6,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-bdb012975-shaded.jar",
+          "primary": true,
+          "size": 10582110,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260531-bdb012975/Terra-VIBE-allay-7.0.0-BETA-bdb012975-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-bukkit-7.0.0-BETA-bdb012975-shaded.jar",
+          "primary": false,
+          "size": 13998548,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260531-bdb012975/Terra-VIBE-bukkit-7.0.0-BETA-bdb012975-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-bdb012975-shaded.jar",
+          "primary": false,
+          "size": 26591917,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260531-bdb012975/Terra-VIBE-cli-7.0.0-BETA-bdb012975-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-merged-7.0.0-BETA-bdb012975-shaded.jar",
+          "primary": false,
+          "size": 5986766,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260531-bdb012975/Terra-VIBE-merged-7.0.0-BETA-bdb012975-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-minestom-7.0.0-BETA-bdb012975-shaded.jar",
+          "primary": false,
+          "size": 13364436,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260531-bdb012975/Terra-VIBE-minestom-7.0.0-BETA-bdb012975-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260531-bdb012975",
+      "prerelease": false,
+      "published_at": 1780247226,
+      "version": "VIBE-20260531-bdb012975"
+    },
+    {
+      "changelog": "## What's Changed\n* Modified by @diytechy in https://github.com/diytechy/Terra/pull/1\n* change for string construction, should hopefully work with publish. by @diytechy in https://github.com/diytechy/Terra/pull/2\n* Terrain investigation by @diytechy in https://github.com/diytechy/Terra/pull/3\n* Force chimera pull by @diytechy in https://github.com/diytechy/Terra/pull/4\n\n## New Contributors\n* @diytechy made their first contribution in https://github.com/diytechy/Terra/pull/1\n\n**Full Changelog**: https://github.com/diytechy/Terra/commits/VIBE-20260516-4eb76dd62",
+      "downloads": 4,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-4eb76dd62-shaded.jar",
+          "primary": true,
+          "size": 10518520,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-4eb76dd62/Terra-VIBE-allay-7.0.0-BETA-4eb76dd62-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-bukkit-7.0.0-BETA-4eb76dd62-shaded.jar",
+          "primary": false,
+          "size": 13934958,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-4eb76dd62/Terra-VIBE-bukkit-7.0.0-BETA-4eb76dd62-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-4eb76dd62-shaded.jar",
+          "primary": false,
+          "size": 26536333,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-4eb76dd62/Terra-VIBE-cli-7.0.0-BETA-4eb76dd62-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-merged-7.0.0-BETA-4eb76dd62-shaded.jar",
+          "primary": false,
+          "size": 5923177,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-4eb76dd62/Terra-VIBE-merged-7.0.0-BETA-4eb76dd62-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260516-4eb76dd62",
+      "prerelease": false,
+      "published_at": 1778942484,
+      "version": "VIBE-20260516-4eb76dd62"
+    },
+    {
+      "changelog": "## What's Changed\n* Publish locator-surface-noise-3d addon to Repsy by @diytechy in https://github.com/diytechy/Terra/pull/5\n\n\n**Full Changelog**: https://github.com/diytechy/Terra/compare/VIBE-20260516-4eb76dd62...VIBE-20260516-230000011",
+      "downloads": 9,
+      "files": [
+        {
+          "filename": "Terra-VIBE-allay-7.0.0-BETA-230000011-shaded.jar",
+          "primary": true,
+          "size": 10518417,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-230000011/Terra-VIBE-allay-7.0.0-BETA-230000011-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-bukkit-7.0.0-BETA-230000011-shaded.jar",
+          "primary": false,
+          "size": 13934858,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-230000011/Terra-VIBE-bukkit-7.0.0-BETA-230000011-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-cli-7.0.0-BETA-230000011-shaded.jar",
+          "primary": false,
+          "size": 26536236,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-230000011/Terra-VIBE-cli-7.0.0-BETA-230000011-shaded.jar"
+        },
+        {
+          "filename": "Terra-VIBE-merged-7.0.0-BETA-230000011-shaded.jar",
+          "primary": false,
+          "size": 5923076,
+          "url": "https://github.com/diytechy/Terra/releases/download/VIBE-20260516-230000011/Terra-VIBE-merged-7.0.0-BETA-230000011-shaded.jar"
+        }
+      ],
+      "name": "VIBE-20260516-230000011",
+      "prerelease": false,
+      "published_at": 1778945041,
+      "version": "VIBE-20260516-230000011"
+    }
+  ]
 }
