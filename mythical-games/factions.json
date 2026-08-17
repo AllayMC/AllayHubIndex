@@ -13,7 +13,7 @@
   "created_at": 1780696098,
   "dependencies": [],
   "description": "",
-  "downloads": 3,
+  "downloads": 0,
   "gallery": [],
   "icon_url": "https://raw.githubusercontent.com/Mythical-Games/Factions/main/logo.png",
   "id": "mythical-games/factions",
@@ -33,22 +33,5 @@
   "stars": 0,
   "summary": "A NOT vibe-coded Factions plugin for Allay!",
   "updated_at": 1780765882,
-  "versions": [
-    {
-      "changelog": "",
-      "downloads": 3,
-      "files": [
-        {
-          "filename": "Factions-0.1.0-shaded.jar",
-          "primary": true,
-          "size": 14746162,
-          "url": "https://github.com/Mythical-Games/Factions/releases/download/0.1.0/Factions-0.1.0-shaded.jar"
-        }
-      ],
-      "name": "Factions - AllayMC",
-      "prerelease": false,
-      "published_at": 1780697568,
-      "version": "0.1.0"
-    }
-  ]
+  "versions": []
 }
