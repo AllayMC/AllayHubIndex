@@ -1,0 +1,37 @@
+{
+  "api_version": "0.28.0",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/178429143?v=4",
+      "name": "NivarisMC",
+      "url": "https://github.com/NivarisMC"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1783972070,
+  "dependencies": [],
+  "description": "",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/178429143?v=4",
+  "id": "nivarismc/proxythread",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "",
+    "wiki": ""
+  },
+  "name": "ProxyThread",
+  "server_version": "",
+  "source": "https://github.com/NivarisMC/ProxyThread",
+  "stars": 0,
+  "summary": "ProxyThread library",
+  "updated_at": 1783972164,
+  "versions": []
+}

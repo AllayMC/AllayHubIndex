@@ -1,0 +1,37 @@
+{
+  "api_version": "",
+  "authors": [
+    {
+      "avatar_url": "https://avatars.githubusercontent.com/u/178429143?v=4",
+      "name": "NivarisMC",
+      "url": "https://github.com/NivarisMC"
+    }
+  ],
+  "categories": [
+    "utility"
+  ],
+  "created_at": 1783972499,
+  "dependencies": [],
+  "description": "# Parties\n\nAn **AllayMC** plugin that lets players create and manage parties to play together between servers.\n\n## Requirements\n\n- AllayMC API `0.28.0`\n- Java 21\n- [`ProxyThread`](https://github.com/NivarisMC/ProxyThread) library for cross-server synchronization\n\n## Installation\n\n1. Build the plugin with Gradle:\n   ```bash\n   ./gradlew shadowJar\n   ```\n2. Copy the generated jar from `build/libs/` into the `plugins/` folder of your AllayMC server.\n3. Make sure the `proxythread-allay` library is also installed or loaded as a plugin on the server.\n4. Start the server and adjust `config.yml` and `messages.yml` to your needs.\n\n## Configuration\n\n`config.yml` handles cross-server synchronization:\n\n```yaml\nserver-list:\n  lobby1:\n    socket-port: 19200\n  sw_solo:\n    socket-port: 19201\n  sw_doubles:\n    socket-port: 19202\n\ncurrent-server: lobby1\n```\n\n- `server-list`: list of connected servers with the socket port used by `proxythread-allay`.\n- `current-server`: name of the current server (must match a key in `server-list`).\n\n## Commands\n\nAll commands use `/party`:\n\n| Command | Description |\n|---------|-------------|\n| `/party` | Opens the main or management menu. |\n| `/party create [public]` | Creates a new party. Add `public` to make it public. |\n| `/party dispose` | Deletes the party (owner only). |\n| `/party invite <player>` | Invites a player to the party. |\n| `/party accept <inviter>` | Accepts a received invitation. |\n| `/party reject <inviter>` | Rejects a received invitation. |\n| `/party quit` | Leaves the party. |\n| `/party kick <player>` | Removes a member from the party (owner only). |\n\n## How it works\n\n### Creation and management\n\n- Each player can be in only one party at a time.\n- A party has an **owner** (the creator) and supports up to **4 members** in total.\n- The owner can invite other players, kick members, or dispose the party.\n- If the owner leaves the party, the party is automatically disbanded.\n- When a player leaves the server, they are removed from the party and their invitations are cleared.\n\n### Invitations\n\n- Invitations are managed per player: an invitee can have multiple pending invitations from different parties.\n- Accepting an invitation adds the player to the party, provided they are not already in another party and the party is not full.\n\n### User interface\n\nRunning `/party` without arguments opens a **Bedrock Form** that allows players to:\n\n- Create a party\n- View and manage received invitations\n- Manage members of the current party\n- Invite online players via an input/dropdown form\n- Leave or delete the party\n\n### Cross-server synchronization\n\nThe plugin integrates with `proxythread-allay` to keep parties alive when players are transferred between servers (e.g., from a lobby to a minigame):\n\n- Party data (owner and members) is sent over sockets between servers.\n- When a packet of type `party_proxy_data` is received, the party is automatically recreated on the target server.\n- `PartyTransferManager` handles a transfer queue: it waits about 4 seconds (80 ticks) and then transfers all party members to the target server address.\n\n## Events\n\nThe plugin emits custom events that other plugins can listen to:\n\n- `PartyCreateEvent`\n- `PartyDisposeEvent`\n- `PartyJoinEvent`\n- `PartyLeaveEvent`\n- `PartyInviteEvent`\n- `PartyAcceptEvent`\n- `PartyRejectEvent`\n\nEach event extends `PartyEvent` or `PlayerPartyEvent` and supports cancellation where applicable.\n\n## Build\n\nTo produce the production jar:\n\n```bash\n./gradlew shadowJar\n```\n\nTo test locally with AllayGradle:\n\n```bash\n./gradlew runServer\n```\n\n## Author\n\nMade by **NivarisMC** — [GitHub](https://github.com/nivarismc)\n",
+  "downloads": 0,
+  "gallery": [],
+  "icon_url": "https://avatars.githubusercontent.com/u/178429143?v=4",
+  "id": "nivarismc/parties",
+  "license": {
+    "id": "MIT",
+    "name": "MIT License",
+    "url": "https://spdx.org/licenses/MIT.html"
+  },
+  "links": {
+    "discord": "",
+    "homepage": "https://github.com/nivarismc",
+    "wiki": ""
+  },
+  "name": "Parties",
+  "server_version": "",
+  "source": "https://github.com/NivarisMC/Parties",
+  "stars": 0,
+  "summary": "A party management system plugin for Allay",
+  "updated_at": 1783978010,
+  "versions": []
+}
