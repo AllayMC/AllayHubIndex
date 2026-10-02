@@ -30,9 +30,9 @@
   "name": "Aether",
   "server_version": "",
   "source": "https://github.com/Miroshka000/Aether",
-  "stars": 3,
+  "stars": 4,
   "summary": "⚡ Aether Network Core - High-Performance Network Bridge for WaterdogPE & AllayMC",
-  "updated_at": 1775296698,
+  "updated_at": 1790971030,
   "versions": [
     {
       "changelog": "## Aether v0.1.0\n\nClean `0.1.x` generation of Aether for AllayMC and WaterdogPE.\n\n### Downloads\n\n- `Aether-Allay-*.jar` - install on each Allay node\n- `Aether-Waterdog-*.jar` - install on WaterdogPE proxy\n\n### Included in this line\n\n- embedded ProxyTransport runtime inside Aether\n- lobby portals\n- PlaceholderAPI integration\n- LuckPerms integration on Allay\n- routing, maintenance mode and diagnostics on Waterdog\n\n### Notes\n\n- `ProxyTransport-Waterdog` no longer needs to be installed separately when using `Aether-Waterdog`\n- QUIC backend type is configured in Waterdog `config.yml`\n\nFull changelog: https://github.com/Miroshka000/Aether/commits/v0.1.0\n",
